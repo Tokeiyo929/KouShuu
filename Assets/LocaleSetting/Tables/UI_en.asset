@@ -1,0 +1,1139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 72c150b36fec1ec49a4d47b6fbd03c3a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 168387702784
+    m_Localized: 'Based on Cantonese business culture
+
+      Virtual simulation experiment
+      of business Chinese application for international students'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2446112878592
+    m_Localized: Start preparing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5661185306624
+    m_Localized: Please have some tea.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5864638410752
+    m_Localized: Please have some tea.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6005466361856
+    m_Localized: Making friends through tea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6180373032960
+    m_Localized: Invitations from other parties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6361063649280
+    m_Localized: Happy cooperation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7985706332160
+    m_Localized: Introduction to the History of Cantonese Merchants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8692358475776
+    m_Localized: Yue merchant cultural environment arrangement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8840820060160
+    m_Localized: Cantonese Tea Culture (A Cup and Two Pieces)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9010420936704
+    m_Localized: Basic Knowledge of Business Communication
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9148493230080
+    m_Localized: Core Vocabulary System of Business Chinese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9287186280448
+    m_Localized: High-frequency business sentence patterns and pragmatic logic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9391213408256
+    m_Localized: Writing of commercial contracts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9503792721920
+    m_Localized: Business Communication Simulation Test
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18543063101440
+    m_Localized: Enter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19459879235584
+    m_Localized: History and Culture of Cantonese Business
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20029729959936
+    m_Localized: Business communication refers to the process by which organizations
+      convey information and emotions through language, text, and behavior to achieve
+      collaborative transactions and other business objectives. Its essence is value
+      transmission and consensus building. It can be divided by audience into internal
+      team collaboration and external customer public relations; by form into formal
+      contracts and reports versus informal social interactions. The core focus is
+      on reducing information disparities to facilitate the realization of goals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20947665973248
+    m_Localized: Guangzhou has always been famous for its flowers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21250360504320
+    m_Localized: Starting point of the Maritime Silk Road
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21392971034624
+    m_Localized: Modern Silk Road
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241856888729600
+    m_Localized: Yue Business History and Culture - Qin and Han Dynasties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 241671324332032
+    m_Localized: 'Qin and Han Dynasties
+
+      Records of the Grand Historian: Biographies
+      of Merchants: Panyu "is also a major metropolis, gathering pearls, rhinoceros
+      horn, tortoiseshell, fruits, and cloth." Book of Han: Geography: Panyu "is
+      located near the sea, abundant in rhinoceros, elephants, tortoiseshell, pearls,
+      silver, copper, fruits, and cloth. Merchants from Central China often become
+      wealthy here; Panyu is one such metropolis." Sima Qian described Lingnan during
+      the Nanyue Kingdom period, while Ban Gu depicted Lingnan after its incorporation
+      into the Han dynasty, when inland merchants increasingly traded there, and
+      commodities expanded to include silver and copper. Archaeologists have found
+      glass beads in Han tombs in Guangzhou and Hepu, resembling ancient Western
+      glass. A gray pottery tripod unearthed in Sumatra bears an inscription dating
+      to the fourth year of the Chuyuan era (45 BCE) of Emperor Yuan of Han. Incense
+      used in censers from Guangzhou Han tombs mostly originated from Southeast Asia.
+
+      Eastern
+      Han
+
+      Yang Fu of Xiadutou Village, Panyu, wrote in Strange Things of the
+      Southern Frontier: "Tortoiseshell resembles a turtle and inhabits the South
+      Sea." "Rhinoceros horn has a special radiance, with white lines running straight
+      from base to tip, known as ''piercing-heaven rhinoceros horn.''" Jar people
+      "have exceptionally white teeth and eyes, with jet-black faces and bodies that
+      gleam. They serve as slaves, strong and diligent," likely referring to Malays
+      traded as commodities to China.
+
+      Book of the Later Han: "During Emperor
+      Huan''s reign, countries west of Funan, such as Tianzhu (India) and Daqin (Rome),
+      sent tribute via the South Sea after multiple translations. Since then, foreign
+      merchants have flooded Yangyue (Guangdong)."
+
+      Guangzhou''s Xianggang
+      Mountain: "The Nanyue King''s Tomb yielded many overseas items, such as ivory,
+      frankincense, silver boxes, and gold floral ornaments."
+
+      Dragon Mother
+
+      Originating
+      in Deqing Yuecheng, also known as Deqing Dragon Mother or Yuecheng Dragon Mother.
+      Enfeoffed since the Han dynasty, Emperor Gaozu granted her the title Lady Chengxi.
+      Shen Huaiyuan''s Records of Nanyue: "Long ago, an old woman of the Wen clan,
+      from Duanxi, made her living by fishing in a stream. One day by the water,
+      she found an egg as large as a peck measure and took it home. After about ten
+      days, a creature like a gecko, a foot long, hatched and stayed. It grew to
+      two feet and could catch over ten fish daily. At five feet, it caught even
+      more. It often swam in waves, circling the woman. Once, while cleaning fish,
+      she accidentally cut its tail, and it left. Years later, it returned radiant.
+      The woman exclaimed: ''Has the dragon son returned?'' It played affectionately
+      as before. When Qin Shi Huang heard, he said: ''This is a dragon son, bestowed
+      by my virtue.'' He sent envoys with ceremonial jade to summon her. But she
+      missed her homeland and was unhappy. At the Xingjiang River, a thousand li
+      from Duanxi, the dragon repeatedly pulled the boat back overnight. After several
+      attempts, the terrified envoys gave up. When she died, she was buried by the
+      river. The dragon son often sent waves to her grave, swirling sand to form
+      a mound. People called it the ''Short-tailed Dragon.'' Today, boats are called
+      ''dragon-tailed boats'' for this reason."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 243425260630016
+    m_Localized: Yue Business History and Culture - Six Dynasties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 243773756960768
+    m_Localized: "\rCantonese merchant history and culture - Sui and Tang dynasties"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338243672371200
+    m_Localized: '"A Bowl and Two Pieces" Concept and Its Implications'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338555485319168
+    m_Localized: The historical origins and developmental context
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338725996359680
+    m_Localized: Cultural connotation and social function
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338847702478848
+    m_Localized: Analysis of typical dim sum and tea products
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339013905969152
+    m_Localized: Modern inheritance and cultural influence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365552345313280
+    m_Localized: Overview of Communication
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365720314605568
+    m_Localized: The Principles and Procedures of Effective Communication
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366301036965888
+    m_Localized: The skill of being obedient
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366455253135360
+    m_Localized: The art of speaking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366652628692992
+    m_Localized: Overview of Business Negotiation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366963112046592
+    m_Localized: Overview of Public Relations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367164598022144
+    m_Localized: The beginning and preliminary understanding of negotiations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367355522740224
+    m_Localized: Techniques and knowledge points for casual seating greetings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1327761594544128
+    m_Localized: "1. Concept Definition\r\n\"One Cup Two Pieces\" is the core symbol
+      of Cantonese (Pearl River Delta) tea culture, meaning \"one cup of tea paired
+      with two dim sum items.\" It embodies the \"morning tea\" (yum cha) ritual,
+      combining tea drinking with dim sum consumption into a cultural practice integrating
+      dining, socialization, and leisure.\r\n2. Core Components\r\n\u2022 \"One Cup\":
+      Centered on tea\u2014traditionally robust, grease-cutting varieties like Pu'er,
+      Tieguanyin, Chrysanthemum Pu'er, Shou Mei\u2014reflecting \"tea precedes food\"
+      logic.\r\n\u2022 \"Two Pieces\": Two dim sum items. Early staples were sweet-savory
+      Cantonese bites like char siu bao, har gow, siu mai. Later expanded to hundreds:
+      ma lai go, char siu pastry, cheong fun, etc."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1328650342395904
+    m_Localized: "1. Emergence: Ming-Qing Commerce\r\nAs a trading port, Guangzhou
+      attracted merchants. Simple \"tea houses\" (cha ju) along Pearl River docks/markets
+      (per Panyu County Annals) served traders/boatmen, forming early \"tea + dim
+      sum\" culture.\r\nSource: Qu Dajun's New Accounts of Guangdong first documented
+      \"Guangzhou custom: morning tea must have dim sum.\"\r\n\r\n2. Maturation:
+      Teahouses & Standardization (Late Qing-Early ROC)\r\nLate 19th century: Grand
+      teahouses emerged (e.g., Tao Tao Ju 1880, Lin Heung 1889). \"Weekly Dim Sum\"
+      system (rotating menus) made \"One Cup Two Pieces\" a daily habit.\r\nSource:
+      Guangzhou Culinary Culture (Chen Zehong, 2005): ROC-era teahouses standardized
+      \"graded tea pricing + per-piece dim sum billing.\"\r\n\r\n3. Peak: Post-war
+      Revival & Cultural Symbolism (1950s-Present)\r\n1956: \"Weekly Dim Sum\" innovation
+      \u2192 hundreds of varieties. 2014: \"Yum cha\" became China ICH. \"One Cup
+      Two Pieces\" is now a global cultural icon.\r\nSource: Encyclopedia of Cantonese
+      Culture (2018): Morning tea is key for \"intergenerational bonding\" and \"business
+      talks.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1328925287411712
+    m_Localized: "1. Social Etiquette Vehicle\r\n\u2022 Finger-tapping thanks: Legendarily
+      from Qianlong incognito; became standard when receiving tea (Guangdong Folk
+      Customs, 1993).\r\n\u2022 Lid-propping refill: Placing lid on pot spout signals
+      server\u2014subtle communication.\r\n\r\n2. Business Civilization Microcosm\r\nMing-ROC
+      teahouses were primary venues for trade talks/guild meetings (e.g., Thirteen
+      Hongs merchants at Wenyuan Teahouse). Dim sum consumption intertwined with
+      commerce.\r\nSource: Guangzhou History Records (2002/3): 1920s teahouses served
+      100K+ daily; 70% were merchants/artisans.\r\n\r\n3. Culinary Philosophy Embodiment\r\nPairing
+      logic: \"Tea cuts grease, dim sum fills stomachs\"\u2014e.g., fatty siu mai
+      with Pu'er; sweet lotus buns with chrysanthemum Pu'er. Reflects TCM \"hot-cold
+      balance.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1329464947535872
+    m_Localized: "1. Classic \"Two Pieces\"\r\n\u2022 Har Gow (shrimp dumpling):
+      Early 1900s; translucent wheat starch skin. Cited in 1937 Guangzhou Bamboo
+      Branch Songs: \"Guests vie for shrimp dumplings, siu mai.\"\r\n\u2022 Char
+      Siu Bao: Ming Yang Xiao Lu recorded \"steamed buns with meat.\" Qing evolved
+      to \"smiling\" open-top shape, symbolizing \"rising fortune.\"\r\n\r\n2. Tea
+      Pairing Logic\r\n\u2022 Ripe Pu'er: With roast meats/greasy dim sum to cut
+      oil (History of Guangdong Tea, 1995).\r\n\u2022 Tieguanyin: With seafood dim
+      sum to enhance umami, remove fishiness.\r\n\u2022 Chrysanthemum Pu'er: Autumn/winter;
+      clears heat, moistens dryness."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1329706606555136
+    m_Localized: '1. ICH Protection & Innovation
+
+      2014: "Cantonese Morning
+      Tea" became China ICH. Tao Tao Ju, Guangzhou Restaurant, Lin Heung designated
+      heritage bases (MCT announcement). Modern creations (e.g., "molecular har gow,"
+      "bird''s nest egg tart") coexist with "Four Heavenly Kings" staples (har gow,
+      siu mai, char siu bao, egg tart).
+
+
+
+      2. Global Spread
+
+      19th-century
+      diaspora brought it to SE Asia/Europe/America. NYC/London teahouses preserve
+      "One Cup Two Pieces" as cultural identity symbol.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1438390363910144
+    m_Localized: Basic vocabulary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1447537188827136
+    m_Localized: I. Price Negotiation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451187806171136
+    m_Localized: 1. What's the quote for this [tea]?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451443411251200
+    m_Localized: "2. [1,600] is still high\u2014could you go lower?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451524474564608
+    m_Localized: 3. Could you give a [5%] discount?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451592615227392
+    m_Localized: 4. Could we split the [tea] delivery into two shipments?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451772924162048
+    m_Localized: 5. Does the price include [freight]?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451835029221376
+    m_Localized: 6. At [1,200] USD/jin, we'd consider ordering 1,000 jin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1451946249580544
+    m_Localized: 7. We can lower by [200 yuan] at most.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452131876892672
+    m_Localized: "8. Sorry, [1,600] is our bottom price\u2014can't go lower."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452405249044480
+    m_Localized: II. Delivery & Payment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452517488619520
+    m_Localized: 1. What are your specific requirements for [delivery time]?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452614624505856
+    m_Localized: 2. Can you deliver by [early August]?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452721134661632
+    m_Localized: 3. Adjusting production plans/increasing output immediately is difficult/not
+      easy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452898574692352
+    m_Localized: 5. Our requirement for [payment method] is...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452995651858432
+    m_Localized: 6. We request [30%] advance payment by T/T, balance by L/C.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453098072567808
+    m_Localized: 7. I can wire the [30%] advance via [Citibank USA].
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453223574532096
+    m_Localized: 8. For the balance, could we use [installment payment]?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453546716295168
+    m_Localized: III. Contract Review
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453637128712192
+    m_Localized: "1. Here's your [contract]\u2014please review."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453704174661632
+    m_Localized: '2. A minor issue: For [delivery time], I have... but it says...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453798903017472
+    m_Localized: "3. Thanks! [Delivery time] is critical\u2014I want no errors."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1453910123376640
+    m_Localized: "4. Revised\u2014please check. Any [other issues]?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464815850647552
+    m_Localized: Procedures and precautions for signing contracts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1464967034335232
+    m_Localized: Common misunderstandings and solutions in contract writing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1465100744552448
+    m_Localized: Reference to model contracts and examples
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1466839837208576
+    m_Localized: "1. Business Contract Concepts\r\n\u2022 Interest-driven: Core economic
+      benefits (e.g., goods delivery/payment).\r\n\u2022 Adversarial: Balancing differing
+      positions (e.g., supplier advance payment vs. buyer payment on delivery).\r\n\u2022
+      Equitable: Win-win pursuit (e.g., \"Buyer \u2191order \u2192 Supplier 10% discount\").\r\n\r\n2.
+      Basic Structure\r\n\u2022 Preamble: Title, number, date/location, parties'
+      legal names/addresses.\r\n\u2022 Body: Key clauses\u2014\r\n- Subject matter:
+      Item name/specs/quantity (\"Party A provides 10 units of Model A\").\r\n- Price:
+      Unit/total price, payment method (\"Total: \xA51M, paid in 3 installments\").\r\n-
+      Performance: Delivery time/place/acceptance criteria (\"Party B delivers to
+      Party A's warehouse by Dec 31, 2024\").\r\n- Breach liability: Default scenarios/compensation
+      (\"Late payment: 0.05% daily penalty\").\r\n\u2022 End: Copies, annex validity,
+      signatures/seals.\r\n\r\n3. Clause Design Principles\r\n\u2022 Equal rights/obligations:
+      E.g., \"Party A pays on time; Party B delivers on time.\"\r\n\u2022 Unambiguous
+      language: Use data\u2014\"Delivery within 30 workdays after advance payment\"
+      not \"ASAP.\"\r\n\u2022 Risk prevention: Address obstacles\u2014\"Force majeure
+      exempts both parties.\"\r\n\r\n4. Key Clause Drafting\r\n\u2022 Quality: Acceptance
+      criteria (\"Complies with GB/T1234-2020\").\r\n\u2022 Packaging: Form/cost
+      bearer (\"Wooden crates; cost borne by Party B\").\r\n\u2022 Dispute resolution:
+      Jurisdiction (\"Disputes submitted to Guangzhou Arbitration Commission\")."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1467317031563264
+    m_Localized: "1. Signing Process\r\n1. Negotiation consensus (key terms: price/delivery).\r\n2.
+      Drafting by party/professional.\r\n3. Review/modification (focus: legality/interest
+      protection).\r\n4. Signing/filing: Authorized reps sign/seal; duplicate copies
+      stored.\r\n\r\n2. Legal Compliance\r\n\u2022 Capacity: Natural persons \u226518;
+      legal entities with valid business licenses.\r\n\u2022 Signing/sealing: Natural
+      persons sign/fingerprint; entities use official/seal.\r\n\u2022 Annex validity:
+      \"Annex [Technical Specs] is integral to this contract.\"\r\n\r\n3. Performance
+      Risk Control\r\n\u2022 Tracking: Log key milestones (\"Party B provides tracking
+      # within 24h of shipment\").\r\n\u2022 Change management: Written confirmation
+      for modifications (\"Delivery extended to Jan 15, 2025 by mutual consent\").\r\n\u2022
+      Dispute handling: Negotiate first \u2192 arbitration/litigation per contract."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1467537328992256
+    m_Localized: "1. Common Pitfalls & Fixes\r\n\u2022 Vague payment: \"Party A pays
+      after receiving goods\" \u2192 \"Party A pays 90% via bank transfer within
+      10 workdays post-acceptance.\"\r\n\u2022 Missing breach terms: \"Default handled
+      per Contract Law\" \u2192 \"Late delivery: 0.1% daily penalty; >30 days late:
+      Party A may terminate + claim damages.\"\r\n\r\n2. Intercultural Contracts\r\n\u2022
+      Language: Bilingual versions; Chinese prevails.\r\n\u2022 Governing law: \"This
+      contract is governed by PRC law.\"\r\n\u2022 Cultural sensitivity: Avoid taboos
+      (e.g., pork/alcohol in Middle East)."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1467751645343744
+    m_Localized: "Sales Contract Template\r\nParty A (Seller): XX Co.\r\nParty B
+      (Buyer): YY Co.\r\n\r\nI. Subject Matter\r\nParty B buys 50 laptops (Model
+      A: Intel i5, 8GB RAM, 512GB SSD).\r\nUnit: \xA55,000; Total: \xA5250,000.\r\n\r\nII.
+      Delivery\r\nParty A delivers to Party B's warehouse (XX Road, Tianhe, Guangzhou)
+      by Dec 31, 2024.\r\nParty B inspects within 3 workdays per Annex I (Technical
+      Specs).\r\n\r\nIII. Payment\r\nParty B pays \xA550,000 advance within 5 workdays
+      of signing.\r\nBalance \xA5200,000 paid within 10 workdays post-acceptance.\r\n\r\nIV.
+      Breach Liability\r\nLate delivery: 0.05% daily penalty on undelivered value.\r\nLate
+      payment: 0.03% daily penalty on unpaid amount.\r\n\r\nV. Dispute Resolution\r\nNegotiate
+      first \u2192 Guangzhou Arbitration Commission if unresolved.\r\n\r\nVI. Miscellaneous\r\nEffective
+      upon signing/sealing; duplicate copies.\r\n\r\nParty A (Seal): XX Co.\r\nLegal
+      Rep (Signature): XXX\r\nDate: Dec 1, 2024\r\n\r\nParty B (Seal): YY Co.\r\nLegal
+      Rep (Signature): XXX\r\nDate: Dec 1, 2024"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1684607316553728
+    m_Localized: 'Six Dynasties
+
+      Book of Southern Qi: Account of Southeastern
+      Barbarians: "The southern barbarians, diverse tribes establishing island states,
+      offer treasures unmatched elsewhere. Mountains hide waters brimming with jewels.
+      Merchant ships arrive from afar, goods converge in the southern regions, enriching
+      Jiaozhou and Guangzhou, filling imperial coffers."
+
+      Yin Ju''s Ode to
+      Extraordinary Cloth and Preface: "In the second year of Taikang (281 CE), Teng
+      Hou, General of Annam and Governor of Guangzhou, governed the south. I, then
+      a minor official, witnessed the Great Qin (Rome) presenting treasures through
+      our province. Among exquisite wonders, fire-resistant cloth was exceptional."
+
+      Guangxiao
+      Temple is where Bodhidharma, founder of Zen Buddhism, taught.
+
+      Ge Hong''s
+      Biographies of Deities: Huang Chuping of Danxi herded sheep as a boy. Meeting
+      a Taoist, he attained enlightenment and became an immortal. (Today, Wong Tai
+      Sin temples in Guangzhou, Foshan, and Hong Kong''s Kowloon attract worshippers
+      and form bustling commercial districts for goods and fortune-telling.)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1685206934253568
+    m_Localized: 'Sui, Tang, and Five Dynasties
+
+      Huaisheng Mosque, built in
+      the High Tang, blends Chinese and West Asian architecture, documenting ancient
+      foreign trade and relations with the Arab Empire.
+
+      Tang Zhengxiong''s
+      Miscellaneous Records of Panyu: "By the sea, ghost markets convene at midnight
+      and disperse at cockcrow. Those who go often obtain exotic goods." (Note: This
+      refers to illegal black markets, associated with darkness.)
+
+      Hong Sheng
+      Wang is an epithet for the South Sea God Zhu Rong. The cult emerged in the
+      Sui dynasty; in 594 CE, Emperor Wen ordered a temple built near the sea at
+      Nanhai Town. In 751 CE, the Tang granted him the title "King of Broad Profits."
+      In 1041 CE, the Song renamed him "King of Vast Sagacity and Broad Profits."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1685450057084928
+    m_Localized: "\rCantonese merchant history and culture - Song and Yuan dynasties"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1685656408453120
+    m_Localized: 'Song and Yuan
+
+      Tianfei (Mazu): Legends date to the Song dynasty.
+      Lin Mo of Meizhou Island, Fujian, rescued people in distress during her lifetime.
+      After her ascension, temples were built in her honor. Southern Song Liao Pengfei''s
+      Record of Rebuilding Shunji Temple at Shengdun: "Surnamed Lin, from Meizhou.
+      She practiced shamanism, foretelling fortunes. After death, a temple was built
+      on the island... The following year (1123 CE), Lu Yundi envoys to Goryeo encountered
+      storms in the East Sea. Of eight ships, seven capsized. Only his ship saw a
+      goddess dancing on the mast, and it was saved. Questioning the crew, Li Zhen,
+      a devotee, explained. The court granted the temple title ''Shunji'' (Favorable
+      Aid)."
+
+      Song maritime trade linked Fujian and Guangdong. Min migrants
+      brought Mazu worship to Guangdong''s coast. As Liu Kezhuang noted: "Cantonese
+      revere Mazu no less than Putian people."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1685898554011648
+    m_Localized: Cantonese Commercial History and Culture - Ming Dynasty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686076216340480
+    m_Localized: "Ming\r\nQu Dajun's New Accounts of Guangdong: \"Cantonese worship
+      Red Emperor (Chidi) and Black Emperor (Heidi). Black Emperor governs the North
+      Pole and South Sea. South Sea's waters originate from the North Pole\u2014source
+      and outflow. We worship Chidi for managing the outflow and Heidi for controlling
+      the source. Guangdong is a water realm; people thrive between salt tides and
+      fresh tides. Unlike turtles and serpents, they transform. People credit Chidi,
+      unaware of Heidi's virtue. Every household worships\u2014ritually improper,
+      but this is how Cantonese honor origins.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686410305236992
+    m_Localized: Cantonese Commercial History and Culture - Qing Dynasty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1686712341262336
+    m_Localized: 'Qing
+
+      In Cantonese homes, ancestral tablets, God of Wealth,
+      Guanyin, Guan Yu, door gods, kitchen god, even a red "fortune" character or
+      a golden ingot all receive incense and offerings.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1689090209640448
+    m_Localized: Guangzhou has always been a famous flower - Qin and Han dynasties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1689428748693504
+    m_Localized: "Records of the Plants of the South under \"Yasemin\" quotes Lu
+      Jia's Travel Notes of Nanyue: \"In Nanyue, grains are bland, flowers lack fragrance\u2014only
+      these two flowers (Yasemin and Molihua) are exceptionally fragrant. Transplanted
+      from foreign lands, they adapt without changing, unlike oranges turning bitter
+      north of the Huai River. Local women thread colored strings through their hearts
+      to wear as ornaments.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1689647649419264
+    m_Localized: Guangzhou has always been a famous flower - Six Dynasties dynasties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1689914994356224
+    m_Localized: "Records of the Plants of the South Vol.1:\r\nYasemin and Molihua
+      were transplanted from Western regions to the South Sea by foreigners. Southerners,
+      enamored by their fragrance, cultivated them widely. Lu Jia's Travel Notes
+      of Nanyue: \"In Nanyue, grains are bland, flowers lack fragrance\u2014only
+      these two are fragrant. Transplanted from foreign lands, they adapt without
+      changing, unlike oranges turning bitter...\" Women thread colored silk through
+      their hearts for ornaments.\r\nMolihua resembles white roses but is more fragrant
+      than Yasemin.\r\nCardamom flowers: Seedlings like reeds, leaves like ginger,
+      flowers in spikes. Buds reddish, spike tips darken as leaves unfurl and blooms
+      emerge. Traditionally consumed to dispel gas, dissolve phlegm, and enhance
+      alcohol tolerance. In 281 CE, Jiaozhou presented a basket; the emperor verified
+      its efficacy and gifted it to ministers.\r\nGalangal flowers: Stems and leaves
+      resemble ginger; roots inedible. Flowers emerge between leaves as soft red
+      wheat-like spikes. Decoctions treat chills effectively. Native to Jiuzhen and
+      Jiaozhi.\r\nCrane grass: A vine with dust-colored, pale purple flowers. Willow-like
+      short leaves. Blooms in summer, shaped like flying cranes with complete beaks,
+      wings, tails, and feet. Native to South Sea. Believed to be an aphrodisiac;
+      insects on it metamorphose into reddish-yellow butterflies. Women keep them
+      as \"charm butterflies\" to win husbands' affection.\r\nBeautiful flowers:
+      Water lily resembles lotus but has purple, thornless stems. Water banana resembles
+      daylilies, purple or yellow. During Sun Xiu's reign (258-264 CE), envoys failed
+      to obtain them but brought paintings."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690220226441216
+    m_Localized: Guangzhou has always been a famous flower - Sui, Tang, and Five
+      Dynasties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690363940073472
+    m_Localized: Guangzhou has always been a famous flower - Song and Yuan dynasties
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1690710557356032
+    m_Localized: "Su Shi's Poem on Pujian Temple, Guangzhou: \"Now only flowers smile,
+      mocking Qin Shi Huang's quest for immortality.\"\r\nLiu Kezhuang's Ten Impromptu
+      Poems IV: \"Dominating white blooms, plucked to cool summer's heat. In the
+      land of Suxin, even Xun Yu's famed fragrance pales.\"\r\nNorthern Song Su Shen's
+      Poem on Viewing Sugar Palm Trees at Puxian Pavilion with Mei Zhi: \"Cantonese
+      merchants transplanted them westward\u2014gnarled trunks witness how many autumns!
+      Honored by day, I return to admire them; next visit, I'll roam with Red Pine
+      Immortals.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1691011968430080
+    m_Localized: Guangzhou has always been a famous flower - Ming Dynasty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1691138103734272
+    m_Localized: "Li Suiqiu's Ode to Suxin: \"Ascend Yangcheng, gaze west: emerald
+      fields unfurl\u2014not pearls woven by rain, but fragrance drifting like smoke.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1691349064642560
+    m_Localized: Guangzhou has always been a famous flower - Qing Dynasty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1691495064170496
+    m_Localized: "Qu Dajun's Guangzhou Bamboo Branch Song: \"Hibiscus too is Fusang\u2014each
+      bloom aflame like sea-clouds. Worn daily by southern maidens in their hair,
+      slanting on every head.\"\r\nWang Shizhen's Six Guangzhou Bamboo Branch Songs
+      II: \"Plum blossoms near spring's end, hibiscus and peach urge them on. Apricots
+      and loquats flood markets; jade plates hold bayberries in March.\"\r\nHuang
+      Zigao's Flower Field Bamboo Branch Song: \"Regret not dwelling in Zhuangtou
+      Village\u2014clothed and fed by Suxin flowers all my life.\"\r\nL\xFC Jian's
+      Panyu Bamboo Branch Song: \"In March, flower sellers cross the river\u2014east
+      bank fewer than west. By Suxin fields, who mourns? Only pearl girls sigh in
+      vain.\"\r\nLi Huanpu's Pearl River Bamboo Branch Song: \"Today's perfect for
+      Huadi strolls\u2014roses bloom amidst crape myrtles.\"\r\nZhang Qiucha's Yangcheng
+      Bamboo Branch Song: \"Jasmine, roses, and cherry blossoms\u2014basket carriers
+      cry their wares. Butterflies chase in pairs, following sellers into the city.\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1692874809831424
+    m_Localized: 'Duan Chengshi''s Miscellaneous Morsels from Youyang writes "Yasemin"
+      as "Yesemi": "Yesemi comes from Fulin (Byzantium) and Persia. Stems 7-8 feet
+      tall; plum-like leaves. Flowers bloom year-round, five-petaled, white, seedless.
+      When blooming, fragrance fills fields, similar to Lingnan''s camphor. Westerners
+      press its flowers into fragrant oil."
+
+      The name "Suxin" emerged during
+      the Five Dynasties. Compendium of Fragrant Flowers quotes Guishan Chronicles:
+      "A maid of Prince Liu named Suxin was buried here; this flower grew on her
+      grave." Guangzhou Chronicles cites Southern Expedition Records: "A beauty was
+      buried here (west of the city) during Liu Yin''s reign; the fragrance remains
+      unique." Guangzhou Chronicles: "Flower field people cultivate Suxin. As its
+      spirit is a Southern Han beauty, only women may pick it."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1694727685566464
+    m_Localized: The embodiment of Cantonese tea culture in business communication
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1694928726945792
+    m_Localized: Guangzhou Style
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1695149028569088
+    m_Localized: "Teaware Placement: Large teapot, cups on table; electric kettle
+      usually off-table.\r\nTea & Water: Oolong teas (e.g., Tieguanyin), Pu'er; tap/bottled
+      water.\r\nBrewing: Boil water \u2192 add tea leaves to pot \u2192 pour boiling
+      water over leaves.\r\nServing: Pour tea into cups to 80% capacity.\r\nEtiquette:
+      Guests tap table twice with index and middle fingers when host pours tea. Other
+      customs relaxed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1695329618522112
+    m_Localized: Chaozhou Style
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1695425764552704
+    m_Localized: "Teaware Placement: Electric kettle, small teapot, thimble-sized
+      cups, tray, charcoal/electric stove on table to maintain water temperature.\r\nTea
+      & Water: Oolong teas (e.g., Baiye Dancong, Shuixian, Huangdan). Preferred water:
+      settled \"jar-core water,\" rainwater, snow water, spring/well water.\r\nBrewing:
+      Boil water \u2192 scald teapot/cups \u2192 fill teapot 80% with leaves. \"Skim
+      foam\": Remove impurities after pouring water. \"Lid shower\": Pour boiling
+      water over teapot to enhance infusion.\r\nServing: \"Guanyu Patrols\": Pour
+      tea in circular motion over cups for uniform strength. \"Hanxin Commands\":
+      Distribute last drops evenly. Scald cups after each round.\r\nEtiquette: Host
+      places all teaware near guests, accompanying throughout. Juniors stand to thank
+      host, offer tea to others first, then sip slowly (palm outward), never taking
+      center cup."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1695815776104448
+    m_Localized: I. Historical Evolution & Cantonese Merchants' Rise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1695975482617856
+    m_Localized: "1. Qin-Han Foundation (Xuwen/Hepu Ports)\r\nPost-Nanyue conquest
+      (111 BCE), Han Wudi launched official routes: Xuwen (Zhanjiang), Hepu (Guangxi)
+      \u2192 SE Asia \u2192 India (Huangzhi) \u2192 Sri Lanka. Traded silk for rhino
+      horn, ivory, pearls.\r\nPanyu (Guangzhou), a riverine hub, became inland goods
+      center. Records of the Grand Historian notes: \"Panyu gathers pearls, rhinos,
+      tortoiseshell, fruits, cloth.\" Central China merchants thrived here.\r\n2.
+      Six Dynasties-Tang (Guangzhou-centric)\r\nThree Kingdoms: Wu developed shipbuilding;
+      Guangzhou built oceangoing vessels (600-700 crew, 1000+ tons) with watertight
+      bulkrooms (proven by 1955 Wu pottery boat model).\r\nTang's \"Guangzhou Foreign
+      Sea Route\": Direct to Persian Gulf (14,000 km via 100+ countries)\u2014world's
+      longest then. 4,000+ Arab ships/year; foreign quarter (Fanfang) hosted 100,000+.\r\n3.
+      Song-Yuan Shift (Guangzhou-Quanzhou rivalry)\r\n971 CE: Song established China's
+      first Maritime Trade Office (Shibosi) in Guangzhou, enacting pioneering trade
+      law Yuanfeng Guangzhou Shibosi Regulations.\r\nYuan: Quanzhou became #1 port,
+      Guangzhou #2. Cantonese merchants leveraged Pearl Delta crafts (Foshan ceramics,
+      Guang satin) for trade dominance.\r\n\r\n4. Ming-Qing \"Single Port Trade\"
+      (Cantonese Monopoly)\r\n1757: Qianlong restricted foreign trade to Guangzhou.
+      Thirteen Hongs monopolized global trade:\r\n\u2022 Pan Zhencheng (Tongwen Hong):
+      Partnered with Swedish East India Co., pioneered letters of credit.\r\n\u2022
+      Wu Bingjian (Ewo Hong): Among world's richest (26M+ silver dollars).\r\nTrade
+      model: Export silk/porcelain/tea \u2192 Import American silver (400M taels
+      to Guangzhou, 1700-1830). Customs revenue = 30% of national total (\"Imperial
+      Southern Treasury\")."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1696311970656256
+    m_Localized: II. Cantonese Merchant Traits & Networks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1696420120784896
+    m_Localized: "1. Geographic-Clan Ties\r\nCantonese (Guangzhou/Foshan) & Teochew
+      (Zhanglin Port) groups built transnational supply chains via kinship.\r\nExample:
+      Qing-era Teochew merchants in Vietnam created \"allied firms\" covering urban-rural
+      wholesale/retail across China-Vietnam-Cambodia.\r\n\r\n2. Risk Management &
+      Innovation\r\nInsurance: 18th-century \"maritime insurance silver\"\u2014shipowners
+      pooled funds against sinking risks.\r\nFinance: Thirteen Hongs issued \"silver
+      notes\" (early international drafts) replacing bullion.\r\n\r\n3. Southeast
+      Asian Colonial Role\r\n18th century: Cantonese dominated Malacca tin trade;
+      Chinese-Filipino merchants (80% Fujian-Guangdong origin) monopolized China-Manila
+      routes, connecting Spanish galleons exporting Guang satin to Mexico."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1696643194843136
+    m_Localized: III. Trade Goods & Technology Transfer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1696732319608832
+    m_Localized: "1. Ceramics Trade\r\nContribution: Foshan Nanhai Kiln's \"Guangdong
+      Jars\" (brown-glazed) for wine/spice export.\r\nEvidence: \"Nanhai I\" wreck
+      jars marked \"\u9152\u58B1\" (wine vessel) match Nanyue Palace findings \u2192
+      Guangzhou distribution hub.\r\n\r\n2. Textile Revolution\r\nContribution: Guang
+      satin used kesi technique (150 warp threads/cm\xB2). Gold-woven brocade popular
+      with Persian elites.\r\nEvidence: Tang-era fragments in Sh\u014Ds\u014Din Repository
+      (Japan); Arab texts: \"Guangzhou gold brocade like rosy clouds.\"\r\n\r\n3.
+      Agricultural Imports\r\nContribution: Introduced Champa rice (Vietnam), jackfruit
+      (India) to Pearl Delta.\r\nEvidence: Strange Things of Lingnan: \"Cantonese
+      merchants brought rice from Funan, yielding two harvests/year.\"\r\n\r\n4.
+      Shipbuilding Tech\r\nContribution: \"Guang ships\" with watertight bulkheads
+      + rigid sails \u2192 30% more cargo than Arab ships.\r\nEvidence: Song Pingzhou
+      Ketan: \"Navigators know geography: stars at night, sun by day, compass when
+      cloudy\"\u2014earliest compass navigation record."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1697121265807360
+    m_Localized: IV. Socio-Cultural Impact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1697207043518464
+    m_Localized: "1. Institutional Innovation\r\nMaritime Trade Office: Tang's \"Supervisor
+      of Foreign Ships\" evolved into Song's tariff system (taxation, state procurement,
+      monopolies).\r\nGonghang System: Thirteen Hongs acted as diplomats\u2014handling
+      foreign lawsuits, document transfers.\r\n\r\n2. Religious-Artistic Fusion\r\nHuaisheng
+      Mosque (627 CE): China's earliest mosque; minaret doubled as lighthouse.\r\nGuangcai
+      Porcelain: Jingdezhen white body + Western enamels \u2192 custom coat-of-arms
+      porcelain for Europe.\r\n\r\n3. Global City DNA\r\nTang Fanfang: Foreigner
+      self-governance (marriage, temple-building allowed).\r\nBeijing Road excavations:
+      Han-Tang roads + Song Shibosi ruins \u2192 \"Millennium Commercial Capital\"
+      continuity."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1698963903246336
+    m_Localized: Strategic Positioning and Historical Heritage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1699091825324032
+    m_Localized: "Strategic Positioning & Heritage\r\n1. Maritime Silk Road Priority\r\nLeveraging
+      geographic and diaspora networks, Cantonese merchants prioritize the 21st-Century
+      Maritime Silk Road. South Sea route economies' scale, infrastructure needs,
+      and market potential surpass land routes, aligning with Guangdong's export-oriented
+      manufacturing.\r\nHistorical DNA: As ancient Maritime Silk Road origin (Guangzhou/Xuwen),
+      Guangdong built ASEAN trade-cultural ties via \"Nanyang\" migrant networks.
+      Modern merchants deepen regional cooperation along this path.\r\n\r\n2. Dual-Circulation
+      Hub\r\nDomestic-Global Linkage: Based in GBA, merchants connect inland production
+      to global markets via ports (Guangzhou/Yantian) and intermodal transport (e.g.,
+      China-Europe freight, sea-rail). Example: 150 of Guangzhou Port's 174 int'l
+      routes serve B&R countries; 2025 Q1 foreign trade container volume \u219122.48%
+      YoY.\r\nDiaspora Empowerment: 2025 \"Global Guangdong Trade Alliance\" integrates
+      60+ countries' Chinese business resources, supporting market access, localization,
+      and risk mitigation for SMEs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2393846302658560
+    m_Localized: 'Characters: You are Johnson; assistant is Molly. As business reps,
+      you visit China during the 2025 Canton Fair. After preliminary agreements at
+      the fair, you toured their tea gardens/factory. Main task: tea procurement
+      & price negotiation.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2394291402199040
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2399248130002944
+    m_Localized: '<rotate=270>Goal</rotate> '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2400324782673920
+    m_Localized: "Understanding Business Attire Etiquette: \r1. Wear formal attire
+      on formal occasions. \r2. \"Three Color Principle\" - No more than three colors
+      in your entire outfit. \r3. \"Three Consistency Law\" - The colors of the belt,
+      shoes, and briefcase should be uniform."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2402064311537664
+    m_Localized: 'Characters: Your name is Johnson, and your assistant''s name is
+      Molly. You are company business representatives visiting China for business
+      investigation and negotiations during the 2025 Canton Fair. Prior to this,
+      you had participated in the exhibition and reached a preliminary cooperation
+      intention with a company. After the Canton Fair, you visited their tea garden
+      and factory. This task mainly involves tea procurement and price negotiations.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2403533236490240
+    m_Localized: Last
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2422565854240768
+    m_Localized: Today, you negotiate autumn orders. Draft an invitation for Mr.
+      Wang to sign contracts at Room 708, 7F, GuangShen Building, 8:00 AM, June 28,
+      2025.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2422989151789056
+    m_Localized: Fill out the invitation letter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2424771634520064
+    m_Localized: 'Inviter:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2425677528686592
+    m_Localized: "Date\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2425978952343552
+    m_Localized: "Location\uFF1A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2426635495137280
+    m_Localized: Invitee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2429476565671936
+    m_Localized: You are Molly. En route to meeting with partners. Select your seat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2429962190577664
+    m_Localized: Reception etiquette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2435319893843968
+    m_Localized: Choose a greeting for the meeting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2435989250236416
+    m_Localized: Please choose a way to greet when meeting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2470105681223680
+    m_Localized: Handshake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2470193136656384
+    m_Localized: Embrace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2470386510848000
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2484940800253952
+    m_Localized: "Objective: Handshakes are crucial first-meeting rituals\u2014symbolizing
+      trust, respect, professionalism, and cooperation sincerity."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2487769153658880
+    m_Localized: In business etiquette, it is very important to meet for the first
+      time, to show your trust and respect, and to demonstrate professionalism and
+      sincerity of cooperation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3965999568117760
+    m_Localized: Yue merchants, also known as Guangdong merchants, are known for
+      their spirit of "daring to be the first and being practical and enterprising."
+      They rely on Guangdong's unique geographical position and have been active
+      in the Maritime Silk Road since the Ming and Qing dynasties, with trade reaching
+      around the globe. Yue merchants are good at seizing business opportunities
+      and are courageous in exploration, forming a unique business culture. Since
+      modern times, they have established industries both domestically and internationally,
+      making significant contributions to economic development and representing Lingnan
+      culture.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3966208222158848
+    m_Localized: Guangzhou, known as the 'Flower City' due to its warm and humid
+      subtropical climate, has a rich variety of flowers. The city flower is the
+      cotton rose hibiscus, which blooms in spring with bright red colors, symbolizing
+      heroism. The jasmine exudes a strong fragrance in summer, while the osmanthus
+      offers a rich aroma in autumn, and the flame tree bursts into brilliant flames
+      in summer. Additionally, bougainvillea and bauhinia are also commonly found
+      on the streets, adding vibrant colors to the city.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3966344381849600
+    m_Localized: Guangzhou, as an important starting point of the Maritime Silk Road,
+      has a long and profound historical status. As early as the Qin and Han Dynasties,
+      Guangzhou (then called Panyu) was already the core port for trade between China
+      and the countries of the South China Sea. During the reign of Emperor Wu of
+      the Han Dynasty, Guangzhou transported silk, ceramics, and other goods via
+      maritime routes to India and Sri Lanka, becoming one of the earliest starting
+      points. In the Sui and Tang Dynasties, Guangzhou established a Maritime Trade
+      Office to manage overseas trade, with its trade routes extending to the Persian
+      Gulf and East Africa, becoming the busiest trade center of that time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3966476368207872
+    m_Localized: As the core promoters of the ancient Maritime Silk Road in China,
+      Guangdong merchants have been engaging in trade activities since the Qin and
+      Han dynasties. Guangzhou (formerly known as Panyu) is the main starting point
+      and birthplace of the Maritime Silk Road, having already become a distribution
+      center for rare items such as pearls, rhinoceros horn, and ivory during the
+      Western Han dynasty. The discovery of a Persian silver box and African ivory
+      in the tomb of the Nanyue King serves as clear evidence. During the Tang dynasty,
+      Guangzhou opened the world's longest maritime trade route, connecting directly
+      to the Persian Gulf; under the Qing dynasty's 'Single Port Trade' policy, Guangdong
+      merchants monopolized national foreign trade through the Thirteen Hongs, maintaining
+      a thousand years of prosperity. Although Xuwen Port on the Leizhou Peninsula
+      was one of the early departure ports in the Han dynasty, Guangzhou has always
+      remained the core of trade and the foundation for the development of Guangdong
+      merchants.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3966662352035840
+    m_Localized: In the advancement of the modern Belt and Road initiative, Guangdong
+      merchants have continued the commercial genes of the ancient Maritime Silk
+      Road, becoming an important practical force. Guangzhou, as the place of inheritance
+      of ancient Panyu, remains a core hub of the Belt and Road. Here, Guangdong
+      merchants build cross-border trade networks, just like the gathering of pearls
+      and ivory in ancient times; now they export home appliances, electronics, and
+      other products to countries along the route. The continuous growth of container
+      throughput at Nansha Port is a testament to this heritage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3967719455055872
+    m_Localized: 'The concept and connotation of "One Cup and Two Delicacies": It
+      is the core embodiment of Cantonese tea culture. "One Cup" refers to a pot
+      of tea, commonly served in a covered bowl or a purple clay pot; "Two Delicacies"
+      refers to the accompanying snacks, which do not strictly limit the quantity
+      but are more of a general term for the standard pairing at morning tea. Essentially,
+      it represents a lifestyle of combining tea and snacks.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3967918298619904
+    m_Localized: 'Historical Origins and Development Context: The origins are related
+      to the historical environment of Guangzhou as a trading port. From the late
+      Qing to the early Republic period, the "Erli Guan" (Two Li Pavilion) first
+      emerged, providing cheap tea and simple snacks for dock workers and merchants;
+      subsequently, as citizens'' living standards improved, tea houses with better
+      decor appeared, integrating tea drinking, snacks, and socializing, and "one
+      cup and two pieces" gradually became a customary lifestyle habit.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3968062293270528
+    m_Localized: 'Cultural connotation and social function: It embodies the ''slow
+      life'' attitude of the people of Guangzhou, which is not only a mode of eating
+      behavior but also serves as a social medium. Regular tea drinkers can sit for
+      a long time in tea houses chatting and reading the newspaper, while young people
+      can communicate here. This practice is a way to maintain relationships and
+      convey information, reflecting the practicality and enjoyment-loving nature
+      of the people of Guangzhou.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3968218132635648
+    m_Localized: 'Analysis of typical dim sum and tea: Dim sum emphasizes freshness,
+      tenderness, and refinement, such as shrimp dumplings with thin skin and fresh
+      filling, siu mai with a smooth texture, and rice rolls that are soft and flavorful,
+      along with char siu bao and egg tarts; tea is primarily for cutting through
+      greasiness, with Pu-erh tea balancing rich flavors, Tieguanyin paired with
+      fresh dim sum being suitable, and chrysanthemum Pu-erh favored by young people,
+      which also has the traditional custom of ''washing the tea pot.'''
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3969011778838528
+    m_Localized: 'Modern inheritance and cultural influence: Traditional teahouses
+      preserve the old flavors, while chain tea restaurants and new-style teahouses
+      innovate forms, introducing new-style dim sum and combinations; they have become
+      a cultural emblem of Cantonese culture, attracting tourists to experience it,
+      frequently appearing in films and television dramas, and are part of the identity
+      of Guangzhou people, allowing more people to feel the vibrant atmosphere of
+      Cantonese culture.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3969272068956160
+    m_Localized: 'The core is the 7C principle: Clarity to avoid ambiguous statements,
+      Conciseness to eliminate redundant information, Concreteness to support with
+      data and examples, Correctness to ensure the information is true, Coherence
+      to maintain a logical structure, Completeness to cover key elements, and Courtesy
+      to respect the other party''s position. At the same time, it is important to
+      maintain a goal-oriented approach, clearly identifying whether the communication
+      is focused on information transmission, persuasion and influence, problem-solving,
+      or relationship maintenance.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3969462586826752
+    m_Localized: Full engagement requires focused listening and stopping other work.
+      Demonstrating participation through nodding and eye contact is important, as
+      well as maintaining objectivity to avoid preconceived judgments. Encouragement
+      techniques include guiding expression with heuristic questioning, digging into
+      needs with open-ended questions, restating key points to confirm understanding,
+      and remaining silent to allow for thinking space.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3969637598355456
+    m_Localized: In the preparation stage, one needs to analyze the audience's identity
+      to adjust the content, choosing topics based on their interests. During expression,
+      differentiate the use of professional or colloquial language based on the occasion,
+      convey key information when attention is focused, replace negative statements
+      with positive wording, and emphasize core content through changes in intonation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3969832268587008
+    m_Localized: Negotiation is the process in which economic entities negotiate
+      the terms of a transaction, characterized by interests orientation, opposing
+      positions, and the pursuit of fairness. Basic principles include distinguishing
+      between issues and personal feelings, focusing on substantive needs rather
+      than superficial positions, and achieving a win-win result through the exchange
+      of benefits.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3969976527478784
+    m_Localized: The main obstacles include language ambiguity, non-verbal taboos,
+      and value conflicts. Coping strategies should use standardized language to
+      avoid slang, adapt to different cultural concepts of time and spatial distance,
+      prioritize building trust in collectivist cultures, and avoid sensitive topics
+      related to religion and politics.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3970111084945408
+    m_Localized: In the initial stage, the atmosphere can be cultivated using a collaborative,
+      straightforward, or aggressive style to fit the relationship between both parties.
+      During the probing phase, targeted questions can be used to gather demands,
+      observing body language to assess attitudes, and proposing hypothetical conditions
+      to explore the flexibility in negotiations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3970186410450944
+    m_Localized: Seating arrangements should be determined based on the direction
+      of the door to identify the host and guest positions, with interpreter positions
+      adjusted according to cultural contexts in foreign-related occasions. The small
+      talk design includes ice-breaking elements related to geographical items, while
+      the value layer deepens the industry resonance, and the transition layer naturally
+      introduces the agenda. It is important to avoid a sense of pressure from seating
+      arrangements and topics that may cause cultural offense, and to immediately
+      apologize and make adjustments in case of mistakes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3970757053898752
+    m_Localized: 'Business negotiation is the process in which economic entities
+      negotiate on the distribution of interests to achieve transaction goals. Its
+      essence has three main characteristics: interest orientation, positional antagonism,
+      and result fairness. The core principle requires distinguishing between issues
+      and personal emotions, focusing on the substantial needs of both parties rather
+      than superficial positions, and creating a win-win situation through resource
+      exchange.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3970847621505024
+    m_Localized: 'The signing of the contract requires a four-step process: offer,
+      acceptance, negotiation of terms, and legal validity review. Key considerations
+      include confirming the qualifications of the signing parties, verifying the
+      authenticity of authorization documents; checking each key clause such as amounts
+      and delivery periods; and having the legal department review before affixing
+      the seal to avoid missing dispute resolution clauses.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3970925723639808
+    m_Localized: Common mistakes include ambiguous terms that lead to misunderstandings,
+      unclear division of responsibilities resulting in evasion, and neglecting force
+      majeure clauses that pose risks. Solutions require the use of standardized
+      legal terminology, quantifying the rights and obligations of both parties;
+      supplementing breach handling details, clarifying the arbitration institution;
+      and important clauses needing dual review by lawyers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3970995529441280
+    m_Localized: 'The template provides a basic framework but requires in-depth customization,
+      for example, the procurement contract needs to add quality inspection standards,
+      and the technical agreement should include acceptance procedures. When referring
+      to examples, one must pay attention to: deleting redundant clauses in the template,
+      adjusting payment nodes according to the nature of the transaction, and ensuring
+      that foreign-related contracts have both Chinese and English versions with
+      legal effectiveness.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

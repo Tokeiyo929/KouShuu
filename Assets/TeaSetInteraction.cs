@@ -1,0 +1,376 @@
+using UnityEngine;
+
+namespace QFramework.Example
+{
+    public class TeaSetInteraction : MonoBehaviour
+    {
+        // 添加静态变量来跟踪全局检视状态
+        private static bool isAnyObjectInspecting = false;
+        private static TeaSetInteraction currentInspectingObject = null;
+        
+        private bool isInspecting = false;
+        private Vector3 originalPosition;
+        private Quaternion originalRotation;
+        private Transform originalParent;
+        private Transform inspectionArea;
+        
+        // 存储原始组件引用
+        private SkinnedMeshRenderer originalSkinnedMeshRenderer;
+        private MeshFilter originalMeshFilter;
+        private MeshRenderer originalMeshRenderer;
+        private Mesh originalMesh;
+        private Material[] originalMaterials;
+        
+        private void Start()
+        {
+           
+        }
+
+        private void OnEnable()
+        {
+            // 创建独立的检视区域，而不是修改父对象
+            CreateInspectionArea();
+            
+            // 确保物体有必要的组件
+            EnsureRequiredComponents();
+            
+            // 保存原始组件引用
+            SaveOriginalComponents();
+            
+            Debug.Log($"TeaSetInteraction initialized on {gameObject.name}");
+        }
+
+        //组件禁用时，终止检视
+        private void OnDisable()
+        {
+            if(isInspecting)
+            {
+                ReturnToOriginalPosition();
+
+                //删除检视区域
+                Destroy(inspectionArea.gameObject);
+            }
+            // 禁用鼠标事件响应
+            enabled = false;
+        }
+        
+        private void SaveOriginalComponents()
+        {
+            // 保存原始组件引用
+            originalSkinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
+            originalMeshFilter = GetComponent<MeshFilter>();
+            originalMeshRenderer = GetComponent<MeshRenderer>();
+            
+            if (originalSkinnedMeshRenderer != null)
+            {
+                originalMesh = originalSkinnedMeshRenderer.sharedMesh;
+                originalMaterials = originalSkinnedMeshRenderer.materials;
+                Debug.Log($"保存了原始SkinnedMeshRenderer: {originalSkinnedMeshRenderer.name}");
+            }
+        }
+        
+        private void CreateInspectionArea()
+        {
+            // 创建一个独立的检视区域对象
+            GameObject inspectionAreaObj = new GameObject($"{gameObject.name}_InspectionArea");
+            inspectionArea = inspectionAreaObj.transform;
+            
+            // 将检视区域放置在茶具原位置的上方，使用世界坐标
+            Vector3 inspectionPosition = transform.position + Vector3.up * 0.15f;
+            inspectionArea.position = inspectionPosition;
+            
+            // 确保检视区域的位置在后续操作中保持稳定
+            inspectionAreaObj.name = $"{gameObject.name}_InspectionArea_Stable";
+            inspectionAreaObj.transform.position=new Vector3(2.25f,-5.5f,0.5f);
+            
+            Debug.Log($"Created inspection area at position: {inspectionArea.position}");
+            Debug.Log($"Original tea set position: {transform.position}");
+            Debug.Log($"Inspection area world position: {inspectionArea.position}");
+        }
+        
+        private void EnsureRequiredComponents()
+        {
+            // 确保有Collider用于射线检测
+            if (GetComponent<Collider>() == null)
+            {
+                Debug.LogWarning($"{gameObject.name} 缺少Collider组件，添加BoxCollider");
+                gameObject.AddComponent<BoxCollider>();
+            }
+        }
+        
+        private void Update()
+        {
+            HandleMouseDrag();
+        }
+        
+        /// <summary>
+        /// 处理鼠标点击事件
+        /// </summary>
+        private void OnTeaSetClick()
+        {
+            // 检查是否有其他物体正在检视
+            if (isAnyObjectInspecting && currentInspectingObject != null && currentInspectingObject != this)
+            {
+                Debug.Log($"无法检视 {gameObject.name}，因为 {currentInspectingObject.gameObject.name} 正在检视中");
+                return;
+            }
+            
+            if (isInspecting)
+            {
+                originalMeshRenderer.enabled = false;
+                gameObject.tag="TeaSet";
+                // 如果正在检视，则返回原位置
+                ReturnToOriginalPosition();
+            }
+            else
+            {
+                // 如果不在检视，则开始检视
+                originalMeshRenderer.enabled = true;
+                gameObject.tag="Untagged";
+                if (originalSkinnedMeshRenderer != null)
+                {
+                    // 将SkinnedMeshRenderer转换为普通MeshRenderer以便检视
+                    Mesh bakedMesh = new Mesh();
+                    originalSkinnedMeshRenderer.BakeMesh(bakedMesh);
+                    
+                    // 确保有MeshFilter组件
+                    MeshFilter meshFilter = GetComponent<MeshFilter>();
+                    if (meshFilter == null)
+                    {
+                        meshFilter = gameObject.AddComponent<MeshFilter>();
+                    }
+                    meshFilter.mesh = bakedMesh;
+                    
+                    // 确保有MeshRenderer组件
+                    MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+                    if (meshRenderer == null)
+                    {
+                        meshRenderer = gameObject.AddComponent<MeshRenderer>();
+                    }
+                    meshRenderer.materials = originalMaterials;
+                    
+                    // 禁用SkinnedMeshRenderer
+                    originalSkinnedMeshRenderer.enabled = false;
+                    
+                    Debug.Log("已转换SkinnedMeshRenderer为普通MeshRenderer");
+                }
+
+                StartInspection();
+            }
+        }
+        
+        /// <summary>
+        /// 处理鼠标拖动事件
+        /// </summary>
+        private void HandleMouseDrag()
+        {
+            // 只在检视模式下响应右键拖动
+            if (isInspecting && Input.GetMouseButton(1)) // 右键拖动
+            {
+                float rotationSpeed = 2f; // 旋转速度
+                float rotX = Input.GetAxis("Mouse X") * rotationSpeed;
+                float rotY = Input.GetAxis("Mouse Y") * rotationSpeed;
+                
+                // 记录旋转前的位置和旋转
+                Vector3 positionBeforeRotation = transform.position;
+                Quaternion rotationBeforeRotation = transform.localRotation;
+                
+                // 使用更精确的旋转方式，围绕茶具自身的中心点旋转
+                // 计算茶具的几何中心
+                Vector3 objectCenter = GetObjectCenter();
+                
+                // 围绕茶具自身中心旋转，而不是检视区域
+                transform.RotateAround(objectCenter, Vector3.up, rotX);
+                transform.RotateAround(objectCenter, Vector3.right, rotY);
+                
+                // 检查位置是否发生变化
+                Vector3 positionAfterRotation = transform.position;
+                if (Vector3.Distance(positionBeforeRotation, positionAfterRotation) > 0.001f)
+                {
+                    Debug.LogWarning($"旋转后位置发生变化: 前={positionBeforeRotation}, 后={positionAfterRotation}");
+                    Debug.LogWarning($"检视区域位置: {inspectionArea.position}");
+                    Debug.LogWarning($"茶具本地位置: {transform.localPosition}");
+                    Debug.LogWarning($"茶具几何中心: {objectCenter}");
+                }
+                
+                Debug.Log($"旋转茶具: deltaX={rotX}, deltaY={rotY}, 当前旋转: {transform.localRotation.eulerAngles}");
+                Debug.Log($"茶具世界位置: {transform.position}, 本地位置: {transform.localPosition}");
+                Debug.Log($"茶具几何中心: {objectCenter}");
+            }
+        }
+        
+        /// <summary>
+        /// 获取茶具的几何中心
+        /// </summary>
+        private Vector3 GetObjectCenter()
+        {
+            // 如果有SkinnedMeshRenderer，尝试获取其边界中心
+            if (originalSkinnedMeshRenderer != null && originalSkinnedMeshRenderer.enabled)
+            {
+                return originalSkinnedMeshRenderer.bounds.center;
+            }
+            
+            // 如果有MeshRenderer，使用其边界中心
+            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+            if (meshRenderer != null)
+            {
+                return meshRenderer.bounds.center;
+            }
+            
+            // 如果有Collider，使用其边界中心
+            Collider collider = GetComponent<Collider>();
+            if (collider != null)
+            {
+                return collider.bounds.center;
+            }
+            
+            // 默认使用物体自身位置
+            return transform.position;
+        }
+        
+        /// <summary>
+        /// 鼠标按下事件 - 使用Unity内置的OnMouseDown
+        /// </summary>
+        private void OnMouseDown()
+        {
+            if (!enabled) return; // 检查组件是否启用
+            Debug.Log($"OnMouseDown: 左键点击茶具 {gameObject.name}");
+            OnTeaSetClick();
+        }
+
+        /// <summary>
+        /// 鼠标悬停时检测右键点击
+        /// </summary>
+        private void OnMouseOver()
+        {
+            if (!enabled) return; // 检查组件是否启用
+            
+            // 检测右键点击
+            if (Input.GetMouseButtonDown(1)) // 右键
+            {
+                // 检查是否有其他物体正在检视，如果有则不允许打开提示面板
+                if (isAnyObjectInspecting && currentInspectingObject != null && currentInspectingObject != this)
+                {
+                    Debug.Log($"无法为 {gameObject.name} 打开提示面板，因为 {currentInspectingObject.gameObject.name} 正在检视中");
+                    return;
+                }
+                
+                // 检查茶具是否在检视状态，如果是则不显示提示面板
+                if (isInspecting)
+                {
+                    Debug.Log($"茶具 {gameObject.name} 正在检视中，不显示提示面板");
+                    return;
+                }
+
+                Debug.Log($"右键点击茶具 {gameObject.name}");
+                // 右键点击时调用提示面板相关代码
+                Global.CurrentKeyword.Value = GameData.Instance.hintDatabase_SO.GetHint(gameObject.name, Global.CurrentLanguage.Value);
+                if(UIKit.GetPanel<UIHoverInfoPanel>()==null)
+                {
+                    UIKit.OpenPanel<UIHoverInfoPanel>(UILevel.PopUI, null, null, "UIPrefabs/UIHoverInfoPanel");
+                }
+            }
+        }
+        
+        // 开始检视模型
+        private void StartInspection()
+        {
+            Debug.Log("StartInspection");
+            isInspecting = true;
+            
+            // 设置全局检视状态
+            isAnyObjectInspecting = true;
+            currentInspectingObject = this;
+            
+            originalPosition = transform.position;
+            originalRotation = transform.rotation;
+            originalParent = transform.parent;
+            
+            // 移动到检视区域，使用世界坐标
+            transform.SetParent(inspectionArea);
+            // 直接设置到检视区域的世界坐标位置
+            transform.position = inspectionArea.position;
+            // 保持原始旋转，不要重置
+            // transform.localRotation = Quaternion.identity;
+
+            
+            Debug.Log($"Started inspecting {gameObject.name}");
+            Debug.Log($"Tea set moved to inspection area at: {transform.position}");
+            Debug.Log($"Inspection area position: {inspectionArea.position}");
+        }
+        
+        // 返回原位置
+        private void ReturnToOriginalPosition()
+        {
+            Debug.Log("ReturnToOriginalPosition");
+            isInspecting = false;
+            
+            // 清除全局检视状态
+            if (currentInspectingObject == this)
+            {
+                isAnyObjectInspecting = false;
+                currentInspectingObject = null;
+                Debug.Log("全局检视状态已清除");
+            }
+            
+            transform.SetParent(originalParent);
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
+            
+            // 恢复原始组件
+            if (originalSkinnedMeshRenderer != null)
+            {
+                // 重新启用SkinnedMeshRenderer
+                originalSkinnedMeshRenderer.enabled = true;
+                
+                // 移除临时添加的组件
+                MeshFilter tempMeshFilter = GetComponent<MeshFilter>();
+                if (tempMeshFilter != null && tempMeshFilter != originalMeshFilter)
+                {
+                    DestroyImmediate(tempMeshFilter);
+                }
+                
+                MeshRenderer tempMeshRenderer = GetComponent<MeshRenderer>();
+                if (tempMeshRenderer != null && tempMeshRenderer != originalMeshRenderer)
+                {
+                    DestroyImmediate(tempMeshRenderer);
+                }
+                
+                Debug.Log("已恢复原始SkinnedMeshRenderer");
+            }
+            
+            Debug.Log($"Returned {gameObject.name} to original position");
+        }
+        
+        // 添加鼠标悬停检测（可选，用于调试）
+        private void OnMouseEnter()
+        {
+            if (!enabled) return; // 检查组件是否启用
+            Debug.Log($"Mouse entered {gameObject.name}");
+        }
+        
+        private void OnMouseExit()
+        {
+            if (!enabled) return; // 检查组件是否启用
+            Debug.Log($"Mouse exited {gameObject.name}");
+            // 只有在非检视状态下才关闭提示面板
+            if (!isInspecting)
+            {
+                CloseHoverInfoPanel();
+            }
+        }
+
+        /// <summary>
+        /// 关闭提示面板
+        /// </summary>
+        private void CloseHoverInfoPanel()
+        {
+            var hoverPanel = UIKit.GetPanel<UIHoverInfoPanel>();
+            if (hoverPanel != null)
+            {
+                UIKit.ClosePanel<UIHoverInfoPanel>();
+                Debug.Log("提示面板已关闭");
+            }
+        }
+    }
+}

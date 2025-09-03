@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/LC.unity
+    guid: d851a5c0cb788694b84315fc7e1e7967
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/MD.unity
+    guid: bd1ca19ccd542204fb75e942fc5cc916
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/QD.unity
+    guid: 2cd96ce513f03374f8a844abfa111203
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/QH.unity
+    guid: 5c79d6fcf640926449e9eccaab92e9ed
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/ST.unity
+    guid: 9af08e9b13e18254095ece899aa321a5
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/SY.unity
+    guid: 670779be7c58bb8438060d6119b86c39
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/XD.unity
+    guid: bf06bff89e5788d49bc32d2e882655c0
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/YiMaoJian.unity
+    guid: ad543273a0e9ff04cb66fbd585c4d273
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/GC.unity
+    guid: b2ecc2b100eff33469b7826731981ddd
+  - enabled: 1
+    path: Assets/YueShangWenHua/Scenes/JD.unity
+    guid: 4f3e105ac697ca045b87e3bc3c597ccb
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 0b354221374a3a44cb196ebcbf0a386e,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: be63e4857307b5b4995deb76d796a883,
+      type: 2}

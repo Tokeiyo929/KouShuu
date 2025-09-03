@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>商务汉语虚拟仿真系统</title>
+    <style>
+        html, body {
+            background: #000;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        #unityContainer {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .unity-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        .unity-loading-bar {
+            width: 300px;
+            height: 20px;
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        
+        .unity-loading-progress {
+            width: 0%;
+            height: 100%;
+            background: #4CAF50;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="unityContainer">
+        <div class="unity-loading">
+            <h2>正在加载商务汉语虚拟仿真系统...</h2>
+            <div class="unity-loading-bar">
+                <div class="unity-loading-progress" id="loadingProgress"></div>
+            </div>
+            <p id="loadingText">准备中...</p>
+        </div>
+    </div>
+    
+    <!-- 加载jsPDF库 - 多个CDN源确保可用性 -->
+    <script>
+        // jsPDF库加载函数 - 使用本地库
+        function loadJsPDF() {
+            return new Promise((resolve, reject) => {
+                console.log('开始加载本地jsPDF库...');
+                
+                // 首先尝试加载本地jsPDF库
+                const localScript = document.createElement('script');
+                localScript.src = 'jspdf.umd.min.js';
+                localScript.onload = function() {
+                    console.log('本地jsPDF库加载成功');
+                    if (typeof window.jspdf !== 'undefined' && window.jspdf.jsPDF) {
+                        window.jsPDF = window.jspdf.jsPDF;
+                        console.log('jsPDF库已加载到全局作用域:', typeof window.jsPDF);
+                        resolve(true);
+                    } else {
+                        reject(new Error('本地jsPDF库加载后未正确初始化'));
+                    }
+                };
+                localScript.onerror = function() {
+                    console.error('本地jsPDF库加载失败，请确保jspdf.umd.min.js文件存在');
+                    reject(new Error('本地jsPDF库文件不存在或无法访问'));
+                };
+                
+                document.head.appendChild(localScript);
+            });
+        }
+        
+        // 确保jsPDF库加载完成
+        function ensureJsPDFLoaded() {
+            if (typeof window.jsPDF !== 'undefined') {
+                console.log('jsPDF库已加载');
+                return true;
+            } else if (typeof window.jspdf !== 'undefined' && window.jspdf.jsPDF) {
+                window.jsPDF = window.jspdf.jsPDF;
+                console.log('jsPDF库加载成功（备用方式）');
+                return true;
+            } else {
+                console.log('jsPDF库未加载，开始加载...');
+                return false;
+            }
+        }
+        
+        // 全局函数：供Unity调用，手动设置jsPDF库
+        window.setJsPDFForUnity = function() {
+            if (typeof window.jsPDF !== 'undefined') {
+                console.log('手动设置jsPDF库到Unity环境');
+                // 这里可以添加其他逻辑
+                return true;
+            } else {
+                console.error('jsPDF库未加载，无法设置');
+                return false;
+            }
+        };
+        
+        // 全局函数：检查jsPDF库状态
+        window.checkJsPDFStatus = function() {
+            return {
+                loaded: typeof window.jsPDF !== 'undefined',
+                type: typeof window.jsPDF,
+                object: window.jsPDF
+            };
+        };
+        
+        // 动态加载jsPDF库（供PDFGenerator.jslib调用）
+        window.loadJsPDFDynamically = function() {
+            console.log('动态加载jsPDF库被调用');
+            return loadJsPDF().then(() => {
+                console.log('动态加载完成');
+                return true;
+            }).catch((error) => {
+                console.error('动态加载失败:', error);
+                return false;
+            });
+        };
+        
+        // 全局函数：供Unity调用，确保jsPDF库加载并设置到Unity环境
+        window.ensureJsPDFForUnity = function() {
+            console.log('Unity调用：确保jsPDF库加载并设置...');
+            
+            return new Promise((resolve, reject) => {
+                // 如果jsPDF库已加载，直接设置到Unity环境
+                if (typeof window.jsPDF !== 'undefined') {
+                    console.log('jsPDF库已加载，直接设置到Unity环境');
+                    try {
+                        if (typeof window.unityInstance !== 'undefined') {
+                            window.unityInstance.SendMessage('WebPDFGenerator', 'SetJSPDFLibrary', window.jsPDF);
+                            console.log('jsPDF库已成功设置到Unity环境');
+                            resolve(true);
+                        } else {
+                            console.error('Unity实例未准备好');
+                            reject(new Error('Unity实例未准备好'));
+                        }
+                    } catch (error) {
+                        console.error('设置jsPDF库到Unity失败:', error);
+                        reject(error);
+                    }
+                } else {
+                    // 如果jsPDF库未加载，先加载再设置
+                    console.log('jsPDF库未加载，开始加载...');
+                    loadJsPDF().then(() => {
+                        console.log('jsPDF库加载完成，设置到Unity环境');
+                        try {
+                            if (typeof window.unityInstance !== 'undefined') {
+                                window.unityInstance.SendMessage('WebPDFGenerator', 'SetJSPDFLibrary', window.jsPDF);
+                                console.log('jsPDF库已成功设置到Unity环境');
+                                resolve(true);
+                            } else {
+                                console.error('Unity实例未准备好');
+                                reject(new Error('Unity实例未准备好'));
+                            }
+                        } catch (error) {
+                            console.error('设置jsPDF库到Unity失败:', error);
+                            reject(error);
+                        }
+                    }).catch((error) => {
+                        console.error('加载jsPDF库失败:', error);
+                        reject(error);
+                    });
+                }
+            });
+        };
+        
+        // Unity WebGL加载完成后的回调
+        function onUnityLoaded() {
+            document.querySelector('.unity-loading').style.display = 'none';
+            
+            // Unity加载完成后，将jsPDF库传递给.jslib环境
+            setTimeout(function() {
+                if (typeof window.jsPDF !== 'undefined') {
+                    console.log('Unity加载完成，准备传递jsPDF库到.jslib环境...');
+                    console.log('jsPDF库类型:', typeof window.jsPDF);
+                    
+                    // 等待Unity实例完全初始化
+                    if (typeof unityInstance !== 'undefined') {
+                        // 调用Unity中的SetJSPDFLibrary方法
+                        try {
+                            console.log('Unity实例已就绪，调用SetJSPDFLibrary方法');
+                            unityInstance.SendMessage('WebPDFGenerator', 'SetJSPDFLibrary', window.jsPDF);
+                            console.log('jsPDF库已成功传递给Unity .jslib环境');
+                        } catch (error) {
+                            console.error('传递jsPDF库到Unity失败:', error);
+                        }
+                    } else {
+                        console.log('Unity实例未完全初始化，等待中...');
+                        // 如果Unity实例未准备好，延迟重试
+                        setTimeout(function() {
+                            if (typeof unityInstance !== 'undefined') {
+                                try {
+                                    console.log('延迟重试：调用SetJSPDFLibrary方法');
+                                    unityInstance.SendMessage('WebPDFGenerator', 'SetJSPDFLibrary', window.jsPDF);
+                                    console.log('jsPDF库已成功传递给Unity .jslib环境（延迟重试）');
+                                } catch (error) {
+                                    console.error('延迟传递jsPDF库到Unity失败:', error);
+                                }
+                            } else {
+                                console.error('延迟重试后Unity实例仍未初始化');
+                            }
+                        }, 2000);
+                    }
+                } else {
+                    console.error('Unity加载完成，但jsPDF库未定义');
+                }
+            }, 1000);
+        }
+        
+        // 更新加载进度
+        function updateLoadingProgress(progress) {
+            document.getElementById('loadingProgress').style.width = progress + '%';
+            document.getElementById('loadingText').textContent = '加载中... ' + Math.round(progress) + '%';
+        }
+        
+        // 检查jsPDF库是否可用
+        function checkJsPDFAvailability() {
+            return ensureJsPDFLoaded();
+        }
+        
+        // 页面加载完成后自动加载jsPDF库
+        window.addEventListener('load', function() {
+            console.log('页面加载完成，开始初始化...');
+            
+            // 延迟加载，确保页面完全加载
+            setTimeout(function() {
+                console.log('检查jsPDF库状态...');
+                if (!ensureJsPDFLoaded()) {
+                    console.log('开始加载jsPDF库...');
+                    loadJsPDF().then(() => {
+                        console.log('jsPDF库加载完成');
+                        console.log('jsPDF库类型:', typeof window.jsPDF);
+                        console.log('jsPDF库对象:', window.jsPDF);
+                    }).catch((error) => {
+                        console.error('jsPDF库加载失败：', error.message);
+                        console.log('请检查网络连接或刷新页面重试');
+                    });
+                } else {
+                    console.log('jsPDF库已可用');
+                    console.log('jsPDF库类型:', typeof window.jsPDF);
+                }
+            }, 1000);
+        });
+    </script>
+    
+    <!-- Unity WebGL构建文件 -->
+    <script src="Build/Build.loader.js"></script>
+    <script>
+        // 确保unityInstance是全局变量
+        window.unityInstance = null;
+        
+        createUnityInstance(canvas, config, function (progress) {
+            updateLoadingProgress(progress * 100);
+        }).then(function (instance) {
+            // 设置全局变量
+            window.unityInstance = instance;
+            console.log('Unity实例已创建，调用onUnityLoaded');
+            onUnityLoaded();
+        }).catch(function (message) {
+            console.error('Unity WebGL加载失败:', message);
+        });
+    </script>
+</body>
+</html>

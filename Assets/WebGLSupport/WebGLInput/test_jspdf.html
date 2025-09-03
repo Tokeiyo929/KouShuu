@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>jsPDF库测试页面</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+        button { background-color: #007bff; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 4px; cursor: pointer; }
+        button:disabled { background-color: #6c757d; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>jsPDF库测试页面</h1>
+        <p>此页面用于测试jsPDF库是否正确加载和配置。</p>
+        
+        <div id="status" class="status info">正在检查jsPDF库状态...</div>
+        
+        <div>
+            <button onclick="checkJsPDFStatus()">检查jsPDF状态</button>
+            <button onclick="testPDFGeneration()" id="testBtn" disabled>测试PDF生成</button>
+            <button onclick="loadJsPDF()">重新加载jsPDF</button>
+            <button onclick="testFileAccess()">测试文件访问</button>
+        </div>
+        
+        <div id="log" style="margin-top: 20px; padding: 10px; background: #f8f9fa; border-radius: 4px; font-family: monospace; font-size: 12px; max-height: 300px; overflow-y: auto;">
+            <div>日志输出：</div>
+        </div>
+    </div>
+
+    <script>
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.style.color = type === 'error' ? '#dc3545' : type === 'success' ? '#28a745' : '#6c757d';
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            logDiv.appendChild(logEntry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function updateStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+        }
+
+        function checkJsPDFStatus() {
+            log('检查jsPDF库状态...');
+            
+            if (typeof window.jsPDF !== 'undefined') {
+                log('✓ jsPDF库已加载', 'success');
+                log(`jsPDF类型: ${typeof window.jsPDF}`, 'info');
+                updateStatus('jsPDF库已加载并可用', 'success');
+                document.getElementById('testBtn').disabled = false;
+            } else if (typeof window.jspdf !== 'undefined' && window.jspdf.jsPDF) {
+                log('✓ 检测到jspdf命名空间，设置jsPDF别名', 'info');
+                window.jsPDF = window.jspdf.jsPDF;
+                updateStatus('jsPDF库已加载并可用', 'success');
+                document.getElementById('testBtn').disabled = false;
+            } else {
+                log('✗ jsPDF库未加载', 'error');
+                updateStatus('jsPDF库未加载', 'error');
+                document.getElementById('testBtn').disabled = true;
+            }
+        }
+
+        function testPDFGeneration() {
+            if (typeof window.jsPDF === 'undefined') {
+                log('jsPDF库未加载，无法测试', 'error');
+                return;
+            }
+
+            try {
+                log('开始测试PDF生成...', 'info');
+                
+                const doc = new window.jsPDF();
+                doc.setFont('helvetica');
+                doc.setFontSize(16);
+                doc.text('jsPDF库测试成功！', 105, 20, { align: 'center' });
+                doc.setFontSize(12);
+                doc.text('测试时间: ' + new Date().toLocaleString(), 20, 40);
+                
+                const fileName = 'jspdf_test_' + Date.now() + '.pdf';
+                doc.save(fileName);
+                
+                log(`✓ PDF生成成功: ${fileName}`, 'success');
+                updateStatus('PDF测试生成成功！', 'success');
+            } catch (error) {
+                log(`✗ PDF生成失败: ${error.message}`, 'error');
+                updateStatus('PDF测试生成失败', 'error');
+            }
+        }
+
+        function testFileAccess() {
+            log('测试文件访问...', 'info');
+            
+            const testFile = 'jspdf.umd.min.js';
+            log(`尝试访问文件: ${testFile}`, 'info');
+            
+            fetch(testFile)
+                .then(response => {
+                    if (response.ok) {
+                        log(`✓ 文件访问成功: ${response.status}`, 'success');
+                        log(`文件大小: ${response.headers.get('content-length') || '未知'} 字节`, 'info');
+                    } else {
+                        log(`✗ 文件访问失败: ${response.status}`, 'error');
+                    }
+                })
+                .catch(error => {
+                    log(`✗ 文件访问错误: ${error.message}`, 'error');
+                });
+        }
+
+        function loadJsPDF() {
+            log('开始加载jsPDF库...', 'info');
+            updateStatus('正在加载jsPDF库...', 'info');
+            
+            const script = document.createElement('script');
+            script.src = 'jspdf.umd.min.js';
+            script.onload = function() {
+                log('jsPDF库脚本加载完成', 'success');
+                setTimeout(() => {
+                    checkJsPDFStatus();
+                }, 100);
+            };
+            script.onerror = function() {
+                log('jsPDF库脚本加载失败', 'error');
+                updateStatus('jsPDF库加载失败', 'error');
+            };
+            
+            document.head.appendChild(script);
+        }
+
+        window.addEventListener('load', function() {
+            log('页面加载完成', 'info');
+            setTimeout(() => {
+                checkJsPDFStatus();
+            }, 500);
+        });
+    </script>
+</body>
+</html>

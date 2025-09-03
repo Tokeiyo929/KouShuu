@@ -1,0 +1,61 @@
+ManifestFileVersion: 0
+CRC: 1730620373
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: uiselectclosepanel_prefab
+      Dependencies: {}
+    Info_1:
+      Name: uiinvitedpanel_prefab
+      Dependencies: {}
+    Info_2:
+      Name: uitransitionpanel_prefab
+      Dependencies: {}
+    Info_3:
+      Name: uicoverpanel_prefab
+      Dependencies: {}
+    Info_4:
+      Name: uiloginpanel_prefab
+      Dependencies: {}
+    Info_5:
+      Name: uilogicpanel_prefab
+      Dependencies: {}
+    Info_6:
+      Name: uihistorypanel_prefab
+      Dependencies: {}
+    Info_7:
+      Name: uititlepanel_prefab
+      Dependencies: {}
+    Info_8:
+      Name: uiteahistorypanel_prefab
+      Dependencies: {}
+    Info_9:
+      Name: uicommunicationpanel_prefab
+      Dependencies: {}
+    Info_10:
+      Name: uitestpanel_prefab
+      Dependencies: {}
+    Info_11:
+      Name: uiselectpanel_prefab
+      Dependencies: {}
+    Info_12:
+      Name: uidialoguepanel_prefab
+      Dependencies: {}
+    Info_13:
+      Name: uihoverinfopanel_prefab
+      Dependencies: {}
+    Info_14:
+      Name: uiselectscencepanel_prefab
+      Dependencies: {}
+    Info_15:
+      Name: uimeetingpanel_prefab
+      Dependencies: {}
+    Info_16:
+      Name: uienvironmentpanel_prefab
+      Dependencies: {}
+    Info_17:
+      Name: uivocabularypanel_prefab
+      Dependencies: {}
+    Info_18:
+      Name: uicontractpanel_prefab
+      Dependencies: {}
