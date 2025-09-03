@@ -38,6 +38,7 @@ namespace QFramework.Example
                 ScoreList.Add(0f);
             }
         }
+        
 
     }
 }

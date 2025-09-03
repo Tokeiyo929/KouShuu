@@ -33,6 +33,12 @@ namespace QFramework.Example
 
             UIKit.OpenPanel<UIMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UIMeetingPanel");
         }
+        public void OpenPanel_CarPage()
+        {
+            var panel = UIKit.OpenPanel<UIInvitedPanel>(UILevel.Common, null, null, "UIPrefabs/UIInvitedPanel");
+            // 延迟调用，确保面板初始化完成
+            this.DelayFrame(0, () => panel.OpenCarPage());
+        }
 
         public void OpenPanel_ExtraInvitation()
         {

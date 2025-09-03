@@ -61,24 +61,31 @@ namespace QFramework.Example
 
 		private void OnClickNext_1()
 		{
-			Page_Invitation.Hide();
-			Page_Car.Show();
+            UIKit.ClosePanel<UIInvitedPanel>();
 
-			Tog_location1.isOn=false;
-			Tog_location2.isOn=false;
-			Tog_location3.isOn=false;
-			Tog_location4.isOn=false;
+            SceneManager.Instance.LoadExtraScene("JD");
+            FsmManager.ChangeToStateByName("State-接待礼仪上车");
+            Debug.Log("切换到接待礼仪上车");
+            //UIKit.OpenPanel<UIMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UIMeetingPanel");
 		}
-
-		private void OnClickNext_2()
+		public void OpenCarPage()
 		{
-			UIKit.ClosePanel<UIInvitedPanel>();
+            Page_Invitation.Hide();
+            Page_Car.Show();
 
-			SceneManager.Instance.LoadExtraScene("JD");
-			FsmManager.ChangeToStateByName("State-接待礼仪上车");
-			Debug.Log("切换到接待礼仪上车");
-			//UIKit.OpenPanel<UIMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UIMeetingPanel");
-		}
+            Tog_location1.isOn = false;
+            Tog_location2.isOn = false;
+            Tog_location3.isOn = false;
+            Tog_location4.isOn = false;
+        }
+		public void OnClickNext_2()
+		{
+            SceneManager.Instance.UnloadExtraScene();
+            SceneManager.Instance.LoadExtraScene("XD");
+
+            UIKit.OpenPanel<UIMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UIMeetingPanel");
+            UIKit.ClosePanel<UIInvitedPanel>();
+        }
 
 		private void OnClickSubmit_1()
 		{

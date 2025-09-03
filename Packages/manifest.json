@@ -1,9 +1,9 @@
 {
   "dependencies": {
+    "com.boxqkrtm.ide.cursor": "file:C:/Users/Administrator/Downloads/com.unity.ide.cursor-master",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.cinemachine": "2.10.4",
     "com.unity.collab-proxy": "2.8.2",
-    "com.unity.ide.cursor": "file:D:/Downloads/com.unity.ide.cursor-master/com.unity.ide.cursor-master",
     "com.unity.ide.rider": "3.0.28",
     "com.unity.ide.visualstudio": "2.0.23",
     "com.unity.ide.vscode": "1.2.5",

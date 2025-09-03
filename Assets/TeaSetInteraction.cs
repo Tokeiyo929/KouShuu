@@ -81,7 +81,7 @@ namespace QFramework.Example
             
             // 确保检视区域的位置在后续操作中保持稳定
             inspectionAreaObj.name = $"{gameObject.name}_InspectionArea_Stable";
-            inspectionAreaObj.transform.position=new Vector3(2.25f,-5.5f,0.5f);
+            inspectionAreaObj.transform.position=new Vector3(2.33f,-5.17f,0.56f);
             
             Debug.Log($"Created inspection area at position: {inspectionArea.position}");
             Debug.Log($"Original tea set position: {transform.position}");
@@ -117,6 +117,7 @@ namespace QFramework.Example
             
             if (isInspecting)
             {
+                SetPanelActive(false);
                 originalMeshRenderer.enabled = false;
                 gameObject.tag="TeaSet";
                 // 如果正在检视，则返回原位置
@@ -124,6 +125,7 @@ namespace QFramework.Example
             }
             else
             {
+                SetPanelActive(true);
                 // 如果不在检视，则开始检视
                 originalMeshRenderer.enabled = true;
                 gameObject.tag="Untagged";
@@ -158,47 +160,63 @@ namespace QFramework.Example
                 StartInspection();
             }
         }
-        
+
         /// <summary>
         /// 处理鼠标拖动事件
         /// </summary>
+        // 保存鼠标上次位置
+        // 保存鼠标上次位置
+        private Vector3? lastMousePos = null;
+
         private void HandleMouseDrag()
         {
-            // 只在检视模式下响应右键拖动
-            if (isInspecting && Input.GetMouseButton(1)) // 右键拖动
+            if (!isInspecting) return;
+
+            if (Input.GetMouseButtonDown(1)) // 右键按下
             {
-                float rotationSpeed = 2f; // 旋转速度
-                float rotX = Input.GetAxis("Mouse X") * rotationSpeed;
-                float rotY = Input.GetAxis("Mouse Y") * rotationSpeed;
-                
-                // 记录旋转前的位置和旋转
-                Vector3 positionBeforeRotation = transform.position;
-                Quaternion rotationBeforeRotation = transform.localRotation;
-                
-                // 使用更精确的旋转方式，围绕茶具自身的中心点旋转
-                // 计算茶具的几何中心
-                Vector3 objectCenter = GetObjectCenter();
-                
-                // 围绕茶具自身中心旋转，而不是检视区域
-                transform.RotateAround(objectCenter, Vector3.up, rotX);
-                transform.RotateAround(objectCenter, Vector3.right, rotY);
-                
-                // 检查位置是否发生变化
-                Vector3 positionAfterRotation = transform.position;
-                if (Vector3.Distance(positionBeforeRotation, positionAfterRotation) > 0.001f)
+                lastMousePos = Input.mousePosition;
+            }
+
+            if (Input.GetMouseButton(1) && lastMousePos.HasValue) // 右键拖动
+            {
+                Vector3 currentMousePos = Input.mousePosition;
+
+                // 计算鼠标移动增量（归一化）
+                Vector2 delta = (currentMousePos - lastMousePos.Value) / new Vector2(Screen.width, Screen.height);
+
+                // 根据鼠标移动方向计算旋转
+                Vector3 rotationAxis = Vector3.zero;
+                float rotationSpeed = 200f; // 旋转速度系数
+
+                // 水平移动控制左右旋转（绕Y轴）
+                if (Mathf.Abs(delta.x) > 0.001f)
                 {
-                    Debug.LogWarning($"旋转后位置发生变化: 前={positionBeforeRotation}, 后={positionAfterRotation}");
-                    Debug.LogWarning($"检视区域位置: {inspectionArea.position}");
-                    Debug.LogWarning($"茶具本地位置: {transform.localPosition}");
-                    Debug.LogWarning($"茶具几何中心: {objectCenter}");
+                    rotationAxis += Vector3.up * delta.x * rotationSpeed;
                 }
-                
-                Debug.Log($"旋转茶具: deltaX={rotX}, deltaY={rotY}, 当前旋转: {transform.localRotation.eulerAngles}");
-                Debug.Log($"茶具世界位置: {transform.position}, 本地位置: {transform.localPosition}");
-                Debug.Log($"茶具几何中心: {objectCenter}");
+
+                // 垂直移动控制上下旋转（绕X轴）
+                if (Mathf.Abs(delta.y) > 0.001f)
+                {
+                    rotationAxis -= Vector3.right * delta.y * rotationSpeed;
+                }
+
+                // 应用旋转
+                if (rotationAxis.sqrMagnitude > 0.001f)
+                {
+                    Vector3 objectCenter = GetObjectCenter();
+                    transform.RotateAround(objectCenter, rotationAxis.normalized, rotationAxis.magnitude);
+                }
+
+                lastMousePos = currentMousePos;
+            }
+
+            if (Input.GetMouseButtonUp(1)) // 右键松开
+            {
+                lastMousePos = null;
             }
         }
-        
+
+
         /// <summary>
         /// 获取茶具的几何中心
         /// </summary>
@@ -265,10 +283,10 @@ namespace QFramework.Example
                 Debug.Log($"右键点击茶具 {gameObject.name}");
                 // 右键点击时调用提示面板相关代码
                 Global.CurrentKeyword.Value = GameData.Instance.hintDatabase_SO.GetHint(gameObject.name, Global.CurrentLanguage.Value);
-                if(UIKit.GetPanel<UIHoverInfoPanel>()==null)
-                {
-                    UIKit.OpenPanel<UIHoverInfoPanel>(UILevel.PopUI, null, null, "UIPrefabs/UIHoverInfoPanel");
-                }
+                //if(UIKit.GetPanel<UIHoverInfoPanel>()==null)
+                //{
+                //    UIKit.OpenPanel<UIHoverInfoPanel>(UILevel.PopUI, null, null, "UIPrefabs/UIHoverInfoPanel");
+                //}
             }
         }
         
@@ -341,36 +359,46 @@ namespace QFramework.Example
             
             Debug.Log($"Returned {gameObject.name} to original position");
         }
-        
-        // 添加鼠标悬停检测（可选，用于调试）
-        private void OnMouseEnter()
+        private void SetPanelActive(bool isActive)
         {
-            if (!enabled) return; // 检查组件是否启用
-            Debug.Log($"Mouse entered {gameObject.name}");
-        }
-        
-        private void OnMouseExit()
-        {
-            if (!enabled) return; // 检查组件是否启用
-            Debug.Log($"Mouse exited {gameObject.name}");
-            // 只有在非检视状态下才关闭提示面板
-            if (!isInspecting)
+            if (isActive)
             {
-                CloseHoverInfoPanel();
+                UIKit.OpenPanel<UICheckModelPanel>(UILevel.Common, null, null, "UIPrefabs/UICheckModelPanel");
+            }
+            else
+            {
+                UIKit.ClosePanel<UICheckModelPanel>();
             }
         }
+        // 添加鼠标悬停检测（可选，用于调试）
+        //private void OnMouseEnter()
+        //{
+        //    if (!enabled) return; // 检查组件是否启用
+        //    Debug.Log($"Mouse entered {gameObject.name}");
+        //}
+
+        //private void OnMouseExit()
+        //{
+        //    if (!enabled) return; // 检查组件是否启用
+        //    Debug.Log($"Mouse exited {gameObject.name}");
+        //    // 只有在非检视状态下才关闭提示面板
+        //    //if (!isInspecting)
+        //    //{
+        //    //    CloseHoverInfoPanel();
+        //    //}
+        //}
 
         /// <summary>
         /// 关闭提示面板
         /// </summary>
-        private void CloseHoverInfoPanel()
-        {
-            var hoverPanel = UIKit.GetPanel<UIHoverInfoPanel>();
-            if (hoverPanel != null)
-            {
-                UIKit.ClosePanel<UIHoverInfoPanel>();
-                Debug.Log("提示面板已关闭");
-            }
-        }
+        //private void CloseHoverInfoPanel()
+        //{
+        //    //var hoverPanel = UIKit.GetPanel<UIHoverInfoPanel>();
+        //    //if (hoverPanel != null)
+        //    //{
+        //    //    UIKit.ClosePanel<UIHoverInfoPanel>();
+        //    //    Debug.Log("提示面板已关闭");
+        //    //}
+        //}
     }
 }

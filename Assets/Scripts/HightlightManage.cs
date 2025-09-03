@@ -84,7 +84,7 @@ public class HightlightManage : MonoBehaviour
                     choices[i].GetComponent<HighlightControl>().SetGlowColor(Color.green);
                     img_correct.gameObject.SetActive(true);
                     img_wrong.gameObject.SetActive(false);
-
+                    Debug.Log($"ScoreList Count: {Global.ScoreList.Count}, Accessing Index: 1");
                     Global.ScoreList[1] = 4;
                 }
                 else//选择错误
@@ -95,7 +95,7 @@ public class HightlightManage : MonoBehaviour
                     rightAnswer.GetComponent<HighlightEffect>().SetHighlighted(true);
                     img_wrong.gameObject.SetActive(true);
                     img_correct.gameObject.SetActive(false);
-
+                    Debug.Log($"ScoreList Count: {Global.ScoreList.Count}, Accessing Index: 1");
                     Global.ScoreList[1] = 0;
                 }
                 return;

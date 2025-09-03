@@ -17264,8 +17264,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9021673053934447508}
   m_HandleRect: {fileID: 8917593354952598326}
   m_Direction: 2
-  m_Value: 0.99999887
-  m_Size: 0.9144867
+  m_Value: 1
+  m_Size: 0.91448677
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19285,7 +19285,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 299284988163261503}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.44322935
+  m_Size: 0.44322938
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -21161,7 +21161,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 128.86499, y: -28.5}
-  m_SizeDelta: {x: 237.73, y: 57}
+  m_SizeDelta: {x: 0, y: 57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7138427865406959944
 CanvasRenderer:

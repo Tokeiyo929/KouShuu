@@ -828,7 +828,7 @@ public class DaTiView : MonoBehaviour
         {
             score+=item;
         }
-
+        
         if(Global.ScoreList.Count==0)
         {
             for(int i=0;i<18;i++)
