@@ -139,7 +139,14 @@ namespace QFramework.Example
 
 			SceneMoveManager.Instance.TransferImmediately(1);
 			TimeLineManager.Instance.ChangeToState("State-视角转换_1");
-		}
+
+            //关闭检视
+            UIKit.ClosePanel<UICheckModelPanel>();
+			if(GameObject.Find("泡茶-茶杯1_InspectionArea_Stable") != null)
+				Destroy(GameObject.Find("泡茶-茶杯1_InspectionArea_Stable"));
+            if (GameObject.Find("泡茶-公道杯_InspectionArea_Stable") != null)
+                Destroy(GameObject.Find("泡茶-公道杯_InspectionArea_Stable"));
+        }
 	
 		private void DialogueEndEvent()
 		{

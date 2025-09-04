@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using TMPro;
 
 namespace QFramework.Example
 {
@@ -30,5 +31,11 @@ namespace QFramework.Example
 		protected override void OnClose()
 		{
 		}
+
+		public void InitText(string introText)
+		{
+			gameObject.GetComponentInChildren<TextMeshProUGUI>().text = introText;
+
+        }
 	}
 }

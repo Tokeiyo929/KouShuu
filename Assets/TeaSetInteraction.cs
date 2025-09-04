@@ -7,7 +7,7 @@ namespace QFramework.Example
         // 添加静态变量来跟踪全局检视状态
         private static bool isAnyObjectInspecting = false;
         private static TeaSetInteraction currentInspectingObject = null;
-        
+
         private bool isInspecting = false;
         private Vector3 originalPosition;
         private Quaternion originalRotation;
@@ -363,7 +363,16 @@ namespace QFramework.Example
         {
             if (isActive)
             {
-                UIKit.OpenPanel<UICheckModelPanel>(UILevel.Common, null, null, "UIPrefabs/UICheckModelPanel");
+                var panel = UIKit.OpenPanel<UICheckModelPanel>(UILevel.Common, null, null, "UIPrefabs/UICheckModelPanel");
+                switch(gameObject.name)
+                {
+                    case "泡茶-公道杯":
+                        panel.DelayFrame(0, () => panel.InitText("<b><size=110%>公道杯</size></b>\r\n公道杯是茶席中用于均分茶汤的关键器具，多采用瓷、玻璃或砂材质制成，杯身常带有把手以方便握持，部分款式还配有滤网可初步滤除茶渣。其核心作用是避免茶汤因冲泡时间不同而浓淡不均，将壶中茶汤均匀分至各茶杯，保证每位饮茶者口感一致，同时也能起到降温作用，让茶汤温度更适宜入口，是体现茶道“公平”理念的更要器具"));
+                        break;
+                    case "泡茶-茶杯1":
+                        panel.DelayFrame(0, () => panel.InitText("<b><size=110%>茶杯</size></b>\r\n茶杯是茶席中承载茶汤、直接品饮的重要器具，常以瓷、紫砂、玻璃或陶土制成，造型多样，有直口、敛口、敞口等多种形态，部分杯身附有单耳或双耳以便持握。其核心功能在于聚香留味，通过适宜的杯形与材质凸显茶汤的香气与口感层次，同时传递茶汤的温度与色泽，提升品饮体验。一杯一味，茶汤入杯，既是茶的归宿，亦是品茶之人感受茶韵的开端，是茶事中兼具实用与审美价值的灵魂器皿。"));
+                        break;
+                }
             }
             else
             {

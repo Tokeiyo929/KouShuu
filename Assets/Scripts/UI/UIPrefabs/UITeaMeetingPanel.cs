@@ -289,8 +289,8 @@ namespace QFramework.Example
 			{
 				animator.enabled = true;
 			}
-			FsmManager.ChangeToStateByName("State-泡茶");
-			TimeLineManager.Instance.ChangeToState("State-泡茶");
+			//FsmManager.ChangeToStateByName("State-泡茶");
+			//TimeLineManager.Instance.ChangeToState("State-泡茶");
 		}
 
 		public void ChangeToState_ExtraTea()
