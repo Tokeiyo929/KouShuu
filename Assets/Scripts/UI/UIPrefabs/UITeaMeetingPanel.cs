@@ -38,8 +38,8 @@ namespace QFramework.Example
 			BlackTeaConversation_2=DialogueManager.Instance.Conversations[5];
 			BlackTeaConversation_3=DialogueManager.Instance.Conversations[6];
 
-			// 设置当前步骤
-			Global.CurrentStep.Value = 2;
+            // 设置当前步骤
+            Global.CurrentStep.Value = 2;
 			ConversationManager.Instance.EndConversation();
 
 			FsmManager = FindObjectOfType<Machine>();
@@ -289,8 +289,8 @@ namespace QFramework.Example
 			{
 				animator.enabled = true;
 			}
-			//FsmManager.ChangeToStateByName("State-泡茶");
-			//TimeLineManager.Instance.ChangeToState("State-泡茶");
+			FsmManager.ChangeToStateByName("State-泡茶004-1");
+			TimeLineManager.Instance.ChangeToState("State-泡茶004-1");
 		}
 
 		public void ChangeToState_ExtraTea()
