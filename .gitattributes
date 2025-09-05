@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+[200~F:BY_FilesKouShuuAssetsTextMesh filter=lfs diff=lfs merge=lfs -text
+ProFontsSIMSUN filter=lfs diff=lfs merge=lfs -text
+SDF.asset~ filter=lfs diff=lfs merge=lfs -text
+‪F:BY_FilesKouShuuAssetsTextMesh filter=lfs diff=lfs merge=lfs -text
+SDF-OutLine.asset filter=lfs diff=lfs merge=lfs -text
+F:BY_FilesKouShuuAssetsTextMesh filter=lfs diff=lfs merge=lfs -text
+SDF.asset filter=lfs diff=lfs merge=lfs -text
