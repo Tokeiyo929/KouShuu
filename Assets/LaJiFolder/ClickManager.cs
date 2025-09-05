@@ -2,32 +2,32 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
-using Unity.VisualScripting;  // 引入EventSystems来检测UI
 
 public class ClickManager : MonoBehaviour
 {
-    public List<ClickableObject> clickSequence;
-
-    private int currentIndex = 0;
+    public List<ClickableObject> clickObjects;   // 不再叫 clickSequence
     private bool isCooldown = false;
     private Camera playerCamera;
-    private bool isStart = true;
 
     private void Start()
     {
-        if (clickSequence == null || clickSequence.Count == 0)
+        if (clickObjects == null || clickObjects.Count == 0)
         {
-            Debug.LogError("Click sequence is empty!");
+            Debug.LogError("Click objects list is empty!");
             return;
         }
 
-        ActivateCurrent();
         playerCamera = GameObject.FindGameObjectWithTag("PlayerCamera").GetComponent<Camera>();
+
+        // 激活所有对象（每个都能被点击，但只能点一次）
+        foreach (var obj in clickObjects)
+        {
+            obj.Activate();
+        }
     }
 
     private void Update()
     {
-
         if (isCooldown) return;
 
         // 检查是否点击了UI元素
@@ -38,24 +38,26 @@ public class ClickManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            
             Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 GameObject clickedObject = hit.collider.gameObject;
-                ClickableObject expected = clickSequence[currentIndex];
 
-                if (clickedObject == expected.gameObject)
+                // 遍历列表找有没有匹配的 ClickableObject
+                ClickableObject target = clickObjects.Find(obj => obj.gameObject == clickedObject);
+
+                if (target != null && !target.HasBeenClicked)   // 确保没被点过
                 {
-                    expected.TriggerAction();
+                    target.TriggerAction();
+                    target.HasBeenClicked = true; // 标记为已点击
 
-                    // 进入冷却状态，防止动画过程中连续点击
+                    // 冷却
                     isCooldown = true;
-                    StartCoroutine(Cooldown(expected.animationDuration));
+                    StartCoroutine(Cooldown(target.animationDuration));
                 }
                 else
                 {
-                    Debug.Log("点错物体了");
+                    Debug.Log("点到无效物体，或者该物体已点击过");
                 }
             }
         }
@@ -65,16 +67,17 @@ public class ClickManager : MonoBehaviour
     {
         if (isCooldown) return;
 
-        ClickableObject expected = clickSequence[currentIndex];
-        if (obj == expected)
+        if (clickObjects.Contains(obj) && !obj.HasBeenClicked)
         {
             obj.TriggerAction();
+            obj.HasBeenClicked = true;
+
             isCooldown = true;
             StartCoroutine(Cooldown(obj.animationDuration));
         }
         else
         {
-            Debug.Log("点错 UI 对象了");
+            Debug.Log("UI对象不存在，或者已经点过了");
         }
     }
 
@@ -84,29 +87,12 @@ public class ClickManager : MonoBehaviour
         isCooldown = false;
     }
 
-    void ActivateCurrent()
-    {
-        if (currentIndex < clickSequence.Count)
-        {
-            var obj = clickSequence[currentIndex];
-            obj.OnClickCompleted += OnCurrentClickCompleted;
-            obj.Activate();
-        }
-        else
-        {
-            Debug.Log("全部流程完成！");
-        }
-    }
-
-    void OnCurrentClickCompleted(ClickableObject obj)
-    {
-        obj.OnClickCompleted -= OnCurrentClickCompleted;
-        currentIndex++;
-        ActivateCurrent();
-    }
     public void AddList(ClickableObject CO)
     {
-        if(CO != null)
-            clickSequence.Add(CO);
+        if (CO != null)
+        {
+            CO.Activate();
+            clickObjects.Add(CO);
+        }
     }
 }

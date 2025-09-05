@@ -36,8 +36,9 @@ public class ClickableObject : MonoBehaviour
     public GameObject showGameObject02;
     public GameObject hideGameObject;
     public GameObject hideGameObject02;
+    public bool HasBeenClicked { get; set; } = false;
 
-    
+
 
     public event Action<ClickableObject> OnClickCompleted;
 

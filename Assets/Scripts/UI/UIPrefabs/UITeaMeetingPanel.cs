@@ -21,8 +21,23 @@ namespace QFramework.Example
 		[SerializeField] private NPCConversation BlackTeaConversation_1;
 		[SerializeField] private NPCConversation BlackTeaConversation_2;
 		[SerializeField] private NPCConversation BlackTeaConversation_3;
+		[SerializeField] private NPCConversation AddConversation_1;
+		[SerializeField] private NPCConversation AddConversation_2;
+        [SerializeField] private NPCConversation AddConversation_3;
+        [SerializeField] private NPCConversation AddConversation_4;
+        [SerializeField] private NPCConversation AddConversation_5;
+        [SerializeField] private NPCConversation AddConversation_6;
+		[SerializeField] private NPCConversation AddConversation_7;
+		[SerializeField] private NPCConversation AddConversation_8;
+		[SerializeField] private NPCConversation AddConversation_9;
+        [SerializeField] private NPCConversation AddConversation_10;
+		[SerializeField] private NPCConversation AddConversation_11;
+		[SerializeField] private NPCConversation AddConversation_12;
+		[SerializeField] private NPCConversation AddConversation_13;
+        [SerializeField] private NPCConversation AddConversation_14;
+        [SerializeField] private NPCConversation AddConversation_15;
 
-		[SerializeField] private Animator[] animatorObjects;
+        [SerializeField] private Animator[] animatorObjects;
 		
 		public Machine FsmManager;
 
@@ -37,6 +52,21 @@ namespace QFramework.Example
 			BlackTeaConversation_1=DialogueManager.Instance.Conversations[4];
 			BlackTeaConversation_2=DialogueManager.Instance.Conversations[5];
 			BlackTeaConversation_3=DialogueManager.Instance.Conversations[6];
+            AddConversation_1 = DialogueManager.Instance.Conversations[16];
+			AddConversation_2 = DialogueManager.Instance.Conversations[17];
+			AddConversation_3 = DialogueManager.Instance.Conversations[18];
+			AddConversation_4 = DialogueManager.Instance.Conversations[19];
+			AddConversation_5 = DialogueManager.Instance.Conversations[20];
+			AddConversation_6 = DialogueManager.Instance.Conversations[21];
+            AddConversation_7 = DialogueManager.Instance.Conversations[22];
+            AddConversation_8 = DialogueManager.Instance.Conversations[23];
+            AddConversation_9 = DialogueManager.Instance.Conversations[24];
+			AddConversation_10 = DialogueManager.Instance.Conversations[25];
+			AddConversation_11 = DialogueManager.Instance.Conversations[26];
+			AddConversation_12 = DialogueManager.Instance.Conversations[27];
+			AddConversation_13 = DialogueManager.Instance.Conversations[28];
+			AddConversation_14 = DialogueManager.Instance.Conversations[29];
+			AddConversation_15 = DialogueManager.Instance.Conversations[30];
 
             // 设置当前步骤
             Global.CurrentStep.Value = 2;
@@ -214,68 +244,192 @@ namespace QFramework.Example
 			//Btn_NextPage.onClick.AddListener(OnClickNextPage);
 			Btn_Next_1.onClick.AddListener(OnClickNext_1);
 			Btn_NextModule.onClick.AddListener(onClickNextModule);
-			
-			foreach(var node in TeaMeetingConversation_1.GetComponentsInChildren<NodeEventHolder>())
+
+			foreach (var node in TeaMeetingConversation_1.GetComponentsInChildren<NodeEventHolder>())
 			{
-				node.Event.AddListener(()=>playTalkingAnimation(TeaMeetingConversation_1.name,node.NodeID));
-				if(node.NodeID==2)
+				node.Event.AddListener(() => playTalkingAnimation(TeaMeetingConversation_1.name, node.NodeID));
+				if (node.NodeID == 2)
 				{
 					node.Event.AddListener(ChangeToState_MakeTea);
 				}
 			}
-			foreach(var node in TeaMeetingConversation_2.GetComponentsInChildren<NodeEventHolder>())
+			foreach (var node in TeaMeetingConversation_2.GetComponentsInChildren<NodeEventHolder>())
 			{
-				node.Event.AddListener(()=>playTalkingAnimation(TeaMeetingConversation_2.name,node.NodeID));
-				if(node.NodeID==30)
+				node.Event.AddListener(() => playTalkingAnimation(TeaMeetingConversation_2.name, node.NodeID));
+				if (node.NodeID == 30)
 				{
 					node.Event.AddListener(ChangeToState_ExtraTea);
 				}
-				if(node.NodeID==36)
+				if (node.NodeID == 36)
 				{
 					node.Event.AddListener(EnterNextConversation);
 				}
 			}
-			foreach(var node in TeaMeetingConversation_3.GetComponentsInChildren<NodeEventHolder>())
+			foreach (var node in TeaMeetingConversation_3.GetComponentsInChildren<NodeEventHolder>())
 			{
-				node.Event.AddListener(()=>playTalkingAnimation(TeaMeetingConversation_3.name,node.NodeID));
-				if(node.NodeID==4)
+				node.Event.AddListener(() => playTalkingAnimation(TeaMeetingConversation_3.name, node.NodeID));
+				if (node.NodeID == 4)
 				{
 					node.Event.AddListener(EnterNextConversation);
 				}
 			}
-			foreach(var node in BlackTeaConversation_1.GetComponentsInChildren<NodeEventHolder>())
+			foreach (var node in BlackTeaConversation_1.GetComponentsInChildren<NodeEventHolder>())
 			{
-				node.Event.AddListener(()=>playTalkingAnimation(BlackTeaConversation_1.name,node.NodeID));
-				if(node.NodeID==87)
+				node.Event.AddListener(() => playTalkingAnimation(BlackTeaConversation_1.name, node.NodeID));
+				if (node.NodeID == 87)
 				{
 					node.Event.AddListener(ExtraSceneConversation);
 				}
-				if(node.NodeID==92)
+				if (node.NodeID == 92)
 				{
 					node.Event.AddListener(NextPanel);
 				}
 			}
-			foreach(var node in BlackTeaConversation_2.GetComponentsInChildren<NodeEventHolder>())
+			foreach (var node in BlackTeaConversation_2.GetComponentsInChildren<NodeEventHolder>())
 			{
 				//node.Event.AddListener(()=>playTalkingAnimation(BlackTeaConversation_2.name,node.NodeID));
-				if(node.NodeID==3)
+				if (node.NodeID == 3)
 				{
 					node.Event.AddListener(ReturnConversation);
 				}
 			}
-			foreach(var node in BlackTeaConversation_3.GetComponentsInChildren<NodeEventHolder>())
+			foreach (var node in BlackTeaConversation_3.GetComponentsInChildren<NodeEventHolder>())
 			{
-				node.Event.AddListener(()=>playTalkingAnimation(BlackTeaConversation_3.name,node.NodeID));
-				if(node.NodeID==13)
+				node.Event.AddListener(() => playTalkingAnimation(BlackTeaConversation_3.name, node.NodeID));
+				if (node.NodeID == 13)
 				{
 					node.Event.AddListener(ExtraSceneConversation);
 				}
-				if(node.NodeID==18)
+				if (node.NodeID == 18)
 				{
 					node.Event.AddListener(NextPanel);
 				}
 			}
-		}
+			foreach (var node in AddConversation_1.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_1.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(BlinkEye);
+				}
+				if (node.NodeID == 4)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(16));
+				}
+			}
+			foreach (var node in AddConversation_2.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_2.name, node.NodeID));
+				if (node.NodeID == 4)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(17));
+				}
+			}
+			foreach (var node in AddConversation_3.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_3.name, node.NodeID));
+				if (node.NodeID == 4)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(18));
+				}
+            }
+            foreach (var node in AddConversation_4.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_4.name, node.NodeID));
+                if (node.NodeID == 4)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(19));
+                }
+            }
+            foreach (var node in AddConversation_5.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_5.name, node.NodeID));
+                if (node.NodeID == 1)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(20));
+                }
+            }
+            foreach (var node in AddConversation_6.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_6.name, node.NodeID));
+                if (node.NodeID == 2)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(21));
+                }
+            }
+			foreach (var node in AddConversation_7.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_7.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(22));
+				}
+            }
+            foreach (var node in AddConversation_8.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_8.name, node.NodeID));
+                if (node.NodeID == 2)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(23));
+                }
+            }
+            foreach (var node in AddConversation_9.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_9.name, node.NodeID));
+                if (node.NodeID == 2)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(24));
+                }
+            }
+            foreach (var node in AddConversation_10.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_10.name, node.NodeID));
+                if (node.NodeID == 2)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(25));
+                }
+            }
+            foreach (var node in AddConversation_11.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_11.name, node.NodeID));
+                if (node.NodeID == 2)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(26));
+                }
+            }
+            foreach (var node in AddConversation_12.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_12.name, node.NodeID));
+                if (node.NodeID == 2)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(27));
+                }
+            }
+            foreach (var node in AddConversation_13.GetComponentsInChildren<NodeEventHolder>())
+            {
+                node.Event.AddListener(() => playTalkingAnimation(AddConversation_13.name, node.NodeID));
+                if (node.NodeID == 2)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(28));
+                }
+            }
+			foreach (var node in AddConversation_14.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_14.name, node.NodeID));
+				if (node.NodeID == 6)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(29));
+				}
+            }
+			foreach (var node in AddConversation_15.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_15.name, node.NodeID));
+				if (node.NodeID == 7)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(30));
+				}
+            }
+        }
 
 		private void OnClickNext_1()
 		{
@@ -353,8 +507,18 @@ namespace QFramework.Example
 				Debug.LogError("ConversationManager is null");
 			}
 		}
+        #region LaJiDaima
+		public void BlinkEye()
+		{
+			GameObject.Find("Canvas004-3").GetComponent<Canvas>().transform.Find("Image").gameObject.SetActive(true);
+        }
+		public void TriggerSelfAction(int index)
+		{
+            DialogueManager.Instance.Conversations[index].GetComponent<ClickableObject>().TriggerAction();
+        }
+        #endregion
 
-		public void NextPanel()
+        public void NextPanel()
 		{
 			UIKit.ClosePanel<UITeaMeetingPanel>();
 			SceneManager.Instance.UnloadCurrentScene();
