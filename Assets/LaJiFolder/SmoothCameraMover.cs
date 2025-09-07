@@ -3,10 +3,10 @@ using UnityEngine;
 public class SmoothCameraMover : MonoBehaviour
 {
     [Header("移动设置")]
-    [Tooltip("移动速度")]
-    public float moveSpeed = 5f;
-    [Tooltip("旋转速度")]
-    public float rotationSpeed = 5f;
+    [Tooltip("移动总时间（秒）")]
+    public float moveDuration = 2f;
+    [Tooltip("旋转总时间（秒）")]
+    public float rotationDuration = 2f;
     [Tooltip("是否在到达目标位置后停止")]
     public bool stopOnArrival = true;
     [Tooltip("到达目标的距离阈值")]
@@ -17,25 +17,33 @@ public class SmoothCameraMover : MonoBehaviour
     private Transform targetTransform;
     private bool isMoving = false;
 
+    private float moveTime = 0f;
+    private float rotationTime = 0f;
+
+    // 新增：记录起始状态
+    private Vector3 startPosition;
+    private Quaternion startRotation;
+
     void Update()
     {
         if (isMoving && targetTransform != null)
         {
-            // 计算接近目标时的插值比例
+            // 更新已移动的时间
+            moveTime += Time.deltaTime;
+            rotationTime += Time.deltaTime;
+
+            // 计算插值比例（0到1之间）
+            float moveLerpFactor = Mathf.Clamp01(moveTime / moveDuration);
+            float rotationLerpFactor = Mathf.Clamp01(rotationTime / rotationDuration);
+
+            // 使用缓存的起始位置进行插值
+            transform.position = Vector3.Lerp(startPosition, targetTransform.position, moveLerpFactor);
+            transform.rotation = Quaternion.Slerp(startRotation, targetTransform.rotation, rotationLerpFactor);
+
+            // 检查是否到达目标
             float distance = Vector3.Distance(transform.position, targetTransform.position);
             float angle = Quaternion.Angle(transform.rotation, targetTransform.rotation);
 
-            // 动态调整移动和旋转的插值量，接近目标时更小
-            float moveLerpFactor = Mathf.Clamp01(distance / arrivalDistance);
-            float rotationLerpFactor = Mathf.Clamp01(angle / arrivalAngle);
-
-            // 平滑移动位置
-            transform.position = Vector3.Lerp(transform.position, targetTransform.position, moveLerpFactor * moveSpeed * Time.deltaTime);
-
-            // 平滑旋转
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetTransform.rotation, rotationLerpFactor * rotationSpeed * Time.deltaTime);
-
-            // 检查是否到达目标
             if (stopOnArrival && HasArrived(distance, angle))
             {
                 isMoving = false;
@@ -57,6 +65,12 @@ public class SmoothCameraMover : MonoBehaviour
 
         targetTransform = target;
         isMoving = true;
+        moveTime = 0f;
+        rotationTime = 0f;
+
+        // 新增：缓存起始状态
+        startPosition = transform.position;
+        startRotation = transform.rotation;
     }
 
     // 立即跳转到目标Transform
@@ -72,6 +86,10 @@ public class SmoothCameraMover : MonoBehaviour
         transform.position = targetTransform.position;
         transform.rotation = targetTransform.rotation;
         isMoving = false;
+
+        // 更新起始状态
+        startPosition = transform.position;
+        startRotation = transform.rotation;
     }
 
     // 检查是否到达目标
@@ -84,5 +102,11 @@ public class SmoothCameraMover : MonoBehaviour
     public bool IsMoving()
     {
         return isMoving;
+    }
+
+    // 可选：停止移动
+    public void StopMovement()
+    {
+        isMoving = false;
     }
 }

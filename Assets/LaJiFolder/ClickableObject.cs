@@ -18,8 +18,11 @@ public class ClickableObject : MonoBehaviour
     [Tooltip("延迟执行 onClickEvents 的时间")]
     public float delayTime = 0.5f;
     public UnityEvent onClickEvents;
-    
 
+    [Header("相机偏差修正")]
+    public bool isBias = false;
+    public float cameraBiasTime = 0f;
+    public UnityEvent onBiasCameraEvents;
 
     [Header("其他")]
     public Animator animator;
@@ -109,6 +112,14 @@ public class ClickableObject : MonoBehaviour
         else
         {
             onClickEvents?.Invoke();
+        }
+
+        if (isBias)
+        {
+            mb.StartCoroutine(WaitForSeconds(cameraBiasTime, () =>
+            {
+                onBiasCameraEvents?.Invoke();
+            }));
         }
     }
 

@@ -248,9 +248,13 @@ namespace QFramework.Example
 			foreach (var node in TeaMeetingConversation_1.GetComponentsInChildren<NodeEventHolder>())
 			{
 				node.Event.AddListener(() => playTalkingAnimation(TeaMeetingConversation_1.name, node.NodeID));
-				if (node.NodeID == 2)
+				//if (node.NodeID == 2)
+				//{
+				//	node.Event.AddListener(ChangeToState_MakeTea);
+				//}
+				if(node.NodeID == 2)
 				{
-					node.Event.AddListener(ChangeToState_MakeTea);
+					node.Event.AddListener(() => TriggerSelfAction(1));
 				}
 			}
 			foreach (var node in TeaMeetingConversation_2.GetComponentsInChildren<NodeEventHolder>())
@@ -443,8 +447,8 @@ namespace QFramework.Example
 			{
 				animator.enabled = true;
 			}
-			FsmManager.ChangeToStateByName("State-泡茶004-1");
-			TimeLineManager.Instance.ChangeToState("State-泡茶004-1");
+			FsmManager.ChangeToStateByName("State-泡茶004");
+			TimeLineManager.Instance.ChangeToState("State-泡茶004");
 		}
 
 		public void ChangeToState_ExtraTea()
