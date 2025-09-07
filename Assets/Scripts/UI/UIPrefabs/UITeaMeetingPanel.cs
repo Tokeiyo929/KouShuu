@@ -36,6 +36,7 @@ namespace QFramework.Example
 		[SerializeField] private NPCConversation AddConversation_13;
         [SerializeField] private NPCConversation AddConversation_14;
         [SerializeField] private NPCConversation AddConversation_15;
+		[SerializeField] private NPCConversation AddConversation_16;
 
         [SerializeField] private Animator[] animatorObjects;
 		
@@ -67,6 +68,7 @@ namespace QFramework.Example
 			AddConversation_13 = DialogueManager.Instance.Conversations[28];
 			AddConversation_14 = DialogueManager.Instance.Conversations[29];
 			AddConversation_15 = DialogueManager.Instance.Conversations[30];
+			AddConversation_16 = DialogueManager.Instance.Conversations[31];
 
             // 设置当前步骤
             Global.CurrentStep.Value = 2;
@@ -252,7 +254,7 @@ namespace QFramework.Example
 				//{
 				//	node.Event.AddListener(ChangeToState_MakeTea);
 				//}
-				if(node.NodeID == 2)
+				if (node.NodeID == 2)
 				{
 					node.Event.AddListener(() => TriggerSelfAction(1));
 				}
@@ -336,31 +338,31 @@ namespace QFramework.Example
 				{
 					node.Event.AddListener(() => TriggerSelfAction(18));
 				}
-            }
-            foreach (var node in AddConversation_4.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_4.name, node.NodeID));
-                if (node.NodeID == 4)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(19));
-                }
-            }
-            foreach (var node in AddConversation_5.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_5.name, node.NodeID));
-                if (node.NodeID == 1)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(20));
-                }
-            }
-            foreach (var node in AddConversation_6.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_6.name, node.NodeID));
-                if (node.NodeID == 2)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(21));
-                }
-            }
+			}
+			foreach (var node in AddConversation_4.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_4.name, node.NodeID));
+				if (node.NodeID == 4)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(19));
+				}
+			}
+			foreach (var node in AddConversation_5.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_5.name, node.NodeID));
+				if (node.NodeID == 1)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(20));
+				}
+			}
+			foreach (var node in AddConversation_6.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_6.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(21));
+				}
+			}
 			foreach (var node in AddConversation_7.GetComponentsInChildren<NodeEventHolder>())
 			{
 				node.Event.AddListener(() => playTalkingAnimation(AddConversation_7.name, node.NodeID));
@@ -368,55 +370,55 @@ namespace QFramework.Example
 				{
 					node.Event.AddListener(() => TriggerSelfAction(22));
 				}
-            }
-            foreach (var node in AddConversation_8.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_8.name, node.NodeID));
-                if (node.NodeID == 2)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(23));
-                }
-            }
-            foreach (var node in AddConversation_9.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_9.name, node.NodeID));
-                if (node.NodeID == 2)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(24));
-                }
-            }
-            foreach (var node in AddConversation_10.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_10.name, node.NodeID));
-                if (node.NodeID == 2)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(25));
-                }
-            }
-            foreach (var node in AddConversation_11.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_11.name, node.NodeID));
-                if (node.NodeID == 2)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(26));
-                }
-            }
-            foreach (var node in AddConversation_12.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_12.name, node.NodeID));
-                if (node.NodeID == 2)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(27));
-                }
-            }
-            foreach (var node in AddConversation_13.GetComponentsInChildren<NodeEventHolder>())
-            {
-                node.Event.AddListener(() => playTalkingAnimation(AddConversation_13.name, node.NodeID));
-                if (node.NodeID == 2)
-                {
-                    node.Event.AddListener(() => TriggerSelfAction(28));
-                }
-            }
+			}
+			foreach (var node in AddConversation_8.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_8.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(23));
+				}
+			}
+			foreach (var node in AddConversation_9.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_9.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(24));
+				}
+			}
+			foreach (var node in AddConversation_10.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_10.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(25));
+				}
+			}
+			foreach (var node in AddConversation_11.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_11.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(26));
+				}
+			}
+			foreach (var node in AddConversation_12.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_12.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(27));
+				}
+			}
+			foreach (var node in AddConversation_13.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_13.name, node.NodeID));
+				if (node.NodeID == 2)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(28));
+				}
+			}
 			foreach (var node in AddConversation_14.GetComponentsInChildren<NodeEventHolder>())
 			{
 				node.Event.AddListener(() => playTalkingAnimation(AddConversation_14.name, node.NodeID));
@@ -424,7 +426,7 @@ namespace QFramework.Example
 				{
 					node.Event.AddListener(() => TriggerSelfAction(29));
 				}
-            }
+			}
 			foreach (var node in AddConversation_15.GetComponentsInChildren<NodeEventHolder>())
 			{
 				node.Event.AddListener(() => playTalkingAnimation(AddConversation_15.name, node.NodeID));
@@ -432,9 +434,16 @@ namespace QFramework.Example
 				{
 					node.Event.AddListener(() => TriggerSelfAction(30));
 				}
-            }
-        }
-
+			}
+			foreach (var node in AddConversation_16.GetComponentsInChildren<NodeEventHolder>())
+			{
+				node.Event.AddListener(() => playTalkingAnimation(AddConversation_16.name, node.NodeID));
+				if (node.NodeID == 13)
+				{
+					node.Event.AddListener(() => TriggerSelfAction(31));
+				}
+			}
+		}
 		private void OnClickNext_1()
 		{
 			Tip_SelectError.Hide();

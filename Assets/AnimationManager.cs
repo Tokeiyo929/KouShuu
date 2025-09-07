@@ -104,6 +104,8 @@ namespace QFramework.Example
             {
                 Debug.Log("启用TeaSetInteraction组件:"+teaSet.name);
                 teaSet.enabled=true;
+                //同时启用BoxCollider组件
+                teaSet.gameObject.GetComponent<BoxCollider>().enabled=true;
             }
         }
 
@@ -114,6 +116,8 @@ namespace QFramework.Example
             {
                 Debug.Log("禁用TeaSetInteraction组件:"+teaSet.name);
                 teaSet.enabled=false;
+                //同时禁用BoxCollider组件
+                teaSet.gameObject.GetComponent<BoxCollider>().enabled=false;
             }
         }
 

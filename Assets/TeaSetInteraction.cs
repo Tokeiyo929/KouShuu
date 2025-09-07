@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace QFramework.Example
@@ -20,7 +21,20 @@ namespace QFramework.Example
         private MeshRenderer originalMeshRenderer;
         private Mesh originalMesh;
         private Material[] originalMaterials;
-        
+
+        [System.Serializable]
+        public class PanelDataList
+        {
+            public List<PanelData> panels;
+        }
+
+        [System.Serializable]
+        public class PanelData
+        {
+            public string title;
+            public string content;
+        }
+
         private void Start()
         {
            
@@ -82,7 +96,18 @@ namespace QFramework.Example
             // 确保检视区域的位置在后续操作中保持稳定
             inspectionAreaObj.name = $"{gameObject.name}_InspectionArea_Stable";
             inspectionAreaObj.transform.position=new Vector3(2.33f,-5.17f,0.56f);
-            
+
+            switch (inspectionAreaObj.name) 
+            {
+                case "泡茶-水盆_InspectionArea_Stable":
+                    inspectionAreaObj.transform.position=new Vector3(2.25f,-5.27f,0.47f);
+                    break;
+                case "泡茶-烧水壶_InspectionArea_Stable":
+                    inspectionAreaObj.transform.position=new Vector3(2.23f,-5.17f,0.49f);
+                    break;
+            }
+
+
             Debug.Log($"Created inspection area at position: {inspectionArea.position}");
             Debug.Log($"Original tea set position: {transform.position}");
             Debug.Log($"Inspection area world position: {inspectionArea.position}");
@@ -364,14 +389,44 @@ namespace QFramework.Example
             if (isActive)
             {
                 var panel = UIKit.OpenPanel<UICheckModelPanel>(UILevel.Common, null, null, "UIPrefabs/UICheckModelPanel");
-                switch(gameObject.name)
+
+                // 从 Resources 文件夹加载 JSON 配置
+                TextAsset jsonFile = Resources.Load<TextAsset>("Config/uicheckmodelpanel");
+
+                if (jsonFile != null)
                 {
-                    case "泡茶-公道杯":
-                        panel.DelayFrame(0, () => panel.InitText("<b><size=110%>公道杯</size></b>\r\n公道杯是茶席中用于均分茶汤的关键器具，多采用瓷、玻璃或砂材质制成，杯身常带有把手以方便握持，部分款式还配有滤网可初步滤除茶渣。其核心作用是避免茶汤因冲泡时间不同而浓淡不均，将壶中茶汤均匀分至各茶杯，保证每位饮茶者口感一致，同时也能起到降温作用，让茶汤温度更适宜入口，是体现茶道“公平”理念的更要器具"));
-                        break;
-                    case "泡茶-茶杯1":
-                        panel.DelayFrame(0, () => panel.InitText("<b><size=110%>茶杯</size></b>\r\n茶杯是茶席中承载茶汤、直接品饮的重要器具，常以瓷、紫砂、玻璃或陶土制成，造型多样，有直口、敛口、敞口等多种形态，部分杯身附有单耳或双耳以便持握。其核心功能在于聚香留味，通过适宜的杯形与材质凸显茶汤的香气与口感层次，同时传递茶汤的温度与色泽，提升品饮体验。一杯一味，茶汤入杯，既是茶的归宿，亦是品茶之人感受茶韵的开端，是茶事中兼具实用与审美价值的灵魂器皿。"));
-                        break;
+                    // 使用 JsonUtility 解析 JSON 内容
+                    PanelDataList panelDataList = JsonUtility.FromJson<PanelDataList>("{\"panels\":" + jsonFile.text + "}");
+
+                    string panelName = gameObject.name;
+                    PanelData panelData = null;
+
+                    // 查找与 panelName 匹配的面板数据
+                    foreach (var data in panelDataList.panels)
+                    {
+                        if (data.title == panelName)
+                        {
+                            panelData = data;
+                            break;
+                        }
+                    }
+
+                    if (panelData != null)
+                    {
+                        string title = panelData.title;
+                        string content = panelData.content;
+
+                        // 延迟初始化内容
+                        panel.DelayFrame(0, () => panel.InitText(title + "\r\n" + content));
+                    }
+                    else
+                    {
+                        Debug.LogError("未找到对应的面板配置！");
+                    }
+                }
+                else
+                {
+                    Debug.LogError("JSON 配置文件未找到！");
                 }
             }
             else
