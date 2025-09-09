@@ -105,6 +105,9 @@ namespace QFramework.Example
                 case "泡茶-烧水壶_InspectionArea_Stable":
                     inspectionAreaObj.transform.position=new Vector3(2.23f,-5.17f,0.49f);
                     break;
+                case "泡茶-水勺_InspectionArea_Stable":
+                    inspectionAreaObj.transform.position=new Vector3(2.32f,-0.85f,0.56f);
+                    break;
             }
 
 
@@ -343,7 +346,7 @@ namespace QFramework.Example
         }
         
         // 返回原位置
-        private void ReturnToOriginalPosition()
+        public void ReturnToOriginalPosition()
         {
             Debug.Log("ReturnToOriginalPosition");
             isInspecting = false;

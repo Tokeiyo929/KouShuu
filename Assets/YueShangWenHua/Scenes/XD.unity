@@ -1163,8 +1163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1847f3967b6acb640abd0088caa5ed45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  rotationSpeed: 1
+  moveDuration: 2
+  rotationDuration: 2
   stopOnArrival: 0
   arrivalDistance: 0.1
   arrivalAngle: 1
@@ -6263,6 +6263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787616879020688022, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
         type: 3}
+      propertyPath: _Event._PersistentCalls.Array.data[2]._PersistentArguments.Array.data[0]._X
+      value: 545
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787616879020688022, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
+        type: 3}
       propertyPath: _Event._PersistentCalls.Array.data[3]._PersistentArguments.Array.data[0]._X
       value: 0
       objectReference: {fileID: 0}
@@ -6326,6 +6331,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041632235115298229, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
+        type: 3}
+      propertyPath: _Event._PersistentCalls.Array.data[2]._PersistentArguments.Array.data[0]._X
+      value: 525
+      objectReference: {fileID: 0}
     - target: {fileID: 5411450606592057036, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
         type: 3}
       propertyPath: _Event._PersistentCalls.Array.size
@@ -6385,6 +6395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _Event._PersistentCalls.Array.data[3]._PersistentArguments.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743270935293149871, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
+        type: 3}
+      propertyPath: _Event._PersistentCalls.Array.data[2]._PersistentArguments.Array.data[0]._X
+      value: 565
       objectReference: {fileID: 0}
     - target: {fileID: 6743270935293149871, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
         type: 3}
@@ -6473,6 +6488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7484456952109166187, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
         type: 3}
+      propertyPath: _Event._PersistentCalls.Array.data[4]._PersistentArguments.Array.data[0]._X
+      value: 584
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484456952109166187, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
+        type: 3}
       propertyPath: _Event._PersistentCalls.Array.data[5]._PersistentArguments.Array.data[0]._X
       value: 0
       objectReference: {fileID: 0}
@@ -6495,6 +6515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: signalAssetEventPairs.Array.data[0].events.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeToStateByName
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882490618225636659, guid: 4e98464e6ceab8c4aaace5fe2d35bfa4,
+        type: 3}
+      propertyPath: _Event._PersistentCalls.Array.data[2]._PersistentArguments.Array.data[0]._X
+      value: 530
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,22 +5,19 @@ using QFramework;
 
 namespace QFramework.Example
 {
-	// Generate Id:23709e66-a2e3-4789-9a69-08a55ce575f4
+	// Generate Id:49feac39-d40d-48b2-b377-899dfe5e407f
 	public partial class UITipPanel_FirstMeeting
 	{
 		public const string Name = "UITipPanel_FirstMeeting";
 		
 		[SerializeField]
 		public UnityEngine.UI.Button Btn_Next;
-		[SerializeField]
-		public UnityEngine.UI.Button Btn_Next_2;
 		
 		private UITipPanel_FirstMeetingData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
 			Btn_Next = null;
-			Btn_Next_2 = null;
 			
 			mData = null;
 		}

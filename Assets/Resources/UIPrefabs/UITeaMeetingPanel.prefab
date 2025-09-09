@@ -750,6 +750,22 @@ MonoBehaviour:
   BlackTeaConversation_1: {fileID: 0}
   BlackTeaConversation_2: {fileID: 0}
   BlackTeaConversation_3: {fileID: 0}
+  AddConversation_1: {fileID: 0}
+  AddConversation_2: {fileID: 0}
+  AddConversation_3: {fileID: 0}
+  AddConversation_4: {fileID: 0}
+  AddConversation_5: {fileID: 0}
+  AddConversation_6: {fileID: 0}
+  AddConversation_7: {fileID: 0}
+  AddConversation_8: {fileID: 0}
+  AddConversation_9: {fileID: 0}
+  AddConversation_10: {fileID: 0}
+  AddConversation_11: {fileID: 0}
+  AddConversation_12: {fileID: 0}
+  AddConversation_13: {fileID: 0}
+  AddConversation_14: {fileID: 0}
+  AddConversation_15: {fileID: 0}
+  AddConversation_16: {fileID: 0}
   animatorObjects: []
   FsmManager: {fileID: 0}
   Tip_SelectError: {fileID: 512093647598045788}
@@ -1343,7 +1359,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 124, y: 77}
+  m_AnchoredPosition: {x: 80, y: 77}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &6708320048978408461

@@ -656,7 +656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 124, y: 77}
+  m_AnchoredPosition: {x: 80, y: 77}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &6964174229576574708
@@ -753,6 +753,7 @@ MonoBehaviour:
   Conversation_SalesContract_Random_2: {fileID: 0}
   Conversation_SalesContract_3: {fileID: 0}
   Conversation_SalesContract_4: {fileID: 0}
+  Conversation_SalesContract_5: {fileID: 0}
   FsmManager: {fileID: 0}
   Btn_Next: {fileID: 8656527123250934562}
   Btn_Next_2: {fileID: 0}

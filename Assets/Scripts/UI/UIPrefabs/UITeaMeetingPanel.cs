@@ -250,19 +250,15 @@ namespace QFramework.Example
 			foreach (var node in TeaMeetingConversation_1.GetComponentsInChildren<NodeEventHolder>())
 			{
 				node.Event.AddListener(() => playTalkingAnimation(TeaMeetingConversation_1.name, node.NodeID));
-				//if (node.NodeID == 2)
-				//{
-				//	node.Event.AddListener(ChangeToState_MakeTea);
-				//}
 				if (node.NodeID == 2)
 				{
-					node.Event.AddListener(() => TriggerSelfAction(1));
-				}
+					node.Event.AddListener(ChangeToState_MakeTea);
+                }
 			}
 			foreach (var node in TeaMeetingConversation_2.GetComponentsInChildren<NodeEventHolder>())
 			{
 				node.Event.AddListener(() => playTalkingAnimation(TeaMeetingConversation_2.name, node.NodeID));
-				if (node.NodeID == 30)
+                if (node.NodeID == 30)
 				{
 					node.Event.AddListener(ChangeToState_ExtraTea);
 				}
@@ -289,7 +285,8 @@ namespace QFramework.Example
 				if (node.NodeID == 92)
 				{
 					node.Event.AddListener(NextPanel);
-				}
+                    node.Event.AddListener(() => TriggerSelfAction(4));
+                }
 			}
 			foreach (var node in BlackTeaConversation_2.GetComponentsInChildren<NodeEventHolder>())
 			{
@@ -309,7 +306,8 @@ namespace QFramework.Example
 				if (node.NodeID == 18)
 				{
 					node.Event.AddListener(NextPanel);
-				}
+					node.Event.AddListener(() => TriggerSelfAction(6));
+                }
 			}
 			foreach (var node in AddConversation_1.GetComponentsInChildren<NodeEventHolder>())
 			{
@@ -456,8 +454,8 @@ namespace QFramework.Example
 			{
 				animator.enabled = true;
 			}
-			FsmManager.ChangeToStateByName("State-泡茶004");
-			TimeLineManager.Instance.ChangeToState("State-泡茶004");
+			FsmManager.ChangeToStateByName("State-泡茶");
+			TimeLineManager.Instance.ChangeToState("State-泡茶");
 		}
 
 		public void ChangeToState_ExtraTea()

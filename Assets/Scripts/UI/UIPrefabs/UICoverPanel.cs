@@ -40,8 +40,8 @@ namespace QFramework.Example
 			});
 			Btn_Exit.onClick.AddListener(()=>
 			{
-				Application.Quit();
-			});
+				//Áô¿Õ
+            });
 		}
 	}
 }
