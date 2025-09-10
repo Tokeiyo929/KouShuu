@@ -42,16 +42,20 @@ namespace QFramework.Example
 
 			FsmManager = FindObjectOfType<Machine>();
 
-			// if(SceneManager.Instance.GetCurrentExtraSceneName()!="XD")
-			// {
-			// 	SceneManager.Instance.LoadExtraScene("XD");
+            // if(SceneManager.Instance.GetCurrentExtraSceneName()!="XD")
+            // {
+            // 	SceneManager.Instance.LoadExtraScene("XD");
 
-			// 	if(TimeLineManager.Instance.GetCurrentSceneName()=="GC")
-			// 	{
-			// 		TimeLineManager.Instance.UnloadScene("GC");
-			// 	}
-			// }
-			TimeLineManager.Instance.LoadScene("XD");
+            // 	if(TimeLineManager.Instance.GetCurrentSceneName()=="GC")
+            // 	{
+            // 		TimeLineManager.Instance.UnloadScene("GC");
+            // 	}
+            // }
+            if (TimeLineManager.Instance.GetCurrentSceneName() == "XD")
+            {
+                TimeLineManager.Instance.UnloadScene("XD");
+            }
+            TimeLineManager.Instance.LoadScene("XD");
 
 			if(ConversationManager.Instance!=null)
 			{
@@ -94,8 +98,15 @@ namespace QFramework.Example
 
 		private void OnListener()
 		{
+            foreach (var node in Conversation_SalesContract_1.GetComponentsInChildren<NodeEventHolder>())
+            {
+                if (node.NodeID == 1)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(9));
+                }
+            }
 
-			foreach(var node in Conversation_SalesContract_2.GetComponentsInChildren<NodeEventHolder>())
+            foreach (var node in Conversation_SalesContract_2.GetComponentsInChildren<NodeEventHolder>())
 			{
 				if(node.NodeID==0)
 				{
@@ -153,5 +164,12 @@ namespace QFramework.Example
 		{
 			FsmManager.ChangeToStateByName("State-早茶");
 		}
-	}
+
+        #region LaJiDaima
+        public void TriggerSelfAction(int index)
+        {
+            DialogueManager.Instance.Conversations[index].GetComponent<ClickableObject>().TriggerAction();
+        }
+        #endregion
+    }
 }

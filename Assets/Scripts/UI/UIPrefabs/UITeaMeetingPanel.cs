@@ -75,19 +75,19 @@ namespace QFramework.Example
 			ConversationManager.Instance.EndConversation();
 
 			FsmManager = FindObjectOfType<Machine>();
-			// if(SceneManager.Instance.GetCurrentExtraSceneName()!="XD")
-			// {
-			// 	SceneManager.Instance.LoadExtraScene("XD");
-			// }
-			Debug.Log("TimeLineManager.Instance.GetCurrentSceneName(): " + TimeLineManager.Instance.GetCurrentSceneName());
-			if(TimeLineManager.Instance.GetCurrentSceneName()!="XD")
-			{
-				TimeLineManager.Instance.LoadScene("XD");
-			}
-			
-			TimeLineManager.Instance.ChangeToState("State-视角转换_1");
 
 			Debug.Log("TimeLineManager.Instance.GetCurrentSceneName(): " + TimeLineManager.Instance.GetCurrentSceneName());
+
+			if(TimeLineManager.Instance.GetCurrentSceneName() == "XD")
+			{
+				TimeLineManager.Instance.UnloadScene("XD");
+            }
+            TimeLineManager.Instance.LoadScene("XD");
+
+            //TimeLineManager.Instance.ChangeToState("State-视角转换_1");
+            FsmManager.ChangeToStateByName("State-以茶会友");
+
+            Debug.Log("TimeLineManager.Instance.GetCurrentSceneName(): " + TimeLineManager.Instance.GetCurrentSceneName());
 			
 			SceneMoveManager.Instance.TransferImmediately(1);
 

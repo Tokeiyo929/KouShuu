@@ -165,4 +165,9 @@ public class ClickableObject : MonoBehaviour
         var camera = GameObject.FindGameObjectWithTag("PlayerCamera");
         camera.GetComponent<SmoothCameraMover>().MoveToTransform(ts);
     }
+    public void SnapPlayerCamera(Transform ts)
+    {
+        var camera = GameObject.FindGameObjectWithTag("PlayerCamera");
+        camera.GetComponent<SmoothCameraMover>().SnapToTransform(ts);
+    }
 }

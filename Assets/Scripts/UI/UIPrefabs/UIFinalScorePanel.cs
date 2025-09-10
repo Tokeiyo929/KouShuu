@@ -127,7 +127,15 @@ namespace QFramework.Example
 		{
 			UIKit.CloseAllPanel();
 			UIKit.OpenPanel<UICoverPanel>(UILevel.Common, null, null, "UIPrefabs/UICoverPanel");
-		}
+			Global.ScoreList.Clear();
+            if (Global.ScoreList.Count == 0)
+            {
+                for (int i = 0; i < 18; i++)
+                {
+                    Global.ScoreList.Add(0f);
+                }
+            }
+        }
 
 		private void OnClickRestart()
 		{
@@ -135,7 +143,15 @@ namespace QFramework.Example
 			UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
 			UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
 			UIKit.OpenPanel<UISelectPanel>(UILevel.Common, null, null, "UIPrefabs/UISelectPanel");
-		}
+            Global.ScoreList.Clear();
+            if (Global.ScoreList.Count == 0)
+            {
+                for (int i = 0; i < 18; i++)
+                {
+                    Global.ScoreList.Add(0f);
+                }
+            }
+        }
 
 		private void OnClickExport()
 		{

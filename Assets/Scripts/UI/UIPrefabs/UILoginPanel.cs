@@ -47,8 +47,9 @@ namespace QFramework.Example
 			Global.StudentStartTime = DateTime.Now;
 
             // 打开标题界面
-
+			
             //临时解决ScoreList为空问题
+			Global.ScoreList.Clear();
             if (Global.ScoreList.Count == 0)
             {
                 for (int i = 0; i < 18; i++)

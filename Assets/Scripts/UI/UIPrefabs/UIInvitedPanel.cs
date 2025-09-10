@@ -61,13 +61,15 @@ namespace QFramework.Example
 
 		private void OnClickNext_1()
 		{
-            UIKit.ClosePanel<UIInvitedPanel>();
+            
 
-            SceneManager.Instance.LoadExtraScene("JD");
+            //SceneManager.Instance.LoadExtraScene("JD");
+			TimeLineManager.Instance.LoadScene("JD");
             FsmManager.ChangeToStateByName("State-接待礼仪上车");
             Debug.Log("切换到接待礼仪上车");
             //UIKit.OpenPanel<UIMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UIMeetingPanel");
-		}
+            UIKit.ClosePanel<UIInvitedPanel>();
+        }
 		public void OpenCarPage()
 		{
             Page_Invitation.Hide();
@@ -80,8 +82,10 @@ namespace QFramework.Example
         }
 		public void OnClickNext_2()
 		{
-            SceneManager.Instance.UnloadExtraScene();
-            SceneManager.Instance.LoadExtraScene("XD");
+            //SceneManager.Instance.UnloadExtraScene();
+            //SceneManager.Instance.LoadExtraScene("XD");
+            TimeLineManager.Instance.UnloadScene("JD");
+            //TimeLineManager.Instance.LoadScene("XD");
 
             UIKit.OpenPanel<UIMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UIMeetingPanel");
             UIKit.ClosePanel<UIInvitedPanel>();

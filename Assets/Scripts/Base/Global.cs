@@ -33,7 +33,8 @@ namespace QFramework.Example
 
         protected override void Init()
         {
-            for(int i=0;i<18;i++)
+            Debug.Log("Global Init Score List");
+            for (int i=0;i<18;i++)
             {
                 ScoreList.Add(0f);
             }

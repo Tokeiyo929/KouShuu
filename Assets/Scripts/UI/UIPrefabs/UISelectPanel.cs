@@ -18,7 +18,12 @@ namespace QFramework.Example
 			ConversationManager.Instance.EndConversation();
 			// please add init code here
 			Btn_AddOnClick();
-		}
+
+			if (TimeLineManager.Instance.GetCurrentSceneName() != null)
+			{
+				TimeLineManager.Instance.UnloadScene(TimeLineManager.Instance.GetCurrentSceneName());
+            }
+        }
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{

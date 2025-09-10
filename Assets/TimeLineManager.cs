@@ -13,7 +13,10 @@ namespace QFramework.Example
         //public string targetSceneName = "GC"; // 有 Timeline 和人物的场景
 		private PlayableDirector targetDirector;
         private Machine FsmManager;
-        
+        [SerializeField]
+        private List<GameObject> AddCanvasList;
+        private ClickManager clickManager;
+
         private string currentSceneName{get;set;}
 
         private bool isSceneLoaded = false;
@@ -45,20 +48,70 @@ namespace QFramework.Example
                 return;
             }
 
-            if(currentSceneName!=null)
+            if (currentSceneName != null && IsSceneLoaded(currentSceneName))
             {
-                UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentSceneName);
+                // 卸载场景并确保其完成
+                StartCoroutine(UnloadSceneAsync(currentSceneName, () =>
+                {
+                    currentSceneName = sceneName;
+                    isSceneLoaded = false;
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+                    StartCoroutine(FindDirectorAfterLoad());
+                }));
             }
-            currentSceneName = sceneName;
-            isSceneLoaded = false;
+            else
+            {
+                currentSceneName = sceneName;
+                isSceneLoaded = false;
+                UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+                StartCoroutine(FindDirectorAfterLoad());
+            }
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-            StartCoroutine(FindDirectorAfterLoad());
+            clickManager.ResetCamera();
         }
+
+        private bool IsSceneLoaded(string sceneName)
+        {
+            // 检查场景是否已加载
+            for (int i = 0; i < UnityEngine.SceneManagement.SceneManager.sceneCount; i++)
+            {
+                if (UnityEngine.SceneManagement.SceneManager.GetSceneAt(i).name == sceneName)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private IEnumerator UnloadSceneAsync(string sceneName, System.Action onComplete)
+        {
+            // 检查场景是否已加载
+            if (!IsSceneLoaded(sceneName))
+            {
+                Debug.LogWarning("Scene to unload is not loaded: " + sceneName);
+                onComplete?.Invoke();
+                yield break;
+            }
+
+            AsyncOperation unloadOp = UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(sceneName);
+            while (!unloadOp.isDone)
+            {
+                yield return null;
+            }
+            onComplete?.Invoke();
+        }
+
+
 
         public void UnloadScene(string sceneName)
         {
+            //1.先卸载场景里的ui，而不是新场景的ui
+            foreach (GameObject GO in AddCanvasList)
+            {
+                GO.SetActive(false);
+            }
             UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(sceneName);
+            currentSceneName = null;
         }
 
         private IEnumerator FindDirectorAfterLoad()

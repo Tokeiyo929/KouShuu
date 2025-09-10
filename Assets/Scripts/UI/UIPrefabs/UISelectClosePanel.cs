@@ -14,8 +14,9 @@ namespace QFramework.Example
 			mData = uiData as UISelectClosePanelData ?? new UISelectClosePanelData();
 			// please add init code here
 			// 加载任意场景（不需要在scenes列表中）
-			SceneManager.Instance.LoadExtraScene("YiMaoJian");
-			OnClickButton();
+			//SceneManager.Instance.LoadExtraScene("YiMaoJian");
+			TimeLineManager.Instance.LoadScene("YiMaoJian");
+            OnClickButton();
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)
@@ -32,8 +33,9 @@ namespace QFramework.Example
 		
 		protected override void OnClose()
 		{
-			SceneManager.Instance.UnloadCurrentScene();
-		}
+			//SceneManager.Instance.UnloadCurrentScene();
+			TimeLineManager.Instance.UnloadScene("YiMaoJian");
+        }
 
 		private void OnClickButton()
 		{

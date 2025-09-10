@@ -26,7 +26,13 @@ namespace QFramework.Example
 			// please add init code here
 			FsmManager = FindObjectOfType<Machine>();
 			OnClickButton();
-		}
+
+            if (TimeLineManager.Instance.GetCurrentSceneName() != null)
+            {
+                TimeLineManager.Instance.UnloadScene(TimeLineManager.Instance.GetCurrentSceneName());
+            }
+
+        }
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{

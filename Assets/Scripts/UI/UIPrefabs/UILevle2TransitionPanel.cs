@@ -19,7 +19,12 @@ namespace QFramework.Example
 			Global.CurrentStep.Value = 1;
 			ConversationManager.Instance.EndConversation();
 			OnClickButton();
-		}
+
+			if (TimeLineManager.Instance.GetCurrentSceneName() != null)
+			{
+				TimeLineManager.Instance.UnloadScene(TimeLineManager.Instance.GetCurrentSceneName());
+            }
+        }
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{

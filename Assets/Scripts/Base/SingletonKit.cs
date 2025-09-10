@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using System.Linq;
 using System.Text.RegularExpressions;
-using UnityEngine.Localization.Settings;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // 1.请在菜单 编辑器扩展/Namespace Settings 里设置命名空间
 // 2.命名空间更改后，生成代码之后，需要把逻辑代码文件（非 Designer）的命名空间手动更改
@@ -917,7 +918,7 @@ namespace QFramework.Example
         #endregion
         
         [Header("场景列表")]
-        public List<string> scenes = new List<string>() { "QH", "LC", "ST", "SY", "MD", "QD" };
+        public List<string> scenes = new List<string>() { "QH", "LC", "ST", "SY", "MD", "QD"};
         
         private int currentSceneIndex = -1; // -1 表示还没有开始加载场景
         private string currentLoadedScene = ""; // 跟踪当前加载的场景名称
@@ -1383,11 +1384,12 @@ namespace QFramework.Example
                 Debug.LogWarning($"场景 {sceneName} 不存在于列表中！");
             }
         }
+
     }
     #endregion
 
-	#region 游戏数据
-	[MonoSingletonPath("Game/GameData")]
+    #region 游戏数据
+    [MonoSingletonPath("Game/GameData")]
 	public class GameData : MonoBehaviour,ISingleton
 	{
 		public static GameData Instance=>MonoSingletonProperty<GameData>.Instance;

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using QFramework;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace QFramework.Example
 {
@@ -13,8 +14,8 @@ namespace QFramework.Example
 	{
 		// 公共的返回按钮行为委托，其他脚本可以直接设置
 		public static Action OnBackButtonClick;
-		
-		protected override void OnInit(IUIData uiData = null)
+
+        protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UITitlePanelData ?? new UITitlePanelData();
 
@@ -30,7 +31,7 @@ namespace QFramework.Example
 				RestBtnImg();
 				GetComponentsInChildren<TitleLittleStepImgControl>()[newValue].SetHightLight(true);
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-		}
+        }
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
@@ -85,7 +86,7 @@ namespace QFramework.Example
 
 				SceneManager.Instance.UnloadCurrentScene();
 
-				UIKit.CloseAllPanel();
+                UIKit.CloseAllPanel();
 				UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
 				UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
                 UIKit.OpenPanel<UITeaMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UITeaMeetingPanel");

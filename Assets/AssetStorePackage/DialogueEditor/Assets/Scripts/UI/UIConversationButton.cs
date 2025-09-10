@@ -32,7 +32,7 @@ namespace DialogueEditor
 
         // Node data
         private eButtonType m_buttonType;
-        private ConversationNode m_node;    
+        private ConversationNode m_node;
 
         // Language support
         private string m_currentChineseText = "";
@@ -44,6 +44,11 @@ namespace DialogueEditor
         private bool Hovering { get { return (m_hoverState == eHoverState.animatingOn || m_hoverState == eHoverState.animatingOff); } }
         private Vector3 BigSize { get { return Vector3.one * 1.2f; } }
 
+        //--------------------------------------
+        // 新增：冷却时间
+        //--------------------------------------
+        private float cooldownTime = 0.2f; // 冷却时间，单位秒
+        private float lastClickTime = 0.0f; // 上次点击的时间
 
         //--------------------------------------
         // MonoBehaviour
@@ -53,19 +58,19 @@ namespace DialogueEditor
         {
             m_rect = GetComponent<RectTransform>();
         }
-        
-                private void Start()
+
+        private void Start()
         {
             // 注册语言变化事件
             Global.CurrentLanguage.Register(OnLanguageChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
         }
-        
+
         private void OnLanguageChanged(GlobalEnums.Language language)
         {
             // 当语言改变时，实时更新按钮文本
             UpdateButtonTextForCurrentLanguage();
         }
-        
+
         private void UpdateButtonTextForCurrentLanguage()
         {
             // 根据按钮类型更新对应的文本
@@ -84,7 +89,7 @@ namespace DialogueEditor
                         {
                             textToDisplay = m_currentChineseText;
                         }
-                        
+
                         // 更新按钮文本
                         if (!string.IsNullOrEmpty(textToDisplay))
                         {
@@ -92,7 +97,7 @@ namespace DialogueEditor
                         }
                     }
                     break;
-                    
+
                 case eButtonType.Speech:
                     // 下一步按钮需要根据语言更新文本
                     if (Global.CurrentLanguage.Value == GlobalEnums.Language.English)
@@ -104,7 +109,7 @@ namespace DialogueEditor
                         TextMesh.text = "下一步";
                     }
                     break;
-                    
+
                 case eButtonType.End:
                     if (Global.CurrentLanguage.Value == GlobalEnums.Language.English)
                     {
@@ -117,7 +122,7 @@ namespace DialogueEditor
                     break;
             }
         }
-        
+
         private void Update()
         {
             if (Hovering)
@@ -132,7 +137,6 @@ namespace DialogueEditor
                 }
                 Vector3 size = Vector3.one;
                 float ease = EaseOutQuart(normalised);
-                
 
                 switch (m_hoverState)
                 {
@@ -152,9 +156,6 @@ namespace DialogueEditor
                 }
             }
         }
-
-
-
 
         //--------------------------------------
         // Input Events
@@ -178,6 +179,13 @@ namespace DialogueEditor
         {
             if (!ConversationManager.Instance.AllowMouseInteraction) { return; }
 
+            // 检查冷却时间
+            if (Time.time - lastClickTime < cooldownTime)
+            {
+                return; // 如果未到冷却时间，直接返回
+            }
+
+            lastClickTime = Time.time; // 更新上次点击时间
             DoClickBehaviour();
         }
 
@@ -185,9 +193,6 @@ namespace DialogueEditor
         {
             DoClickBehaviour();
         }
-
-
-
 
         //--------------------------------------
         // Public calls
@@ -253,7 +258,7 @@ namespace DialogueEditor
                         // 保存中英文文本，用于语言切换
                         m_currentChineseText = node.Text;
                         m_currentEnglishText = node.Text_En;
-                        
+
                         // Set text based on current language
                         string textToDisplay = "";
                         if (Global.CurrentLanguage.Value == GlobalEnums.Language.English && !string.IsNullOrEmpty(node.Text_En))
@@ -264,7 +269,7 @@ namespace DialogueEditor
                         {
                             textToDisplay = node.Text;
                         }
-                        
+
                         TextMesh.text = textToDisplay;
                         TextMesh.font = node.TMPFont;
                     }
@@ -272,7 +277,7 @@ namespace DialogueEditor
 
                 case eButtonType.Speech:
                     {
-                        if(Global.CurrentLanguage.Value == GlobalEnums.Language.English)
+                        if (Global.CurrentLanguage.Value == GlobalEnums.Language.English)
                         {
                             TextMesh.text = "Continue";
                         }
@@ -287,7 +292,7 @@ namespace DialogueEditor
 
                 case eButtonType.End:
                     {
-                        if(Global.CurrentLanguage.Value == GlobalEnums.Language.English)
+                        if (Global.CurrentLanguage.Value == GlobalEnums.Language.English)
                         {
                             TextMesh.text = "End";
                         }
@@ -300,9 +305,6 @@ namespace DialogueEditor
                     break;
             }
         }
-
-
-
 
         //--------------------------------------
         // Private logic
@@ -325,9 +327,6 @@ namespace DialogueEditor
                     break;
             }
         }
-
-
-
 
         //--------------------------------------
         // Util
