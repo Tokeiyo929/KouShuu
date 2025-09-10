@@ -67,7 +67,7 @@ namespace QFramework.Example
                 StartCoroutine(FindDirectorAfterLoad());
             }
 
-            clickManager.ResetCamera();
+            //clickManager.ResetCamera();
         }
 
         private bool IsSceneLoaded(string sceneName)

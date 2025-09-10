@@ -96,9 +96,4 @@ public class ClickManager : MonoBehaviour
         }
     }
 
-    public void ResetCamera()
-    {
-        if(GameObject.FindGameObjectWithTag("PlayerCamera") != null)
-            playerCamera = GameObject.FindGameObjectWithTag("PlayerCamera").GetComponent<Camera>();
-    }
 }
