@@ -12,13 +12,6 @@ public class BlinkEffect : MonoBehaviour
 
     private void OnEnable()
     {
-        DoBlink();
-    }
-    /// <summary>
-    /// 执行一次完整的眨眼效果（黑->亮）
-    /// </summary>
-    public void DoBlink()
-    {
         // 确保Image是激活的
         blinkImage.gameObject.SetActive(true);
 
@@ -44,31 +37,5 @@ public class BlinkEffect : MonoBehaviour
 
         // 播放序列
         blinkSequence.Play();
-    }
-
-    // 一个可选的公共方法，用于场景切换或特殊时刻的“闭眼-睁眼”效果
-    // 比如从A场景切换到B场景，先黑屏，加载完场景后再亮屏
-    public void DoBlinkWithCallback(System.Action onMidBlinkCallback)
-    {
-        blinkImage.gameObject.SetActive(true);
-        Color endColor = blinkImage.color;
-        endColor.a = 0f;
-        blinkImage.color = endColor;
-
-        Sequence sequence = DOTween.Sequence();
-        // 渐黑
-        sequence.Append(blinkImage.DOFade(1f, blinkDuration / 2));
-        // 在变黑最严重的时候执行回调（例如加载新场景）
-        sequence.AppendCallback(() => onMidBlinkCallback?.Invoke());
-        // 渐亮
-        sequence.Append(blinkImage.DOFade(0f, blinkDuration / 2));
-        sequence.Play();
-    }
-
-    // 在Inspector中调试用
-    [ContextMenu("Test Blink")]
-    private void TestBlink()
-    {
-        DoBlink();
     }
 }

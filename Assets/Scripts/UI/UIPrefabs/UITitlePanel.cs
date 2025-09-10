@@ -73,9 +73,6 @@ namespace QFramework.Example
 				UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
                 UIKit.OpenPanel<UILevle2TransitionPanel>(UILevel.Common, null, null, "UIPrefabs/UILevle2TransitionPanel");
 
-				//临时解决第二关跳转问题
-				InitScoreList();
-
                 //UIKit.CloseAllPanel();
                 //UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
                 //UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
@@ -180,16 +177,5 @@ namespace QFramework.Example
 			UIKit.OpenPanel<UICoverPanel>(UILevel.Common, null, null, "UIPrefabs/UICoverPanel");
 		}
 
-		//临时解决第二关跳转问题
-		private void InitScoreList()
-		{
-			if(Global.ScoreList.Count == 0)
-			{
-                for (int i = 0; i < 18; i++)
-                {
-                    Global.ScoreList.Add(0f);
-                }
-            }
-		}
 	}
 }

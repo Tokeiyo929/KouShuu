@@ -46,7 +46,18 @@ namespace QFramework.Example
 
 			Global.StudentStartTime = DateTime.Now;
 
-			UIKit.CloseAllPanel();
+            // 打开标题界面
+
+            //临时解决ScoreList为空问题
+            if (Global.ScoreList.Count == 0)
+            {
+                for (int i = 0; i < 18; i++)
+                {
+                    Global.ScoreList.Add(0f);
+                }
+            }
+
+            UIKit.CloseAllPanel();
 			UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
 			UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
 			UIKit.OpenPanel<UISelectPanel>(UILevel.Common, null, null, "UIPrefabs/UISelectPanel");

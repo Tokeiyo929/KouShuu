@@ -125,4 +125,13 @@ public class DragSequence : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
                currentCorners[2].y > targetCorners[0].y &&
                currentCorners[0].y < targetCorners[2].y;
     }
+
+    public void ResetSequence()
+    {
+        currentIndex = 0;
+        foreach (var target in targetImages)
+        {
+            target.hasTriggered = false;
+        }
+    }
 }

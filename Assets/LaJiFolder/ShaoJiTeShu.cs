@@ -28,6 +28,10 @@ public class ShaoJiTeShu : MonoBehaviour
         {
             Camera camera = GameObject.FindGameObjectWithTag("PlayerCamera").GetComponent<Camera>();
             // 创建射线从相机到鼠标位置
+            if (camera == null)
+            {
+                return;
+            }
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -45,6 +49,6 @@ public class ShaoJiTeShu : MonoBehaviour
     // 当BoxCollider被点击时调用的函数
     void OnBoxClicked()
     {
-        teaSetInteraction.ReturnToOriginalPosition();
+        teaSetInteraction.OnTeaSetClick();
     }
 }

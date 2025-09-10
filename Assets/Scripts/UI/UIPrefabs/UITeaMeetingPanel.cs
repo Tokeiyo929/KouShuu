@@ -312,10 +312,6 @@ namespace QFramework.Example
 			foreach (var node in AddConversation_1.GetComponentsInChildren<NodeEventHolder>())
 			{
 				node.Event.AddListener(() => playTalkingAnimation(AddConversation_1.name, node.NodeID));
-				if (node.NodeID == 2)
-				{
-					node.Event.AddListener(BlinkEye);
-				}
 				if (node.NodeID == 4)
 				{
 					node.Event.AddListener(() => TriggerSelfAction(16));
@@ -519,10 +515,6 @@ namespace QFramework.Example
 			}
 		}
         #region LaJiDaima
-		public void BlinkEye()
-		{
-			GameObject.Find("Canvas004-3").GetComponent<Canvas>().transform.Find("Image").gameObject.SetActive(true);
-        }
 		public void TriggerSelfAction(int index)
 		{
             DialogueManager.Instance.Conversations[index].GetComponent<ClickableObject>().TriggerAction();

@@ -134,7 +134,7 @@ namespace QFramework.Example
         /// <summary>
         /// 处理鼠标点击事件
         /// </summary>
-        private void OnTeaSetClick()
+        public void OnTeaSetClick()
         {
             // 检查是否有其他物体正在检视
             if (isAnyObjectInspecting && currentInspectingObject != null && currentInspectingObject != this)
@@ -346,7 +346,7 @@ namespace QFramework.Example
         }
         
         // 返回原位置
-        public void ReturnToOriginalPosition()
+        private void ReturnToOriginalPosition()
         {
             Debug.Log("ReturnToOriginalPosition");
             isInspecting = false;
