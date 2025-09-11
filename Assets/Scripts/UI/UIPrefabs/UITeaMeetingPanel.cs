@@ -41,12 +41,10 @@ namespace QFramework.Example
         [SerializeField] private Animator[] animatorObjects;
 
         public Machine FsmManager;
-
         protected override void OnInit(IUIData uiData = null)
         {
             mData = uiData as UITeaMeetingPanelData ?? new UITeaMeetingPanelData();
             // please add init code here
-
             TeaMeetingConversation_1 = DialogueManager.Instance.Conversations[1];
             TeaMeetingConversation_2 = DialogueManager.Instance.Conversations[2];
             TeaMeetingConversation_3 = DialogueManager.Instance.Conversations[3];
@@ -250,6 +248,10 @@ namespace QFramework.Example
             foreach (var node in TeaMeetingConversation_1.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(TeaMeetingConversation_1.name, node.NodeID));
+                if (node.NodeID == 0)
+                {
+                    node.Event.AddListener(() => TriggerSelfAction(1));
+                }
                 if (node.NodeID == 2)
                 {
                     node.Event.AddListener(ChangeToState_MakeTea);
@@ -320,7 +322,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_2.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_2.name, node.NodeID));
-                if (node.NodeID == 4)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(17));
                 }
@@ -328,7 +330,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_3.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_3.name, node.NodeID));
-                if (node.NodeID == 4)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(18));
                 }
@@ -336,7 +338,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_4.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_4.name, node.NodeID));
-                if (node.NodeID == 4)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(19));
                 }
@@ -352,7 +354,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_6.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_6.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(21));
                 }
@@ -360,7 +362,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_7.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_7.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(22));
                 }
@@ -368,7 +370,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_8.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_8.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(23));
                 }
@@ -376,7 +378,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_9.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_9.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(24));
                 }
@@ -384,7 +386,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_10.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_10.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(25));
                 }
@@ -392,7 +394,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_11.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_11.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(26));
                 }
@@ -400,7 +402,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_12.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_12.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(27));
                 }
@@ -408,7 +410,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_13.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_13.name, node.NodeID));
-                if (node.NodeID == 2)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(28));
                 }
@@ -416,7 +418,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_14.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_14.name, node.NodeID));
-                if (node.NodeID == 6)
+                if (node.NodeID == 3)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(29));
                 }
@@ -424,7 +426,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_15.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_15.name, node.NodeID));
-                if (node.NodeID == 7)
+                if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(30));
                 }
@@ -432,7 +434,7 @@ namespace QFramework.Example
             foreach (var node in AddConversation_16.GetComponentsInChildren<NodeEventHolder>())
             {
                 node.Event.AddListener(() => playTalkingAnimation(AddConversation_16.name, node.NodeID));
-                if (node.NodeID == 13)
+                if (node.NodeID == 5)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(31));
                 }

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using QFramework;
 using TMPro;
 using System;
+using System.Collections.Generic;
 
 namespace QFramework.Example
 {
@@ -13,9 +14,9 @@ namespace QFramework.Example
     {
         // 公共的返回按钮行为委托，其他脚本可以直接设置
         public static Action OnBackButtonClick;
-
         protected override void OnInit(IUIData uiData = null)
         {
+            CacheAnimatorChildren();
             mData = uiData as UITitlePanelData ?? new UITitlePanelData();
 
             // 先设置委托，确保在按钮事件注册时委托已经可用
@@ -82,8 +83,8 @@ namespace QFramework.Example
             Btn_Step3.onClick.AddListener(() =>
             {
                 Global.CurrentStep.Value = 2;
-
                 SceneManager.Instance.UnloadCurrentScene();
+                //SetAnimatorChildrenActive(0, 1, 2, 3);
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -176,6 +177,50 @@ namespace QFramework.Example
             UIKit.CloseAllPanel();
             UIKit.OpenPanel<UICoverPanel>(UILevel.Common, null, null, "UIPrefabs/UICoverPanel");
         }
+        #region 新增代码
+        private List<GameObject> animatorChildren = new List<GameObject>();
+
+        // 获取并缓存 Animator 子物体
+        private void CacheAnimatorChildren()
+        {
+            animatorChildren.Clear();
+
+            GameObject animatorObj = GameObject.Find("Animator");
+            if (animatorObj == null)
+            {
+                Debug.LogWarning("未找到名为 Animator 的对象！");
+                return;
+            }
+
+            foreach (Transform child in animatorObj.transform)
+            {
+                animatorChildren.Add(child.gameObject);
+                Debug.Log($"找到 Animator 子物体: {child.gameObject.name}");
+            }
+
+            Debug.Log($"Animator 子物体总数: {animatorChildren.Count}");
+        }
+
+        // 通过传入索引数组来控制哪些子物体激活
+        private void SetAnimatorChildrenActive(params int[] indices)
+        {
+            if (animatorChildren.Count == 0)
+            {
+                CacheAnimatorChildren(); // 如果没缓存过，就先获取
+            }
+
+            HashSet<int> activeSet = new HashSet<int>(indices);
+
+            for (int i = 0; i < animatorChildren.Count; i++)
+            {
+                bool active = activeSet.Contains(i);
+                animatorChildren[i].SetActive(active);
+                animatorChildren[i].GetComponent<Animator>().enabled = active; // 同时启用/禁用 Animator 组件
+                Debug.Log($"子物体 {animatorChildren[i].name} 设置为 {(active ? "激活" : "隐藏")}");
+            }
+        }
+
+        #endregion
 
     }
 }

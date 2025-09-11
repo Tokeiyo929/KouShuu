@@ -26,42 +26,42 @@ public class ClickManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (isCooldown) return;
+    //private void Update()
+    //{
+    //    if (isCooldown) return;
 
-        // 检查是否点击了UI元素
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;  // 如果点击的是UI，跳过射线检测
-        }
+    //    // 检查是否点击了UI元素
+    //    if (EventSystem.current.IsPointerOverGameObject())
+    //    {
+    //        return;  // 如果点击的是UI，跳过射线检测
+    //    }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit))
-            {
-                GameObject clickedObject = hit.collider.gameObject;
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+    //        if (Physics.Raycast(ray, out RaycastHit hit))
+    //        {
+    //            GameObject clickedObject = hit.collider.gameObject;
 
-                // 遍历列表找有没有匹配的 ClickableObject
-                ClickableObject target = clickObjects.Find(obj => obj.gameObject == clickedObject);
+    //            // 遍历列表找有没有匹配的 ClickableObject
+    //            ClickableObject target = clickObjects.Find(obj => obj.gameObject == clickedObject);
 
-                if (target != null && !target.HasBeenClicked)   // 确保没被点过
-                {
-                    target.TriggerAction();
-                    target.HasBeenClicked = true; // 标记为已点击
+    //            if (target != null && !target.HasBeenClicked)   // 确保没被点过
+    //            {
+    //                target.TriggerAction();
+    //                target.HasBeenClicked = true; // 标记为已点击
 
-                    // 冷却
-                    isCooldown = true;
-                    StartCoroutine(Cooldown(target.animationDuration));
-                }
-                else
-                {
-                    Debug.Log("点到无效物体，或者该物体已点击过");
-                }
-            }
-        }
-    }
+    //                // 冷却
+    //                isCooldown = true;
+    //                StartCoroutine(Cooldown(target.animationDuration));
+    //            }
+    //            else
+    //            {
+    //                Debug.Log("点到无效物体，或者该物体已点击过");
+    //            }
+    //        }
+    //    }
+    //}
 
     public void TryClickFromUI(ClickableObject obj)
     {
