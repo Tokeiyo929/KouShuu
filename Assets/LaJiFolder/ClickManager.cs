@@ -95,5 +95,26 @@ public class ClickManager : MonoBehaviour
             clickObjects.Add(CO);
         }
     }
+    public void ClearList()
+    {
+        if (clickObjects != null)
+        {
+            clickObjects.Clear();
+        }
+    }
+    private void OnDisable()
+    {
+        if (clickObjects != null)
+        {
+            clickObjects.Clear();
+        }
+    }
+    private void OnDestroy()
+    {
+        if (clickObjects != null)
+        {
+            clickObjects.Clear();
+        }
+    }
 
 }
