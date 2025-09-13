@@ -13,6 +13,7 @@ public class ClickableObject : MonoBehaviour
     public TimelineController timelineController;
     public HighlightEffect outline;
     public UnityEvent onShunKanClickEvents;
+    public bool isInterrupted = false;
 
     [Header("延时执行")]
     [Tooltip("延迟执行 onClickEvents 的时间")]
@@ -61,6 +62,7 @@ public class ClickableObject : MonoBehaviour
 
     public void TriggerAction()
     {
+        OnTriggerAction();
         Deactivate();
 
         if (animator != null)
@@ -106,7 +108,14 @@ public class ClickableObject : MonoBehaviour
         {
             mb.StartCoroutine(WaitForSeconds(delayTime, () =>
             {
-                onClickEvents?.Invoke();
+                if (!isInterrupted)
+                {
+                    onClickEvents?.Invoke();
+                }
+                else
+                {
+                    Debug.Log("点击事件被中断，未执行 onClickEvents");
+                }
             }));
         }
         else
@@ -118,7 +127,16 @@ public class ClickableObject : MonoBehaviour
         {
             mb.StartCoroutine(WaitForSeconds(cameraBiasTime, () =>
             {
-                onBiasCameraEvents?.Invoke();
+
+                if (!isInterrupted)
+                {
+                    onBiasCameraEvents?.Invoke();
+                }
+                else
+                {
+                    Debug.Log("相机事件被中断，未执行 onBiasCameraEvents");
+                }
+
             }));
         }
     }
@@ -169,5 +187,13 @@ public class ClickableObject : MonoBehaviour
     {
         var camera = GameObject.FindGameObjectWithTag("PlayerCamera");
         camera.GetComponent<SmoothCameraMover>().SnapToTransform(ts);
+    }
+    private void OnTriggerAction()
+    {
+        CkObjMgr ckObjMgr = FindObjectOfType<CkObjMgr>();
+        if (ckObjMgr != null)
+        {
+            ckObjMgr.AddClickableObject(this);
+        }
     }
 }

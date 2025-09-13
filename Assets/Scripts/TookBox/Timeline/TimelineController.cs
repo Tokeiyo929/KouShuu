@@ -81,4 +81,34 @@ public class TimelineController : MonoBehaviour
 		PlayTimelineAtTime(time);
 		PauseTimeline();
     }
+
+    // 新增：播放Timeline并在下一帧暂停的方法
+    // 新增：播放Timeline并在下一帧暂停的方法
+    public void PlayTimelineAtTimeAndPauseNextFrame(float time)
+    {
+        // 添加安全检查，避免直接调用 ResumeTimeline() 导致空引用
+        if (director == null || !director.playableGraph.IsValid())
+        {
+            // 如果 Graph 无效，直接设置时间并播放
+            director.time = time;
+            director.RebuildGraph();
+            director.Play();
+            director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+            isplaying = false;
+            return;
+        }
+
+        ResumeTimeline();
+        StartCoroutine(PauseNextFrame(time));
+    }
+
+    // 新增：协程方法，在下一帧暂停
+    private IEnumerator PauseNextFrame(float time)
+    {
+        // 等待一帧
+        yield return null;
+
+        // 暂停Timeline
+        MoveTimelineAtTime(time);
+    }
 }

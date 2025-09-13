@@ -57,6 +57,9 @@ namespace QFramework.Example
             {
                 Global.CurrentStep.Value = 0;
                 UIKit.CloseAllPanel();
+                GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
+
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
                 UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
                 UIKit.OpenPanel<UISelectPanel>(UILevel.Common, null, null, "UIPrefabs/UISelectPanel");
@@ -68,6 +71,8 @@ namespace QFramework.Example
             {
                 Global.CurrentStep.Value = 1;
                 SceneManager.Instance.UnloadCurrentScene();
+                GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -84,6 +89,8 @@ namespace QFramework.Example
             {
                 Global.CurrentStep.Value = 2;
                 SceneManager.Instance.UnloadCurrentScene();
+                GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                GameObject.FindObjectOfType<TimelineController>().PlayTimelineAtTimeAndPauseNextFrame(35f);
                 //SetAnimatorChildrenActive(0, 1, 2, 3);
 
                 UIKit.CloseAllPanel();
@@ -96,8 +103,9 @@ namespace QFramework.Example
             Btn_Step4.onClick.AddListener(() =>
             {
                 Global.CurrentStep.Value = 3;
-
                 SceneManager.Instance.UnloadCurrentScene();
+                GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -107,8 +115,9 @@ namespace QFramework.Example
 
             Btn_Step5.onClick.AddListener(() => {
                 Global.CurrentStep.Value = 4;
-
                 SceneManager.Instance.UnloadCurrentScene();
+                GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");

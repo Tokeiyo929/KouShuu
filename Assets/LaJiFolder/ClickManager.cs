@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using HighlightPlus;
 
 public class ClickManager : MonoBehaviour
 {
@@ -102,6 +103,35 @@ public class ClickManager : MonoBehaviour
             clickObjects.Clear();
         }
     }
+    public void ClearListAndSetHighlightOff()
+    {
+        if (clickObjects == null)
+            return;
+
+        foreach (var obj in clickObjects)
+        {
+            if (obj == null)
+                continue;
+
+            // 优化：只获取一次组件
+            var highlight = obj.GetComponent<HighlightEffect>();
+            if (highlight != null)
+            {
+                highlight.enabled = false;
+            }
+            else
+            {
+                // 如果没有找到，再尝试在父对象中查找
+                var parentHighlight = obj.GetComponentInParent<HighlightEffect>();
+                if (parentHighlight != null)
+                {
+                    parentHighlight.enabled = false;
+                }
+            }
+        }
+
+        clickObjects.Clear();
+    }
     private void OnDisable()
     {
         if (clickObjects != null)
@@ -114,6 +144,14 @@ public class ClickManager : MonoBehaviour
         if (clickObjects != null)
         {
             clickObjects.Clear();
+        }
+    }
+    public void RemoveList(ClickableObject CO)
+    {
+        if (CO != null)
+        {
+            CO.HasBeenClicked = false;
+            clickObjects.Remove(CO);
         }
     }
 

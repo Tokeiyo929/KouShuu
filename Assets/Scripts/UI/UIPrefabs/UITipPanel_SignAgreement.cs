@@ -100,6 +100,9 @@ namespace QFramework.Example
 		{
             foreach (var node in Conversation_SalesContract_1.GetComponentsInChildren<NodeEventHolder>())
             {
+				if(node.NodeID == 0){
+					GameObject.FindObjectOfType<TimelineController>().PlayTimelineAtTimeAndPauseNextFrame(545f);
+                }
                 if (node.NodeID == 1)
                 {
                     node.Event.AddListener(() => TriggerSelfAction(9));
