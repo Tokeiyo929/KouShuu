@@ -105,13 +105,17 @@ namespace QFramework.Example
 
         public void UnloadScene(string sceneName)
         {
-            //1.先卸载场景里的ui，而不是新场景的ui
-            foreach (GameObject GO in AddCanvasList)
-            {
-                GO.SetActive(false);
-            }
+            SetCanvasFalse();
             UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(sceneName);
             currentSceneName = null;
+        }
+        public void SetCanvasFalse()
+        {
+            foreach (GameObject GO in AddCanvasList)
+            {
+                GO.GetComponent<PanelElementInitial>()?.TriggerCloseCanvas();
+                GO.SetActive(false);
+            }
         }
 
         private IEnumerator FindDirectorAfterLoad()

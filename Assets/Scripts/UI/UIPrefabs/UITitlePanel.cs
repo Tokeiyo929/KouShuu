@@ -4,6 +4,7 @@ using QFramework;
 using TMPro;
 using System;
 using System.Collections.Generic;
+using HighlightPlus;
 
 namespace QFramework.Example
 {
@@ -91,7 +92,21 @@ namespace QFramework.Example
                 SceneManager.Instance.UnloadCurrentScene();
                 GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
                 GameObject.FindObjectOfType<TimelineController>().PlayTimelineAtTimeAndPauseNextFrame(35f);
-                //SetAnimatorChildrenActive(0, 1, 2, 3);
+                foreach(var obj in GameObject.FindObjectsOfType<HighlightEffect>())
+                {
+                    obj.enabled = false;
+                }
+                GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
+                if (GameObject.FindWithTag("PlayerCamera") != null)
+                {
+                    Debug.Log("找到了 PlayerCamera 对象，正在设置位置和旋转。");
+                    GameObject.FindWithTag("PlayerCamera").GetComponent<SmoothCameraMover>().SnapToTransform(GameObject.Find("CameraPosLeft").transform);
+                }
+                else
+                {
+                                       Debug.LogError("未找到 PlayerCamera 对象，无法设置位置和旋转。");
+                }
+                    //SetAnimatorChildrenActive(0, 1, 2, 3);
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");

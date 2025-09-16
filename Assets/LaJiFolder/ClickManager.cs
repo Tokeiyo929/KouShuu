@@ -98,6 +98,13 @@ public class ClickManager : MonoBehaviour
     }
     public void ClearList()
     {
+        foreach (var obj in clickObjects)
+        {
+            if (obj != null)
+            {
+                obj.HasBeenClicked = false;
+            }
+        }
         if (clickObjects != null)
         {
             clickObjects.Clear();
@@ -112,6 +119,8 @@ public class ClickManager : MonoBehaviour
         {
             if (obj == null)
                 continue;
+            //新增关闭点击状态
+            obj.HasBeenClicked = false;
 
             // 优化：只获取一次组件
             var highlight = obj.GetComponent<HighlightEffect>();
@@ -134,6 +143,13 @@ public class ClickManager : MonoBehaviour
     }
     private void OnDisable()
     {
+        foreach (var obj in clickObjects)
+        {
+            if (obj != null)
+            {
+                obj.HasBeenClicked = false;
+            }
+        }
         if (clickObjects != null)
         {
             clickObjects.Clear();
@@ -141,6 +157,13 @@ public class ClickManager : MonoBehaviour
     }
     private void OnDestroy()
     {
+        foreach (var obj in clickObjects)
+        {
+            if (obj != null)
+            {
+                obj.HasBeenClicked = false;
+            }
+        }
         if (clickObjects != null)
         {
             clickObjects.Clear();

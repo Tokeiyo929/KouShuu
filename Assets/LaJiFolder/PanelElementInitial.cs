@@ -7,14 +7,18 @@ public class PanelElementInitial : MonoBehaviour
 {
     public UnityEvent onInit;
 
+    public UnityEvent onDisableEvents;
+
     void OnEnable()
     {
         onInit?.Invoke();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void TriggerCloseCanvas()
     {
-        
+        onDisableEvents?.Invoke();
+    }
+    private void OnDisable()
+    {
+        TriggerCloseCanvas();
     }
 }
