@@ -91,6 +91,8 @@ public class HightlightManage : MonoBehaviour
                 {
                     //effects[i].SetHighlighted(true);
                     choices[i].GetComponent<HighlightControl>().SetGlowColor(Color.red);
+                    //检查到第一个的时候就return了，所以额外让第二个红色高亮.2的index是1
+                    choices[1].GetComponent<HighlightControl>().SetGlowColor(Color.red);
                     rightAnswer.GetComponent<HighlightControl>().SetGlowColor(Color.green);
                     rightAnswer.GetComponent<HighlightEffect>().SetHighlighted(true);
                     img_wrong.gameObject.SetActive(true);

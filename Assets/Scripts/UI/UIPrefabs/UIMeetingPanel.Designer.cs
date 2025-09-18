@@ -5,7 +5,7 @@ using QFramework;
 
 namespace QFramework.Example
 {
-	// Generate Id:556987a2-647d-447b-a6f0-59c000604fc7
+	// Generate Id:8980306c-ead1-403f-b1a0-7ec444e8e4b1
 	public partial class UIMeetingPanel
 	{
 		public const string Name = "UIMeetingPanel";

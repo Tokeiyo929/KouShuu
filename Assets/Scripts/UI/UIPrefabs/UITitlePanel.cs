@@ -58,8 +58,15 @@ namespace QFramework.Example
             {
                 Global.CurrentStep.Value = 0;
                 UIKit.CloseAllPanel();
+                //打断当前交互
                 GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                //关闭所有高亮
                 GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
+                foreach (var obj in GameObject.FindObjectsOfType<HighlightEffect>())
+                {
+                    obj.enabled = false;
+                }
+                GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
 
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
                 UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
@@ -72,8 +79,15 @@ namespace QFramework.Example
             {
                 Global.CurrentStep.Value = 1;
                 SceneManager.Instance.UnloadCurrentScene();
+                //打断当前交互
                 GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                //关闭所有高亮
                 GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
+                foreach (var obj in GameObject.FindObjectsOfType<HighlightEffect>())
+                {
+                    obj.enabled = false;
+                }
+                GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -90,23 +104,28 @@ namespace QFramework.Example
             {
                 Global.CurrentStep.Value = 2;
                 SceneManager.Instance.UnloadCurrentScene();
+                //打断当前交互
                 GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
-                GameObject.FindObjectOfType<TimelineController>().PlayTimelineAtTimeAndPauseNextFrame(35f);
+                //关闭所有高亮
+                GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
                 foreach(var obj in GameObject.FindObjectsOfType<HighlightEffect>())
                 {
                     obj.enabled = false;
                 }
                 GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
-                if (GameObject.FindWithTag("PlayerCamera") != null)
+                //设置摄像机位置和旋转
+                if (GameObject.FindWithTag("PlayerCamera") != null && GameObject.FindWithTag("PlayerCamera").GetComponent<SmoothCameraMover>() != null)
                 {
                     Debug.Log("找到了 PlayerCamera 对象，正在设置位置和旋转。");
                     GameObject.FindWithTag("PlayerCamera").GetComponent<SmoothCameraMover>().SnapToTransform(GameObject.Find("CameraPosLeft").transform);
                 }
                 else
                 {
-                                       Debug.LogError("未找到 PlayerCamera 对象，无法设置位置和旋转。");
+                    Debug.LogError("未找到 PlayerCamera 对象，无法设置位置和旋转。");
                 }
-                    //SetAnimatorChildrenActive(0, 1, 2, 3);
+                //设置动画状态
+                GameObject.FindObjectOfType<TimelineController>().PlayTimelineAtTimeAndPauseNextFrame(35f);
+                //SetAnimatorChildrenActive(0, 1, 2, 3);
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -119,8 +138,15 @@ namespace QFramework.Example
             {
                 Global.CurrentStep.Value = 3;
                 SceneManager.Instance.UnloadCurrentScene();
+                //打断当前交互
                 GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                //关闭所有高亮
                 GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
+                foreach (var obj in GameObject.FindObjectsOfType<HighlightEffect>())
+                {
+                    obj.enabled = false;
+                }
+                GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -131,8 +157,15 @@ namespace QFramework.Example
             Btn_Step5.onClick.AddListener(() => {
                 Global.CurrentStep.Value = 4;
                 SceneManager.Instance.UnloadCurrentScene();
+                //打断当前交互
                 GameObject.FindObjectOfType<CkObjMgr>().InterruptLatestClickObj();
+                //关闭所有高亮
                 GameObject.FindObjectOfType<ClickManager>().ClearListAndSetHighlightOff();
+                foreach (var obj in GameObject.FindObjectsOfType<HighlightEffect>())
+                {
+                    obj.enabled = false;
+                }
+                GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");

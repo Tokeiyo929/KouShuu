@@ -448,13 +448,34 @@ namespace QFramework.Example
 
         public void ChangeToState_MakeTea()
         {
+            // 输出开始执行的日志
+            Debug.Log("开始执行ChangeToState_MakeTea");
+
             foreach (var animator in animatorObjects)
             {
-                animator.enabled = true;
+                // 输出每个animator是否被启用的日志
+                if (animator != null)
+                {
+                    animator.enabled = true;
+                    Debug.Log("启用了动画器: " + animator.name);
+                }
+                else
+                {
+                    Debug.LogWarning("遇到一个null的animator对象");
+                }
             }
+
+            // 输出FsmManager和TimeLineManager的状态改变日志
+            Debug.Log("切换FsmManager状态到State-泡茶");
             FsmManager.ChangeToStateByName("State-泡茶");
+
+            Debug.Log("切换TimeLineManager状态到State-泡茶");
             TimeLineManager.Instance.ChangeToState("State-泡茶");
+
+            // 输出结束的日志
+            Debug.Log("完成ChangeToState_MakeTea");
         }
+
 
         public void ChangeToState_ExtraTea()
         {

@@ -132,7 +132,7 @@ namespace QFramework.Example
 		
 		private void OnClickNextPageButton()
 		{
-			UIKit.OpenPanel<UITeaMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UITeaMeetingPanel");
+            UIKit.OpenPanel<UITeaMeetingPanel>(UILevel.Common, null, null, "UIPrefabs/UITeaMeetingPanel");
 			UIKit.ClosePanel<UIMeetingPanel>();
 
 			AnimationManager.Instance.EndInspection();

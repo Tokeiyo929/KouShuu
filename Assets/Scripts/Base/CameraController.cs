@@ -23,6 +23,10 @@ namespace QFramework.Example
         [SerializeField] private LayerMask collisionLayerMask = -1; // 可碰撞的层级
         [SerializeField] private float collisionCheckDistance = 0.1f; // 碰撞检测距离
 
+        [Header("视角高度设置")]
+        [SerializeField] private float fixedHeight = 1.7f; // 人视角高度
+        [SerializeField] private bool useFixedHeight = true; // 是否使用固定高度
+
         [SerializeField]private Camera currentCamera;
         private Transform cameraTransform;
         private Rigidbody cameraRigidbody;
@@ -148,13 +152,13 @@ namespace QFramework.Example
 
             float horizontal = Input.GetAxis("Horizontal"); // A/D
             float vertical = Input.GetAxis("Vertical");     // W/S
-            float upDown = 0f;
+            //float upDown = 0f;
 
             // 可选：添加QE上下移动
-            if (Input.GetKey(KeyCode.Q)) upDown = -1f;
-            if (Input.GetKey(KeyCode.E)) upDown = 1f;
+            //if (Input.GetKey(KeyCode.Q)) upDown = -1f;
+            //if (Input.GetKey(KeyCode.E)) upDown = 1f;
 
-            Vector3 direction = new Vector3(horizontal, upDown, vertical);
+            Vector3 direction = new Vector3(horizontal, 0f, vertical);
             
             // 转换为世界坐标系下的移动方向
             Vector3 worldDirection = cameraTransform.TransformDirection(direction);
@@ -162,6 +166,13 @@ namespace QFramework.Example
             
             // 使用射线检测避免穿墙
             Vector3 safePosition = GetSafeMovementPosition(cameraTransform.position, moveVector);
+
+            // 固定Y轴高度
+            if (useFixedHeight)
+            {
+                safePosition.y = fixedHeight;
+            }
+
             cameraTransform.position = safePosition;
         }
 

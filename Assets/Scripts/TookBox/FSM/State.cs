@@ -33,6 +33,15 @@ namespace FSM
             {
                 action.Execute();
             }
+            if (this.name == "State-入座")
+            {
+                Debug.Log("进入入座状态，显示下一页按钮");
+                // 这里调用Btn_NextPage.Show()，假设Btn_NextPage是一个全局可以访问的对象
+                CanvasGroup nextPageCanvasGroup = GameObject.Find("Btn_NextPage")?.GetComponent<CanvasGroup>();
+                nextPageCanvasGroup.alpha = 1;
+                nextPageCanvasGroup.interactable = true;
+                nextPageCanvasGroup.blocksRaycasts = true;
+            }
         }
 
         public virtual bool Transfer(State newState)
