@@ -61,50 +61,62 @@ namespace QFramework.Example
 			//Text_TotalScore.text = "得分：" + Global.StudentScore.ToString() ;
 		}
 
-		private void SetConversationScore()
-		{
-			List<int> errorTimes = DialogueManager.Instance.ErrorTimes;
+        private void SetConversationScore()
+        {
+            List<int> errorTimes = DialogueManager.Instance.ErrorTimes;
 
-			float totalScore=0;
-			for(int i=0;i<errorTimes.Count;i++)
-			{
-				if(i==0||i==1)
-				{
-					totalScore=2f;
-				}
-				else
-					totalScore=3f;
+            float totalScore = 0;
+            for (int i = 0; i < errorTimes.Count; i++)
+            {
+                if (i == 0 || i == 1)
+                {
+                    totalScore = 2f;
+                }
+                else
+                {
+                    totalScore = 3f;
+                }
 
-				if(i!=2)
-				{
-					if(errorTimes[i]==0)
-					{
-						Global.ScoreList[i+6]=totalScore;
-					}
-					else if(errorTimes[i]<2)
-					{
-						Global.ScoreList[i+6]=totalScore/2;
-					}
-					else
-					{
-						Global.ScoreList[i+6]=0f;
-					}
-				}
-				else
-				{
-					if(errorTimes[i]==0)
-					{
-						Global.ScoreList[i+6]=totalScore;
-					}
-					else
-					{
-						Global.ScoreList[i+6]=0;
-					}
-				}
-			}
-		}
+                if (i != 2)
+                {
+                    // 判断是否为 -1，若是则赋值 0 分
+                    if (errorTimes[i] == -1)
+                    {
+                        Global.ScoreList[i + 6] = 0f;
+                    }
+                    else if (errorTimes[i] == 0)
+                    {
+                        Global.ScoreList[i + 6] = totalScore;
+                    }
+                    else if (errorTimes[i] < 2)
+                    {
+                        Global.ScoreList[i + 6] = totalScore / 2;
+                    }
+                    else
+                    {
+                        Global.ScoreList[i + 6] = 0f;
+                    }
+                }
+                else
+                {
+                    if (errorTimes[i] == -1)
+                    {
+                        Global.ScoreList[i + 6] = 0f;
+                    }
+                    else if (errorTimes[i] == 0)
+                    {
+                        Global.ScoreList[i + 6] = totalScore;
+                    }
+                    else
+                    {
+                        Global.ScoreList[i + 6] = 0;
+                    }
+                }
+            }
+        }
 
-		private void GetScore()
+
+        private void GetScore()
 		{
 			float score=0;
 			for(int i=0;i<Content.transform.childCount;i++)
@@ -135,6 +147,15 @@ namespace QFramework.Example
                     Global.ScoreList.Add(0f);
                 }
             }
+            DialogueManager.Instance.ErrorTimes.Clear();
+            if (DialogueManager.Instance.ErrorTimes.Count == 0)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    //-1代码没有被选择过
+                    DialogueManager.Instance.ErrorTimes.Add(-1);
+                }
+            }
         }
 
 		private void OnClickRestart()
@@ -149,6 +170,15 @@ namespace QFramework.Example
                 for (int i = 0; i < 18; i++)
                 {
                     Global.ScoreList.Add(0f);
+                }
+            }
+			DialogueManager.Instance.ErrorTimes.Clear();
+            if(DialogueManager.Instance.ErrorTimes.Count == 0)
+			{
+                for (int i = 0; i < 7; i++)
+                {
+                    //-1代码没有被选择过
+                    DialogueManager.Instance.ErrorTimes.Add(-1);
                 }
             }
         }

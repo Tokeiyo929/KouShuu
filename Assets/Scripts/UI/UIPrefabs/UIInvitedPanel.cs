@@ -1,9 +1,12 @@
+using FSM;
+using QFramework;
+using QFramework.Example;
+using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using QFramework;
-using TMPro;
-using FSM;
-using QFramework.Example;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QFramework.Example
 {
@@ -14,7 +17,44 @@ namespace QFramework.Example
 	{
 		[SerializeField] private Sprite location4;
 		public Machine FsmManager;
-		protected override void OnInit(IUIData uiData = null)
+        private bool isSubmit;
+        private bool[] inputsCorrect = new bool[4];
+        private Dictionary<int, Dictionary<GlobalEnums.Language, string>> correctAnswers;
+
+        void Start()
+        {
+            isSubmit = false;
+            // 初始化 correctAnswers 只需一次
+            correctAnswers = new Dictionary<int, Dictionary<GlobalEnums.Language, string>>
+    {
+        { 0, new Dictionary<GlobalEnums.Language, string>
+            {
+                { GlobalEnums.Language.Chinese, "王国信" },
+                { GlobalEnums.Language.English, "WangGuoXin" }
+            }
+        },
+        { 1, new Dictionary<GlobalEnums.Language, string>
+            {
+                { GlobalEnums.Language.Chinese, "2025年6月28日" },
+                { GlobalEnums.Language.English, "June 28, 2025" }
+            }
+        },
+        { 2, new Dictionary<GlobalEnums.Language, string>
+            {
+                { GlobalEnums.Language.Chinese, "广深大厦7层708房" },
+                { GlobalEnums.Language.English, "Room 708, 7F, GuangShen Building" }
+            }
+        },
+        { 3, new Dictionary<GlobalEnums.Language, string>
+            {
+                { GlobalEnums.Language.Chinese, "约翰逊" },
+                { GlobalEnums.Language.English, "John" }
+            }
+        }
+    };
+            Global.CurrentLanguage.RegisterWithInitValue(OnLanguageChanged).UnRegisterWhenGameObjectDestroyed(gameObject);
+        }
+        protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIInvitedPanelData ?? new UIInvitedPanelData();
 			// please add init code here
@@ -91,75 +131,65 @@ namespace QFramework.Example
             UIKit.ClosePanel<UIInvitedPanel>();
         }
 
-		private void OnClickSubmit_1()
-		{
+        private void OnClickSubmit_1()
+        {
+            isSubmit = true;
             Debug.Log("OnClickSubmit_1");
-			Btn_Submit_1.gameObject.SetActive(false);
-			Btn_Next_1.gameObject.SetActive(true);
+            Btn_Submit_1.gameObject.SetActive(false);
+            Btn_Next_1.gameObject.SetActive(true);
 
             TMP_InputField[] inputs = new TMP_InputField[4];
-            for(int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 inputs[i] = InputFileds.transform.GetChild(i).GetChild(1).GetComponent<TMP_InputField>();
             }
 
-            Debug.Log("inputs.Length:"+inputs.Length);
-			Global.ScoreList[2]=0f;
-            for(int i = 0; i < inputs.Length; i++)
-            {
-                Debug.Log("inputs[i].text:"+inputs[i].text);
-                switch(i)
-                {
-                    case 0:
-                        if(inputs[i].text != "王国信")
-                        {    
-                            inputs[i].textComponent.color = Color.red;
-                            inputs[i].text="王国信";
-							Global.ScoreList[2] += 0f;
-                        }
-                        else
-                        {    inputs[i].textComponent.color = Color.green;
-							Global.ScoreList[2] += 2f;}
-                        break;
-                    case 1:
-                        if(inputs[i].text != "2025年6月28日")
-                        {
-                            inputs[i].textComponent.color = Color.red;
-                            inputs[i].text="2025年6月28日";
-							Global.ScoreList[2] += 0f;
-                        }
-                        else    
-                        {    inputs[i].textComponent.color = Color.green;
-							Global.ScoreList[2] += 2f;}
-                        break;
-                    case 2:
-                        if(inputs[i].text != "广深大厦7层708房")
-                        {
-                            inputs[i].textComponent.color = Color.red;
-                            inputs[i].text="广深大厦7层708房";
-							Global.ScoreList[2] += 0f;
-                        }
-                        else
-                        {    inputs[i].textComponent.color = Color.green;
-							Global.ScoreList[2] += 2f;}
-                        break;
-                    case 3:
-                        if(inputs[i].text != "约翰逊")
-                        {
-                            inputs[i].textComponent.color = Color.red;
-                            inputs[i].text="约翰逊";
-							Global.ScoreList[2] += 0f;
-                        }
-                        else
-                        {    inputs[i].textComponent.color = Color.green;
-							Global.ScoreList[2] += 2f;}
-                        break;
-                }
-            }
-            
-		}
+            Debug.Log("inputs.Length:" + inputs.Length);
 
-		private void OnClickSubmit_2()
+            // 初始化分数
+            Global.ScoreList[2] = 0f;
+
+            // 遍历每个输入框，检查答案是否正确
+            for (int i = 0; i < inputs.Length; i++)
+            {
+                string correctAnswer = correctAnswers[i][Global.CurrentLanguage.Value];
+                TMP_InputField input = inputs[i];
+
+                Debug.Log("inputs[i].text:" + input.text);
+
+                // 判断输入是否正确
+                bool isCorrect = input.text == correctAnswer;
+                inputsCorrect[i] = isCorrect; // 记录每个输入框的正确性
+                input.textComponent.color = isCorrect ? Color.green : Color.red;
+
+                // 如果不正确，自动填入正确答案
+                if (!isCorrect)
+                {
+                    input.text = correctAnswer;
+                }
+
+                // 更新分数
+                Global.ScoreList[2] += isCorrect ? 2f : 0f;
+            }
+        }
+
+        private void OnLanguageChanged(GlobalEnums.Language language)
+        {
+            if (!isSubmit) return;
+
+            TMP_InputField[] inputs = new TMP_InputField[4];
+            for (int i = 0; i < 4; i++)
+            {
+                inputs[i] = InputFileds.transform.GetChild(i).GetChild(1).GetComponent<TMP_InputField>();
+                inputs[i].text = correctAnswers[i][language];
+
+                // 根据语言切换后的正确性状态更新颜色
+                bool isCorrect = inputsCorrect[i]; // 使用记录的正确性状态
+                inputs[i].textComponent.color = isCorrect ? Color.green : Color.red;
+            }
+        }
+
+        private void OnClickSubmit_2()
 		{
 			Btn_Submit_2.gameObject.SetActive(false);
 			Btn_Next_2.gameObject.SetActive(true);
