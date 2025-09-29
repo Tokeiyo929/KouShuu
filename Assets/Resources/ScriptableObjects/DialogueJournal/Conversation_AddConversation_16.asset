@@ -15,32 +15,40 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_16
   dialogueEntries:
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u70EB\u6D17\u7684\u8FC7\u7A0B\u4E0E\u6E29\u5668\u7684\u8FC7\u7A0B\u4E5F\u6709\u76F8\u4F3C\u4E4B\u5904\u3002"
-    dialogue_EN: English
+    dialogue_EN: The process of scalding is also somewhat similar to the process
+      of dessication.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u539F\u6765\u6CE1\u8336\u8FD8\u6709\u8FD9\u4E9B\u8BB2\u7A76\uFF0C\u8336\u5177\u4ECE\u8336\u76D8\u5230\u76D6\u7F6E\uFF0C\u6446\u5F97\u6574\u6574\u9F50\u9F50\uFF0C\u8FDE\u8336\u5939\u7528\u5B8C\u90FD\u653E\u56DE\u56FA\u5B9A\u7684\u4F4D\u7F6E\uFF0C\u6CA1\u4E00\u70B9\u4E71\uFF1B"
-    dialogue_EN: English
+    dialogue_EN: It turns out that there are so many subtleties in making tea. The
+      tea utensils, from the tea tray to the lid rest, are arranged neatly, and even
+      the tea tongs are returned to their designated place after use, without a hint
+      of disorder.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u716E\u6C34\u3001\u6E29\u676F\u3001\u6295\u8336\u7684\u987A\u5E8F\u4E5F\u4E1D\u6BEB\u4E0D\u614C\uFF0C\u6BCF\u4E00\u6B65\u90FD\u6309\u89C4\u77E9\u6765\uFF0C\u5374\u53C8\u4E0D\u663E\u5F97\u523B\u610F\uFF0C\u53CD\u800C\u8BA9\u559D\u8336\u7684\u4EBA\u8DDF\u7740\u9759\u4E0B\u5FC3\u6765\uFF0C"
-    dialogue_EN: English
+    dialogue_EN: Boiling water, warming the cup, and adding the tea are done in a
+      calm and unhurried sequence. Every step follows the proper procedure, yet it
+      doesn't feel forced; instead, it helps those drinking the tea to settle their
+      minds.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u8FD9\u79CD\u2018\u6709\u89C4\u77E9\u4F46\u4E0D\u523B\u677F\u2019\u7684\u611F\u89C9\uFF0C\u592A\u96BE\u5F97\u7684\u4E86\u3002"
-    dialogue_EN: English
+    dialogue_EN: This feeling of being 'well-disciplined but not rigid' is so rare.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u54C8\u54C8\uFF0C\u591A\u8C22\u60A8\u7684\u5938\u5956\uFF0C\u60A8\u559D\u7684\u5F00\u5FC3\u6211\u4E5F\u4F1A\u5F88\u5F00\u5FC3"
-    dialogue_EN: English
+    dialogue_EN: Haha, thank you for your compliment. If you enjoy your drink, I
+      will be very happy too.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

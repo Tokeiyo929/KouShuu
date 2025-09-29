@@ -15,12 +15,14 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_4
   dialogueEntries:
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u63A5\u4E0B\u6765\u662F\u6DCB\u76D6\uFF0C\u662F\u4E00\u79CD\u7528\u6CB8\u6C34\u6D47\u6DCB\u8336\u7F50\uFF0C\u589E\u52A0\u70ED\u91CF\u4F7F\u8336\u53F6\u8FC5\u901F\u51FA\u5473\u7684\u6B65\u9AA4"
-    dialogue_EN: English
+    dialogue_EN: Next is rinsing with hot water, a step where boiling water is poured
+      over the tea caddy to increase the temperature and quickly bring out the flavor
+      of the tea leaves.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

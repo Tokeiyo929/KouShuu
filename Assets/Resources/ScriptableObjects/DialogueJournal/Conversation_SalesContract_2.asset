@@ -15,17 +15,18 @@ MonoBehaviour:
   conversationName: Conversation_SalesContract_2
   dialogueEntries:
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u7EA6\u7FF0\u900A\u5148\u751F\uFF0C\u8FD9\u662F\u4ECA\u5929\u8981\u7B7E\u7F72\u7684\u5408\u540C\uFF0C\u8BF7\u60A8\u518D\u770B\u4E00\u4E0B\u3002"
-    dialogue_EN: English
+    dialogue_EN: Mr. Johnson, this is the contract to be signed today, please take
+      another look.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u597D\u7684\u3002"
-    dialogue_EN: English
+    dialogue_EN: Okay.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

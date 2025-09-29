@@ -15,12 +15,12 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_11
   dialogueEntries:
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u6765\uFF0C\u5C0F\u674E"
-    dialogue_EN: English
+    dialogue_EN: Come, Xiao Li
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

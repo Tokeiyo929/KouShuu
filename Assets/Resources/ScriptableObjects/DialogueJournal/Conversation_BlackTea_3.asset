@@ -15,97 +15,101 @@ MonoBehaviour:
   conversationName: Conversation_BlackTea_3
   dialogueEntries:
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u4E45\u7B49\u4E86\uFF0C\u674E\u5148\u751F\u3002"
-    dialogue_EN: English
+    dialogue_EN: Sorry to keep you waiting, Mr. Li.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u5F88\u62B1\u6B49\uFF0C\u6211\u4EEC\u76EE\u524D\u4E0D\u63A5\u53D7\u8FD9\u4E9B\u4ED8\u6B3E\u65B9\u5F0F\u3002\u4E3A\u4E86\u4E0D\u5F71\u54CD\u4EA4\u8D27\u65F6\u95F4\uFF0C\u8BF7\u60A8\u52A1\u5FC5\u5728\u88C5\u8FD0\u524D\u4E09\u5341\u5929\u5F00\u51FA\u4FE1\u7528\u8BC1\u3002"
-    dialogue_EN: English
+    dialogue_EN: I'm sorry, but we do not accept these payment methods at the moment.
+      To avoid affecting the delivery time, please be sure to issue the letter of
+      credit 30 days before shipment.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u7EC8\u6B62\u8C08\u5224"
-    dialogue_EN: English
+    dialogue_EN: Terminate negotiations
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u674E\u5148\u751F\uFF0C\u8BF7\u89C1\u8C05\uFF0C\u6211\u4EEC\u6CA1\u529E\u6CD5\u63A5\u53D7\u60A8\u7684\u8981\u6C42\u3002"
-    dialogue_EN: English
+    dialogue_EN: Mr. Li, please forgive us, we cannot accept your request.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u5F88\u62B1\u6B49\uFF0C\u6211\u4EEC\u76EE\u524D\u4E0D\u63A5\u53D7\u8FD9\u4E9B\u4ED8\u6B3E\u65B9\u5F0F\u3002"
-    dialogue_EN: English
+    dialogue_EN: "I\u2019m sorry, we are currently not accepting these payment methods."
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u771F\u9057\u61BE\uFF01\u770B\u6765\u6211\u4EEC\u53EA\u597D\u53E6\u627E\u8D27\u6E90\u4E86\u3002"
-    dialogue_EN: English
+    dialogue_EN: That's a pity! It seems we have to find another source.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7ED3\u5C40"
     characterName_EN: English
     dialogue_CN: "\u8C08\u5224\u5931\u8D25"
-    dialogue_EN: English
+    dialogue_EN: Negotiation failed
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u8FD4\u56DE\u4E0A\u4E00\u6A21\u5757\u91CD\u65B0\u9009\u62E9"
-    dialogue_EN: English
+    dialogue_EN: Return to the previous module to reselect
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u8DF3\u8F6C\u81F3\u6B63\u786E\u8282\u70B9"
-    dialogue_EN: English
+    dialogue_EN: Jump to the correct node
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u63D0\u793A"
     characterName_EN: English
     dialogue_CN: "\u9009\u62E9\u9519\u8BEF\uFF0C\u8C08\u5224\u5931\u8D25\uFF0C\u6B64\u5904\u5E94\u9009\u62E9\u201C\u59A5\u534F\u201D"
-    dialogue_EN: English
+    dialogue_EN: Wrong choice, the negotiation failed. Here, you should choose 'compromise'.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u6682\u505C\u8C08\u5224"
-    dialogue_EN: English
+    dialogue_EN: Suspend negotiations
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u674E\u5148\u751F\uFF0C\u8BA9\u6211\u8003\u8651\u8003\u8651\u2026\u2026\u3002\u6211\u4EEC\u5148\u4F11\u606F\u4E00\u4E0B\u513F\u5427\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Mr. Li, let me think about it... Shall we take a break first?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u5F53\u7136\uFF0C\u60A8\u8BF7\u4FBF"
-    dialogue_EN: English
+    dialogue_EN: Of course, please go ahead.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u59A5\u534F"
-    dialogue_EN: English
+    dialogue_EN: Compromise
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u674E\u5148\u751F\uFF0C\u60A8\u53EF\u771F\u5389\u5BB3\uFF01\u8BF4\u5230\u94B1\uFF0C\u60A8\u4E00\u70B9\u513F\u60C5\u9762\u4E5F\u4E0D\u8BB2\uFF01"
-    dialogue_EN: English
+    dialogue_EN: Mr. Li, you are really impressive! When it comes to money, you don't
+      show any mercy at all!
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\uFF08\u7B11\uFF09\u60A8\u6CA1\u542C\u8FC7\u8FD9\u6837\u4E00\u53E5\u4E2D\u56FD\u8BDD\u5417\uFF1F\u201C\u4EB2\u5144\u5F1F\uFF0C\u660E\u7B97\u8D26\u201D\u561B\uFF01"
-    dialogue_EN: English
+    dialogue_EN: (laughs) Haven't you heard this Chinese saying? 'When it comes to
+      close brothers, be clear about the accounts!'
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\uFF08\u7B11\uFF09\u4E0D\u5BF9\uFF01\u60A8\u8FD9\u662F\u201C\u4E00\u624B\u4EA4\u94B1\uFF0C\u4E00\u624B\u4EA4\u8D27\u201D\uFF01"
-    dialogue_EN: English
+    dialogue_EN: (laughs) No, you're doing 'one hand pays, one hand delivers!'
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u8FDB\u5165\u4E0B\u4E00\u6A21\u5757"
-    dialogue_EN: English
+    dialogue_EN: Enter next module
     color: {r: 0, g: 0, b: 0, a: 1}

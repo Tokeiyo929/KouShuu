@@ -15,17 +15,17 @@ MonoBehaviour:
   conversationName: Conversation_SalesContract_4
   dialogueEntries:
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u6CA1\u6709\u4E86\u3002"
-    dialogue_EN: English
+    dialogue_EN: No, there aren't.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u90A3\u8BF7\u60A8\u5728\u8FD9\u513F\u7B7E\u5B57\u5427\uFF01"
-    dialogue_EN: English
+    dialogue_EN: Then please sign here!
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u597D\uFF0C\u795D\u6211\u4EEC\u5408\u4F5C\u6109\u5FEB\uFF01"
-    dialogue_EN: English
+    dialogue_EN: Okay, wish us a pleasant cooperation!
     color: {r: 0, g: 0, b: 0, a: 1}

@@ -15,12 +15,13 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_6
   dialogueEntries:
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u8FD9\u662F\u201C\u97E9\u4FE1\u70B9\u5175\u201D\uFF0C\u5F53\u8336\u6C34\u5FEB\u5012\u5C3D\u65F6\uFF0C\u5C06\u4F59\u4E0B\u7684\u6C34\u6EF4\u5165\u4E09\u4E2A\u8336\u676F\u3002"
-    dialogue_EN: English
+    dialogue_EN: This is 'Han Xin Counting Soldiers.' When the tea is nearly finished,
+      pour the remaining drops into three teacups.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

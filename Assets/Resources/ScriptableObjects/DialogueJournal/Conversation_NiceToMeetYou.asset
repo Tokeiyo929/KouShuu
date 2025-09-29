@@ -17,15 +17,15 @@ MonoBehaviour:
   - characterName_CN: "\u7EA6\u7FF0\u900A"
     characterName_EN: John
     dialogue_CN: "\u5F88\u9AD8\u5174\u89C1\u5230\u60A8\uFF0C\u738B\u603B\uFF0C\u771F\u662F\u4E45\u4EF0\u5927\u540D"
-    dialogue_EN: aaaa
+    dialogue_EN: Nice to meet you, Mr. Wang. I've heard so much about you
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u738B\u56FD\u4FE1"
     characterName_EN: WangGuoXin
     dialogue_CN: "\u7EA6\u7FF0\u900A\u5148\u751F\u5BA2\u6C14\u4E86\uFF0C\u8FD9\u8FB9\u8BF7"
-    dialogue_EN: bbbbbbbb
+    dialogue_EN: Mr. Johnson, you're welcome. Please come over here
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: Choice
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: cc
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

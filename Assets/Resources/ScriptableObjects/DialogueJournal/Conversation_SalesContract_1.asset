@@ -15,17 +15,18 @@ MonoBehaviour:
   conversationName: Conversation_SalesContract_1
   dialogueEntries:
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u65E2\u7136\u6211\u4EEC\u8FBE\u6210\u4E86\u534F\u5B9A\uFF0C\u90A3\u9EBB\u70E6\u7EA6\u7FF0\u900A\u5148\u751F\u586B\u5199\u4E00\u4E0B\u8FD9\u4E2A\u9500\u552E\u534F\u8BAE\u3002"
-    dialogue_EN: English
+    dialogue_EN: Since we have reached an agreement, could you please fill out this
+      sales contract?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u597D\u7684\u3002"
-    dialogue_EN: English
+    dialogue_EN: Sure.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
-    dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_CN: "\u586B\u5199\u9500\u552E\u534F\u8BAE"
+    dialogue_EN: Fill in the sales agreement
     color: {r: 0, g: 0, b: 0, a: 1}

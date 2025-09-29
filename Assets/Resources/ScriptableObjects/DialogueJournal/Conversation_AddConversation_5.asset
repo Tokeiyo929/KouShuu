@@ -15,12 +15,14 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_5
   dialogueEntries:
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
-    dialogue_CN: "\u8FD9\u662F\u662F\u201C\u5173\u516C\u5DE1\u57CE\u201D\uFF0C\u662F\u6307\u659F\u8336\u65F6\uFF0C\u5728\u51E0\u4E2A\u8336\u676F\u4E0A\u65B9\u5FEB\u901F\u79FB\u52A8\uFF0C\u4FDD\u8BC1\u51E0\u676F\u8336\u6D53\u6DE1\u76F8\u540C\u3002"
-    dialogue_EN: English
+    characterName_EN: WangGuoXin
+    dialogue_CN: "\u8FD9\u662F\u201C\u5173\u516C\u5DE1\u57CE\u201D\uFF0C\u662F\u6307\u659F\u8336\u65F6\uFF0C\u5728\u51E0\u4E2A\u8336\u676F\u4E0A\u65B9\u5FEB\u901F\u79FB\u52A8\uFF0C\u4FDD\u8BC1\u51E0\u676F\u8336\u6D53\u6DE1\u76F8\u540C\u3002"
+    dialogue_EN: This is 'Guan Gong Touring the City,' which refers to moving quickly
+      over several teacups while pouring tea to ensure that the tea in each cup has
+      the same strength.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

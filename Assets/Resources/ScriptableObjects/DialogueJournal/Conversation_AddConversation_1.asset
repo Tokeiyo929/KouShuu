@@ -15,27 +15,29 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_1
   dialogueEntries:
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u7EA6\u7FF0\u900A\u5148\u751F\u8BF7\u7A0D\u4F5C\u7B49\u5F85\uFF0C\u6211\u4EEC\u7528\u7684\u53EF\u662F\u4E0A\u597D\u7684\u5929\u6C34\uFF0C\u8336\u5C31\u8981\u73B0\u51B2\u73B0\u6CE1\u624D\u6700\u597D\u559D"
-    dialogue_EN: English
+    dialogue_EN: Mr. Johnson, please wait a moment. We use only the finest natural
+      spring water, and tea tastes best when brewed fresh.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u597D\u7684\uFF0C\u8FD9\u5C31\u662F\u4F60\u4EEC\u6240\u8BF4\u7684\u201C\u597D\u8336\u4E0D\u6015\u665A\u201D\u5427\uFF0C\u4ECA\u5929\u7B97\u662F\u4F53\u9A8C\u5230\u4E86\uFF08\u7B11\uFF09"
-    dialogue_EN: English
+    dialogue_EN: Alright, so this is what you all mean by 'good tea isn't afraid
+      of being late.' I guess I experienced it today (laughs).
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u738B\u5148\u751F\uFF0C\u63A5\u4E0B\u6765\u7684\u6B65\u9AA4\u662F\u4E0D\u662F\u5C31\u5230\u6E29\u5668\u4E86\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Mr. Wang, is the next step dealing with the thermostat?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u60A8\u8BF4\u7684\u5BF9\uFF0C\u63A5\u4E0B\u6765\u5C31\u5230\u6E29\u5668\u7684\u6B65\u9AA4\u4E86\uFF0C\u8BF7\u770B"
-    dialogue_EN: English
+    dialogue_EN: You are right, the next step is the thermostat. Please take a look.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

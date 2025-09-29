@@ -15,22 +15,22 @@ MonoBehaviour:
   conversationName: Conversation_BlackTea_2
   dialogueEntries:
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u8309\u8389\uFF0C\u6211\u4EEC\u7684\u8D44\u91D1\u53EF\u4EE5\u63A5\u53D7\u674E\u5148\u751F\u7684\u6761\u4EF6\u5417\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Molly, can our funds accept Mr. Li's conditions?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u53EF\u4EE5\u7684\u5148\u751F\uFF0C\u4E0D\u8FC7\u53EF\u80FD\u4F1A\u5BF9\u516C\u53F8\u7684\u8D44\u91D1\u6D41\u9020\u6210\u4E00\u5B9A\u7684\u5F71\u54CD\u3002"
-    dialogue_EN: English
+    dialogue_EN: Yes, sir, but it may have some impact on the company's cash flow.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u6211\u660E\u767D\u4E86\uFF0C\u8BA9\u6211\u4EEC\u56DE\u53BB\u7EE7\u7EED\u8C08\u5224\u5427\u3002"
-    dialogue_EN: English
+    dialogue_EN: I understand, let's go back and continue negotiating.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

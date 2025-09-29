@@ -15,58 +15,80 @@ MonoBehaviour:
   conversationName: Conversation_ExtraInvitation_1
   dialogueEntries:
   - characterName_CN: "\u674E\u5929\u7136"
-    characterName_EN: English
+    characterName_EN: LiTianRan
     dialogue_CN: "\u60A8\u597D\uFF0C\u7EA6\u7FF0\u900A\u5148\u751F\uFF0C\u771F\u662F\u4E45\u4EF0"
-    dialogue_EN: English
+    dialogue_EN: Hello, Mr. Johnson, it's a pleasure to meet you.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u4E0D\u5BA2\u6C14\u674E\u5148\u751F\uFF0C\u4E3A\u6211\u4ECB\u7ECD\u4E00\u4E0B\u4F60\u4EEC\u7684\u4EA7\u54C1\u5427"
-    dialogue_EN: English
+    dialogue_EN: You're welcome, Mr. Li. Please introduce your products to me.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u5929\u7136"
-    characterName_EN: English
+    characterName_EN: LiTianRan
     dialogue_CN: "\u597D\u7684\uFF0C\u6211\u4EEC\u5DE5\u5382\u73B0\u5728\u4E3B\u63A8\u7684\u4EA7\u54C1\u6709\u4E09\u79CD\u3002"
-    dialogue_EN: English
+    dialogue_EN: Okay, our factory currently mainly promotes three products.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u5929\u7136"
-    characterName_EN: English
+    characterName_EN: LiTianRan
     dialogue_CN: "\u7B2C\u4E00\u79CD\u662F\u9752\u74F7\u529F\u592B\u8336\u5177\u5957\u88C5\uFF0C\u91C7\u7528\u9F99\u6CC9\u672C\u5730\u9AD8\u5CAD\u571F\u70E7\u5236\uFF0C\u91C9\u8272\u50CF\u96E8\u540E\u7684\u9752\u5C71\uFF0C\u80CE\u8D28\u7EC6\u817B\u5F97\u80FD\u900F\u5149\u3002\u6211\u4EEC\u7279\u610F\u5BF9\u8336\u5177\u7684\u5404\u79CD\u8FB9\u89D2\u505A\u4E86\u7279\u6B8A\u5904\u7406\uFF0C\u5F88\u591A\u8001\u8336\u5BA2\u90FD\u5938\u63E1\u7740\u987A\u624B\u3002\u4E0A\u4E2A\u6708\u5E7F\u5DDE\u8336\u535A\u4F1A\uFF0C\u5149\u8FD9\u4E00\u6B3E\u5C31\u63A5\u4E86\u4E09\u767E\u591A\u5957\u8BA2\u5355\uFF0C\u4E0D\u5C11\u8336\u884C\u90FD\u8BF4\u662F\u4ECA\u5E74\u7684\u7206\u6B3E\u3002"
-    dialogue_EN: English
+    dialogue_EN: The first is a celadon gongfu tea set, crafted from local Longquan
+      kaolin. The glaze resembles a verdant mountain after rain, and the delicate
+      texture allows light to shine through. We have specially treated the edges
+      and corners of the tea set, and many long-time tea lovers praise its comfortable
+      grip. At the Guangzhou Tea Expo last month, we received orders for over 300
+      sets of this model alone, and many tea shops have hailed it as this year's
+      hot product.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u542C\u8D77\u6765\u5F88\u4E0D\u9519\uFF0C\u90A3\u7B2C\u4E8C\u79CD\u5462\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Sounds good. What about the second one?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u5929\u7136"
-    characterName_EN: English
+    characterName_EN: LiTianRan
     dialogue_CN: "\u7B2C\u4E8C\u79CD\u662F\u73BB\u7483\u84B8\u716E\u8336\u58F6\uFF0C\u8DDF\u9752\u74F7\u8D70\u7684\u8DEF\u5B50\u5B8C\u5168\u4E0D\u540C\u3002\u4F7F\u7528\u9AD8\u787C\u7845\u73BB\u7483\u5236\u4F5C\uFF0C\u53EF\u4EE5\u76F4\u63A5\u52A0\u70ED\uFF0C\u58F6\u8EAB\u4E0A\u6709\u6BEB\u5347\u523B\u5EA6\u3002\u58F6\u76D6\u5185\u4FA7\u5177\u5907\u7EC6\u5BC6\u6EE4\u7F51\uFF0C\u8FC7\u6EE4\u6548\u679C\u975E\u5E38\u597D\u3002\u6B27\u7F8E\u5BA2\u6237\u7279\u522B\u559C\u6B22\u8FD9\u4E2A\uFF0C\u53BB\u5E74\u7ED9\u5FB7\u56FD\u4E00\u5BB6\u8FDE\u9501\u8D85\u5E02\u4F9B\u8D27\uFF0C\u53CD\u9988\u8BF4\u8010\u70ED\u6027\u6BD4\u5F53\u5730\u54C1\u724C\u8FD8\u597D\uFF0C\u56DE\u5934\u5BA2\u4E0D\u5C11\u3002"
-    dialogue_EN: English
+    dialogue_EN: The second type is a glass steaming and brewing teapot, which follows
+      a completely different path from celadon. Made of high borosilicate glass,
+      it can be directly heated, and there are milliliter markings on the body of
+      the teapot. The inside of the lid features a fine filter mesh, which provides
+      excellent filtering effect. European and American customers particularly like
+      this one. Last year, we supplied it to a German supermarket chain, and they
+      reported that its heat resistance is even better than local brands, attracting
+      many repeat customers.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u542C\u7740\u633A\u5B9E\u7528\uFF0C\u6700\u540E\u4E00\u6B3E\u8336\u5177\u662F\u4EC0\u4E48\u6837\u7684\u5462"
-    dialogue_EN: English
+    dialogue_EN: It sounds quite practical. What does the last tea set look like?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u5929\u7136"
-    characterName_EN: English
+    characterName_EN: LiTianRan
     dialogue_CN: "\u5C31\u662F\u8FD9\u6B3E\u624B\u7ED8\u73D0\u7405\u5F69\u76D6\u7897\u4E86\u3002\u4E0A\u9762\u7684\u7F20\u679D\u83B2\u7EB9\uFF0C\u90FD\u662F\u8001\u5E08\u5085\u4E00\u7B14\u7B14\u753B\u7684\uFF0C\u6BCF\u4E2A\u7897\u5E95\u90FD\u6709\u7B7E\u540D\uFF0C\u827A\u672F\u4EF7\u503C\u5F88\u9AD8\uFF01\u7528\u7684\u8FDB\u53E3\u73D0\u7405\u6599\u8981\u5728\u516B\u767E\u5EA6\u7A91\u91CC\u70E7\u4E09\u6B21\uFF0C\u522B\u8BF4\u892A\u8272\u4E86\uFF0C\u5C31\u7B97\u7528\u5341\u5E74\uFF0C\u56FE\u6848\u8FD8\u8DDF\u65B0\u7684\u4E00\u6837\u3002\u4E0A\u6D77\u7684\u7C73\u5176\u6797\u8336\u9986\u4E0A\u4E2A\u6708\u521A\u8865\u4E86\u4E24\u767E\u5957\uFF0C\u8BF4\u7528\u6765\u62DB\u5F85
       VIP \u5BA2\u4EBA\u7279\u522B\u6709\u9762\u5B50\u3002"
-    dialogue_EN: English
+    dialogue_EN: This is the hand-painted enamel-glazed covered bowl. The intertwined
+      lotus patterns on it are all carefully drawn by the master craftsman, and each
+      bowl has a signature on the bottom, making it of high artistic value! The imported
+      enamel material used needs to be fired three times in an 800-degree kiln. Not
+      to mention fading, even after ten years, the patterns will still look as good
+      as new. The Michelin-starred tea house in Shanghai just replenished 200 sets
+      last month, saying that using them to entertain VIP guests is particularly
+      prestigious.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u5929\u7136"
-    characterName_EN: English
+    characterName_EN: LiTianRan
     dialogue_CN: "\u7EA6\u7FF0\u900A\u5148\u751F\uFF0C\u8FD9\u4E09\u6B3E\u7684\u7279\u70B9\u548C\u5E02\u573A\u53CD\u9988\u90FD\u7ED9\u60A8\u4ECB\u7ECD\u5B8C\u4E86\uFF0C\u4E0D\u77E5\u9053\u60A8\u5BF9\u54EA\u6B3E\u66F4\u611F\u5174\u8DA3\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Mr. Johnson, I have introduced to you the characteristics and market
+      feedback of these three models. What do you think?Which one are you more interested
+      in?"
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

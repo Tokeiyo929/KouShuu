@@ -15,187 +15,224 @@ MonoBehaviour:
   conversationName: Conversation_TeaMeeting_2
   dialogueEntries:
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u738B\u603B\uFF0C\u8FD9\u4E24\u5929\u53C2\u89C2\u4E86\u4F60\u4EEC\u7684\u5DE5\u5382\uFF0C\u4E5F\u770B\u4E86\u4E0D\u5C11\u4EA7\u54C1\u3002\u73B0\u5728\u6211\u60F3\u542C\u542C\u4F60\u4EEC\u7684\u62A5\u76D8\u3002"
-    dialogue_EN: English
+    dialogue_EN: Mr. Wang, I visited your factory in the past few days and saw quite
+      a few products. Now, I would like to hear your quotation.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u597D\u554A\uFF01\u4E0D\u77E5\u9053\u60A8\u5BF9\u54EA\u4E9B\u4EA7\u54C1\u611F\u5174\u8DA3\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Sure! Which products are you interested in?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u6211\u60F3\u77E5\u9053\u8D35\u516C\u53F8\u7684\u8336\u53F6\u4EF7\u683C\uFF0C\u4E3B\u8981\u662F\u82F1\u7EA2\u4E5D\u53F7\u548C\u51E4\u51F0\u5355\u679E\u3002"
-    dialogue_EN: English
+    dialogue_EN: I would like to know the prices of your company's tea, mainly the
+      YBH9 (English Red No. 9) and Phoenix Dan Cong.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u82F1\u7EA2\u4E5D\u53F7\u7684\u4EF7\u683C\u662F\u6BCF\u65A4\u4E09\u767E\u516D\u5341\u7F8E\u5143\uFF0C\u51E4\u51F0\u5355\u679E\u6BCF\u65A4\u4E8C\u767E\u56DB\u5341\u7F8E\u5143\u3002\u90FD\u662F\u6700\u9AD8\u7B49\u7EA7\u7684\u3002"
-    dialogue_EN: English
+    dialogue_EN: The price for YBH9 is three hundred sixty dollars per pound, and
+      Phoenix Dan Cong is two hundred forty dollars per tin. Both are of the highest
+      grade.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u60A8\u8BF4\u7684\u4EF7\u683C\u5305\u62EC\u8FD0\u8D39\u5417\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Does the price you mentioned include shipping costs?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u662F\u7684\uFF0C\u4EF7\u683C\u5305\u62EC\u6210\u672C\u548C\u8FD0\u8D39\u3002"
-    dialogue_EN: English
+    dialogue_EN: Yes, the price includes cost and shipping.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u63A5\u53D7\u62A5\u4EF7"
-    dialogue_EN: English
+    dialogue_EN: Accept the offer
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7ED3\u5C40"
     characterName_EN: English
     dialogue_CN: "\u9009\u62E9\u9519\u8BEF\uFF0C\u62A5\u4EF7\u8FC7\u9AD8"
-    dialogue_EN: English
+    dialogue_EN: Incorrect choice, the quotation is too high
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u56DE\u5230\u4E0A\u4E00\u9009\u62E9\u8282\u70B9"
-    dialogue_EN: English
+    dialogue_EN: Return to the previous choice node
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u8DF3\u8F6C\u81F3\u6B63\u786E\u8282\u70B9"
-    dialogue_EN: English
+    dialogue_EN: Jump to the correct node
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u63D0\u793A"
     characterName_EN: English
     dialogue_CN: "\u9009\u62E9\u9519\u8BEF\uFF0C\u62A5\u4EF7\u8FC7\u9AD8\uFF0C\u6B64\u5904\u5E94\u9009\u62E9\u201C\u8BE2\u95EE\u5B9A\u4EF7\u4E0A\u6DA8\u539F\u56E0\u201D"
-    dialogue_EN: English
+    dialogue_EN: Wrong selection, the quotation is too high. Here you should choose
+      'Inquire about the reason for the price increase'.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u8BE2\u95EE\u5B9A\u4EF7\u4E0A\u6DA8\u539F\u56E0"
-    dialogue_EN: English
+    dialogue_EN: Inquire about the reason for the price increase
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u674E\u5148\u751F\uFF0C\u82F1\u7EA2\u4E5D\u53F7\u7684\u62A5\u76D8\u4F3C\u4E4E\u6BD4\u53BB\u5E74\u9AD8\u4E86\u767E\u5206\u4E4B\u5341\u3002\u8FD9\u662F\u4E3A\u4EC0\u4E48\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Mr. Li, the offer price of Yinghong No. 9 seems to be ten percent
+      higher than last year. Why is that?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u6211\u4EEC\u5BF9\u82F1\u7EA2\u4E5D\u53F7\u8FDB\u884C\u4E86\u4EA7\u54C1\u5347\u7EA7\uFF0C\u4F7F\u7528\u4E86\u6700\u9AD8\u7B49\u7EA7\u7684\u5934\u91C7\u5355\u82BD\u4F5C\u4E3A\u539F\u7406\uFF0C\u5473\u9053\u548C\u54C1\u8D28\u90FD\u6709\u5F88\u5927\u7684\u6539\u8FDB\uFF0C\u5DF2\u7ECF\u8FBE\u5230\u4E86\u7279\u7EA7\u7684\u6807\u51C6\uFF0C\u6240\u4EE5\u6210\u672C\u4E5F\u6BD4\u53BB\u5E74\u9AD8\u3002\u6211\u4EEC\u4E0D\u5F97\u4E0D\u9002\u5F53\u63D0\u9AD8\u4EF7\u683C\u3002"
-    dialogue_EN: English
+    dialogue_EN: We have upgraded the product of Yinghong No. 9, using the highest
+      grade of single bud as the raw material, resulting in significant improvements
+      in flavor and quality, which has reached the special grade standard. Therefore,
+      the cost is also higher than last year. We had to appropriately raise the price.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u63A5\u53D7\u62A5\u4EF7"
-    dialogue_EN: English
+    dialogue_EN: Accept the offer
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7ED3\u5C40"
     characterName_EN: English
     dialogue_CN: "\u9009\u62E9\u9519\u8BEF\uFF0C\u62A5\u4EF7\u8FC7\u9AD8"
-    dialogue_EN: English
+    dialogue_EN: Incorrect choice, the quotation is too high
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u56DE\u5230\u4E0A\u4E00\u9009\u62E9\u8282\u70B9"
-    dialogue_EN: English
+    dialogue_EN: Return to the previous choice node
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u8DF3\u8F6C\u81F3\u6B63\u786E\u8282\u70B9"
-    dialogue_EN: English
+    dialogue_EN: Jump to the correct node
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u63D0\u793A"
     characterName_EN: English
     dialogue_CN: "\u9009\u62E9\u9519\u8BEF\uFF0C\u62A5\u4EF7\u8FC7\u9AD8\uFF0C\u6B64\u5904\u5E94\u9009\u62E9\u201C\u63D0\u51FA\u780D\u4EF7\u201D"
-    dialogue_EN: English
+    dialogue_EN: Wrong choice, the quote is too high. You should choose 'propose
+      a discount' here.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u63D0\u51FA\u780D\u4EF7"
-    dialogue_EN: English
+    dialogue_EN: Make a price cut request
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u8FD9\u4E2A\u5934\u91C7\u5355\u82BD\u4F1A\u6709\u4EC0\u4E48\u4E0D\u540C\u5417\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: What difference does picking a single bud make?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u5F53\u7136\uFF0C\u82F1\u7EA2\u4E5D\u53F7\u662F\u82F1\u5FB7\u7EA2\u8336\u7684\u5F53\u5BB6\u54C1\u79CD\uFF0C\u5C5E\u4E8E\u5927\u53F6\u79CD\u7EA2\u8336\uFF0C\u4E0D\u540C\u7B49\u7EA7\u95F4\u6700\u91CD\u8981\u7684\u5C31\u662F\u5AE9\u5EA6\u548C\u91C7\u6458\u7684\u65F6\u95F4\uFF0C\u6211\u4EEC\u8FD9\u6B21\u4F7F\u7528\u7684\u5934\u91C7\u4E00\u82BD\u4E00\u53F6\uFF0C\u5C31\u662F\u6625\u8336\u9996\u6B21\u91C7\u6458\u7684\u6700\u9AD8\u7B49\u7EA7\u7684\u539F\u6599\uFF0C\u82BD\u5934\u5B8C\u6574\uFF0C\u9644\u5E26\u4E00\u7247\u5AE9\u53F6\uFF0C\u5AE9\u5EA6\u9AD8\uFF0C\u5185\u542B\u7269\u8D28\u4E30\u5BCC\uFF0C\u9999\u6C14\u548C\u6ECB\u5473\u63A5\u8FD1\u5355\u82BD\uFF0C\u662F\u9AD8\u7AEF\u82F1\u7EA2\u4E5D\u53F7\u7684\u4E3B\u6D41\u7B49\u7EA7\uFF0C\u82BD\u5934\u80A5\u5AE9\u9971\u6EE1\uFF0C\u79EF\u7D2F\u4E86\u51AC\u5B63\u7684\u517B\u5206\uFF0C\u5236\u6210\u7684\u8336\u9999\u6C14\u975E\u5E38\u597D\u3002"
-    dialogue_EN: English
+    dialogue_EN: 'Of course, Yinghong No. 9 is the flagship variety of Yingde black
+      tea, belonging to the large-leaf black tea type. The most important differences
+      between various grades are tenderness and the picking time. The single bud
+      and one leaf we are using this time is the highest grade material from the
+      first picking of spring tea, with complete buds and an accompanying tender
+      leaf. It has high tenderness, rich internal substances, and its aroma and taste
+      are close to that of a single bud. This is the mainstream grade of high-end
+      Yinghong No. 9, with fat and plump buds that have accumulated nutrients during
+      winter, resulting in tea with a very good aroma. '
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u5373\u4F7F\u662F\u8FD9\u6837\uFF0C\u4E09\u767E\u516D\u5341\u7F8E\u5143\u4E00\u65A4\u8FD8\u662F\u8D35\u4E86\u4E00\u4E9B\u3002\u6211\u4EEC\u662F\u8001\u5BA2\u6237\u4E86\uFF0C\u80FD\u4E0D\u80FD\u4F4E\u4E00\u70B9\u513F\u7ED9\u767E\u5206\u4E4B\u4E94\u7684\u6298\u6263\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Even so, $360 per pound is still a bit expensive. We are long-time
+      customers; could you please give us a 5% discount?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u63D0\u51FA\u62D2\u7EDD"
-    dialogue_EN: English
+    dialogue_EN: Raise an objection
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u767E\u5206\u4E4B\u4E94\u6050\u6015\u4E0D\u884C\uFF0C\u60A8\u4E4B\u524D\u4E5F\u4F53\u9A8C\u8FC7\u6211\u4EEC\u6539\u8FDB\u524D\u540E\u7684\u4EA7\u54C1\uFF0C\u6211\u4EEC\u6539\u8FDB\u524D\u4F7F\u7528\u7684\u6625\u8336\u4E00\u82BD\u4E8C\u53F6\u7684\u5473\u9053\u5F88\u660E\u663E\u4E0D\u5982\u73B0\u5728\u7684\u4EA7\u54C1\u3002\u4E0D\u8FC7\uFF0C\u5982\u679C\u8D35\u516C\u53F8\u8BA2\u8D2D\u4E00\u5343\u65A4\u4EE5\u4E0A\uFF0C\u6211\u4EEC\u53EF\u4EE5\u7ED9\u767E\u5206\u4E4B\u4E8C\u70B9\u4E94\u7684\u6298\u6263\u3002"
-    dialogue_EN: English
+    dialogue_EN: I'm afraid five percent won't work. You have experienced the products
+      before and after our improvements. The taste of the spring tea with one bud
+      and two leaves we used before is clearly not as good as the current product.
+      However, if your company orders more than a thousand pounds, we can offer a
+      two-point-five percent discount.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u4E0D\u63A5\u53D7"
-    dialogue_EN: English
+    dialogue_EN: Not accepted
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u8FD8\u662F\u592A\u8D35\u4E86\uFF01\u5982\u679C\u9500\u8DEF\u4E0D\u597D\uFF0C\u6211\u4EEC\u5C31\u8981\u8D54\u672C\u4E86\u3002\u6211\u8BF4\uFF0C\u54B1\u4EEC\u53CC\u65B9\u518D\u5404\u8BA9\u4EF7\u4E00\u4E9B\u3002\u53E6\u5916\uFF0C\u6211\u8BA4\u4E3A\u8D35\u516C\u53F8\u7684\u51E4\u51F0\u5355\u679E\u4EF7\u683C\u4E5F\u9AD8\u4E86\u4E00\u70B9\u513F\u3002\u76EE\u524D\u751F\u4EA7\u51E4\u51F0\u5355\u679E\u7684\u5382\u5BB6\u5F88\u591A\uFF0C\u5E02\u573A\u7ADE\u4E89\u5F88\u6FC0\u70C8\u3002\u5982\u679C\u6309\u8FD9\u4E2A\u4EF7\u683C\u8FDB\u8D27\uFF0C\u6211\u4EEC\u51E0\u4E4E\u5C31\u6CA1\u6709\u5229\u6DA6\u4E86"
-    dialogue_EN: English
+    dialogue_EN: It's still too expensive! If sales are not good, we will incur losses.
+      I suggest that both of us lower our prices a bit more. Furthermore, I think
+      your company's Phoenix Dancong is priced a bit high. There are many manufacturers
+      producing Phoenix Dancong now, and the market competition is very fierce. If
+      we purchase at this price, we will hardly make any profit.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u5BF9\u4E0D\u8D77\uFF0C\u8FD9\u662F\u6211\u4EEC\u7684\u5E95\u4EF7\uFF0C\u4E0D\u80FD\u518D\u4F4E\u4E86\u3002\u6216\u8005\u60A8\u613F\u610F\u8003\u8651\u6211\u4EEC\u6B21\u4E00\u7EA7\u7684\u4F7F\u7528\u4E2D\u5C71\u767E\u5E74\u8001\u679E\u5355\u679E\uFF0C\u4F46\u662F\u4EA7\u54C1\u8D28\u91CF\u4E0A\u4E5F\u4F1A\u51FA\u73B0\u4E00\u4E9B\u964D\u4F4E\u3002"
-    dialogue_EN: English
+    dialogue_EN: Sorry, this is our bottom price; we can't go any lower. Alternatively,
+      would you consider our second-tier Zhongshan century-old Dancong, but the product
+      quality will be somewhat lower.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u8309 \u8389"
-    characterName_EN: English
+    characterName_EN: Molly
     dialogue_CN: "\u54E6\uFF1F\u60A8\u8FD9\u8FB9\u6709\u6837\u54C1\u53EF\u4EE5\u54C1\u5C1D\u4E00\u4E0B\u5417\u3002"
-    dialogue_EN: English
+    dialogue_EN: Oh? Do you have samples we can taste?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u6709\u7684\uFF0C\u60A8\u7A0D\u7B49\u4E00\u4E0B\u3002"
-    dialogue_EN: English
+    dialogue_EN: Yes, please wait a moment.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u63A5\u53D7"
-    dialogue_EN: English
+    dialogue_EN: Accept
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u55EF\uFF0C\u8FD9\u4E2A\u4EF7\u683C\u53EF\u4EE5\u8003\u8651\u3002\u53E6\u5916\uFF0C\u6211\u8BA4\u4E3A\u8D35\u516C\u53F8\u7684\u51E4\u51F0\u5355\u679E\u4EF7\u683C\u4E5F\u9AD8\u4E86\u4E00\u70B9\u513F\u3002\u76EE\u524D\u751F\u4EA7\u51E4\u51F0\u5355\u679E\u7684\u5382\u5BB6\u5F88\u591A\uFF0C\u5E02\u573A\u7ADE\u4E89\u5F88\u6FC0\u70C8\u3002\u5982\u679C\u6309\u8FD9\u4E2A\u4EF7\u683C\u8FDB\u8D27\uFF0C\u6211\u4EEC\u51E0\u4E4E\u5C31\u6CA1\u6709\u5229\u6DA6\u4E86\u3002"
-    dialogue_EN: English
+    dialogue_EN: Well, this price is negotiable. Also, I believe the price of your
+      company's Phoenix Dancong is a bit high. Currently, there are many manufacturers
+      producing Phoenix Dancong, and the market competition is very fierce. If we
+      purchase at this price, we will have almost no profit.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u674E\u6587\u4FCA"
-    characterName_EN: English
+    characterName_EN: LiWenJun
     dialogue_CN: "\u53EF\u662F\u6211\u4EEC\u7684\u4EA7\u54C1\u8D28\u91CF\u662F\u56FD\u9645\u516C\u8BA4\u7684\uFF0C\u5728\u5E02\u573A\u4E0A\u662F\u6709\u7ADE\u4E89\u529B\u7684\u3002\u6211\u4EEC\u4F7F\u7528\u7684\u662F\u9AD8\u6807\u51C6\u7684\u9AD8\u5C71\u767E\u5E74\u8001\u679E\u5355\u679E\uFF0C\u6210\u672C\u975E\u5E38\u9AD8\uFF0C\u4EA7\u54C1\u6548\u679C\u4E5F\u975E\u5E38\u597D\u3002"
-    dialogue_EN: English
+    dialogue_EN: But our product quality is internationally recognized and competitive
+      in the market. We use high-standard, high-mountain hundred-year-old Dancong,
+      which is very costly and yields excellent results.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u5BF9\uFF01\u6B63\u662F\u8FD9\u4E2A\u539F\u56E0\uFF0C\u6211\u4EEC\u624D\u5E0C\u671B\u4ECE\u8D35\u516C\u53F8\u8FDB\u8D27\u3002\u8FD9\u6837\u5427\uFF0C\u82F1\u7EA2\u4E5D\u53F7\u548C\u51E4\u51F0\u5355\u679E\u6211\u4EEC\u5404\u8BA2\u8D2D\u4E24\u5343\u65A4\uFF0C\u90FD\u7ED9\u767E\u5206\u4E4B\u4E09\u7684\u6298\u6263\uFF0C\u600E\u4E48\u6837\uFF1F"
-    dialogue_EN: English
+    dialogue_EN: Exactly! That's why we hope to source from your company. How about
+      this, we order 2,000 jin of Yinghong No. 9 and 2,000 jin of Phoenix Dancong,
+      with a 3% discount on both, how does that sound?
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u884C\uFF01\u8FD9\u4E2A\u4EF7\u683C\u548C\u6570\u91CF\u90FD\u53EF\u4EE5\u63A5\u53D7\u3002\u8584\u5229\u591A\u9500\u561B\u3002\u6211\u4EEC\u4E00\u8A00\u4E3A\u5B9A\uFF01"
-    dialogue_EN: English
+    dialogue_EN: Sure! This price and quantity are acceptable. Low profit, but high
+      sales. It's a deal!
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
-    characterName_EN: English
+    characterName_EN: Option
     dialogue_CN: "\u8FDB\u5165\u4E0B\u4E00\u6A21\u5757"
-    dialogue_EN: English
+    dialogue_EN: Enter next module
     color: {r: 0, g: 0, b: 0, a: 1}

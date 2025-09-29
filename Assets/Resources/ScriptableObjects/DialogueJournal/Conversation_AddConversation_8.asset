@@ -15,12 +15,12 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_8
   dialogueEntries:
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u591A\u8C22"
-    dialogue_EN: English
+    dialogue_EN: Thank you
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}

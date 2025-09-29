@@ -15,22 +15,22 @@ MonoBehaviour:
   conversationName: Conversation_AddConversation_14
   dialogueEntries:
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u54C7\u54E6\uFF0C\u5F88\u60CA\u8273\u7684\u5473\u9053\u3002"
-    dialogue_EN: English
+    dialogue_EN: Wow, such an amazing flavor.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u738B\u56FD\u4FE1"
-    characterName_EN: English
+    characterName_EN: WangGuoXin
     dialogue_CN: "\u7B2C\u4E8C\u53E3\u548C\u7B2C\u4E09\u53E3\u4F1A\u66F4\u4E0D\u4E00\u6837\u54E6"
-    dialogue_EN: English
+    dialogue_EN: The second and third bites will feel even more different.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u7EA6\u7FF0\u900A"
-    characterName_EN: English
+    characterName_EN: John
     dialogue_CN: "\u90A3\u6211\u53EF\u5F97\u7EC6\u7EC6\u54C1\u5473\u4E86"
-    dialogue_EN: English
+    dialogue_EN: Then I'll have to savor it carefully.
     color: {r: 0, g: 0, b: 0, a: 1}
   - characterName_CN: "\u9009\u9879"
     characterName_EN: English
     dialogue_CN: "\u4E0B\u4E00\u6B65"
-    dialogue_EN: English
+    dialogue_EN: Continue
     color: {r: 0, g: 0, b: 0, a: 1}
