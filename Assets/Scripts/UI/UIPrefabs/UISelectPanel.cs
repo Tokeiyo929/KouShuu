@@ -124,7 +124,8 @@ namespace QFramework.Example
 				if(panel != null)
 				{
 					UIKit.ClosePanel<T>();
-				}
+                    AudioManager.Instance.StopVoice();
+                }
 				else
 				{
 					Debug.LogWarning($"面板 {typeof(T).Name} 不存在，无需关闭");

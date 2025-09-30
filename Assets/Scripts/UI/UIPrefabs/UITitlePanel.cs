@@ -1,10 +1,11 @@
-using UnityEngine;
-using UnityEngine.UI;
+using DialogueEditor;
+using HighlightPlus;
 using QFramework;
-using TMPro;
 using System;
 using System.Collections.Generic;
-using HighlightPlus;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace QFramework.Example
 {
@@ -67,6 +68,9 @@ namespace QFramework.Example
                     obj.enabled = false;
                 }
                 GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
+                //停止所有音频
+                AudioManager.Instance.StopVoice();
+                ConversationManager.Instance.AudioPlayer.Stop();
 
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
                 UIKit.OpenPanel<UIDialoguePanel>(UILevel.PopUI, null, null, "UIPrefabs/UIDialoguePanel");
@@ -88,6 +92,9 @@ namespace QFramework.Example
                     obj.enabled = false;
                 }
                 GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
+                //停止所有音频
+                AudioManager.Instance.StopVoice();
+                ConversationManager.Instance.AudioPlayer.Stop();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -126,6 +133,9 @@ namespace QFramework.Example
                 //设置动画状态
                 GameObject.FindObjectOfType<TimelineController>().PlayTimelineAtTimeAndPauseNextFrame(35f);
                 //SetAnimatorChildrenActive(0, 1, 2, 3);
+                //停止所有音频
+                AudioManager.Instance.StopVoice();
+                ConversationManager.Instance.AudioPlayer.Stop();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -147,6 +157,9 @@ namespace QFramework.Example
                     obj.enabled = false;
                 }
                 GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
+                //停止所有音频
+                AudioManager.Instance.StopVoice();
+                ConversationManager.Instance.AudioPlayer.Stop();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");
@@ -166,6 +179,9 @@ namespace QFramework.Example
                     obj.enabled = false;
                 }
                 GameObject.FindObjectOfType<TimeLineManager>().SetCanvasFalse();
+                //停止所有音频
+                AudioManager.Instance.StopVoice();
+                ConversationManager.Instance.AudioPlayer.Stop();
 
                 UIKit.CloseAllPanel();
                 UIKit.OpenPanel<UITitlePanel>(UILevel.PopUI, null, null, "UIPrefabs/UITitlePanel");

@@ -26451,9 +26451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":283.5,\"yPos\":135},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u4E0B\u4E00\u6B65\",\"Text_En\":\"Continue\",\"parentUIDs\":[2],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":240,\"yPos\":-225},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u54C7\u54E6\uFF0C\u5F88\u60CA\u8273\u7684\u5473\u9053\u3002\",\"Text_En\":\"Wow,
-    such an amazing flavor.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\u7EA6\u7FF0\u900A\",\"Name_En\":\"John\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.5},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":240.5,\"yPos\":-109},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u7B2C\u4E8C\u53E3\u548C\u7B2C\u4E09\u53E3\u4F1A\u66F4\u4E0D\u4E00\u6837\u54E6\",\"Text_En\":\"The
-    second and third bites will feel even more different.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\u738B\u56FD\u4FE1\",\"Name_En\":\"WangGuoXin\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.5},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":262.5,\"yPos\":9},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u90A3\u6211\u53EF\u5F97\u7EC6\u7EC6\u54C1\u5473\u4E86\",\"Text_En\":\"Then
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":271.5,\"yPos\":382},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u4E0B\u4E00\u6B65\",\"Text_En\":\"Continue\",\"parentUIDs\":[2],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":228,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u54C7\u54E6\uFF0C\u5F88\u60CA\u8273\u7684\u5473\u9053\u3002\",\"Text_En\":\"Wow,
+    such an amazing flavor.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\u7EA6\u7FF0\u900A\",\"Name_En\":\"John\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.5},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":228.5,\"yPos\":138},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u7B2C\u4E8C\u53E3\u548C\u7B2C\u4E09\u53E3\u4F1A\u66F4\u4E0D\u4E00\u6837\u54E6\",\"Text_En\":\"The
+    second and third bites will feel even more different.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\u738B\u56FD\u4FE1\",\"Name_En\":\"WangGuoXin\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.5},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":250.5,\"yPos\":256},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u90A3\u6211\u53EF\u5F97\u7EC6\u7EC6\u54C1\u5473\u4E86\",\"Text_En\":\"Then
     I'll have to savor it carefully.\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"\u7EA6\u7FF0\u900A\",\"Name_En\":\"John\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.5}]}"
   saveVersion: 110
   DefaultName: 
@@ -27212,7 +27212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1413623755
 MonoBehaviour:
   m_ObjectHideFlags: 0

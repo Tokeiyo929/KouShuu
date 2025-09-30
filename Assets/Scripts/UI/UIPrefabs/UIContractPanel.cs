@@ -23,7 +23,10 @@ namespace QFramework.Example
 			GetPages();
 			BindButtons();
 			HideAllPages();
-		}
+
+			BindExitButtons();
+
+        }
 		
 		private void GetButtons()
 		{
@@ -59,8 +62,33 @@ namespace QFramework.Example
 				Debug.Log($"UIContractPanel: 绑定按钮 {i} -> 页面 {index}");
 			}
 		}
-		
-		private void HideAllPages()
+        private void BindExitButtons()
+        {
+            // 查找所有名为"Btn_Exit"的Button组件
+            Button[] allButtons = GetComponentsInChildren<Button>(true);
+            List<Button> exitButtons = new List<Button>();
+
+            foreach (Button button in allButtons)
+            {
+                if (button.gameObject.name == "Btn_Exit")
+                {
+                    exitButtons.Add(button);
+                }
+            }
+
+            // 为每个退出按钮添加停止语音功能
+            foreach (Button exitButton in exitButtons)
+            {
+                exitButton.onClick.AddListener(() => {
+                    AudioManager.Instance.StopVoice();
+                    Debug.Log("Btn_Exit点击 - 停止语音播放");
+                });
+            }
+
+            Debug.Log($"找到并绑定了 {exitButtons.Count} 个Btn_Exit按钮");
+        }
+
+        private void HideAllPages()
 		{
 			foreach (Transform page in pageItems)
 			{
