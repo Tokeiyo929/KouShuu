@@ -176,13 +176,18 @@ namespace QFramework.Example
             Btn_ChangText.onClick.AddListener(() =>
             {
                 Global.CurrentLanguage.Value = Global.CurrentLanguage.Value == GlobalEnums.Language.Chinese ? GlobalEnums.Language.English : GlobalEnums.Language.Chinese;
+                if (Global.CurrentLanguage.Value == GlobalEnums.Language.English)
+                {
+                    Global.CurrentAudioType.Value = GlobalEnums.AudioType.English;
+                }
             });
 
             Btn_ChangAudio.onClick.AddListener(() =>
             {
+                Global.CurrentLanguage.Value = GlobalEnums.Language.Chinese;
                 Global.CurrentAudioType.Value = Global.CurrentAudioType.Value == GlobalEnums.AudioType.Chinese ? GlobalEnums.AudioType.Cantonese : GlobalEnums.AudioType.Chinese;
             });
-
+            
             // 设置返回按钮事件
             Btn_Back.onClick.AddListener(() =>
             {

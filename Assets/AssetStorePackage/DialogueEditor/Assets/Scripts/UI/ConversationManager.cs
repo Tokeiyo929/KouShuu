@@ -625,13 +625,30 @@ namespace DialogueEditor
 
             DoParamAction(speech);
 
-            // Play the audio
-            if (speech.Audio != null)
+            switch (Global.CurrentAudioType.Value)
             {
-                AudioPlayer.clip = speech.Audio;
+                case GlobalEnums.AudioType.Cantonese:
+                    AudioPlayer.clip = speech.Audio;
+                    break;
+                case GlobalEnums.AudioType.Chinese:
+                    AudioPlayer.clip = speech.AudioM;
+                    break;
+                case GlobalEnums.AudioType.English:
+                    AudioPlayer.clip = speech.AudioE;
+                    break;
+            }
+            if (AudioPlayer.clip != null)
+            {
                 AudioPlayer.volume = speech.Volume;
                 AudioPlayer.Play();
             }
+            // Play the audio
+            //if (speech.Audio != null)
+            //{
+            //    AudioPlayer.clip = speech.Audio;
+            //    AudioPlayer.volume = speech.Volume;
+            //    AudioPlayer.Play();
+            //}
 
             if (ScrollText)
             {

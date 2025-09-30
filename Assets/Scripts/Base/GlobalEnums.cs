@@ -17,7 +17,8 @@ namespace QFramework.Example
         public enum AudioType
         {
             Chinese,
-            Cantonese
+            Cantonese,
+            English
         }
     }
 }

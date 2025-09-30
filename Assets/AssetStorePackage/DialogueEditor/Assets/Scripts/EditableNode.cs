@@ -188,6 +188,8 @@ namespace DialogueEditor
 
         /// <summary> The Audio Clip acompanying this Speech. </summary>
         public AudioClip Audio;
+        public AudioClip AudioM;     // 普通话音频
+        public AudioClip AudioE;      // 英语音频
         /// <summary> Deprecated as of V1.03 </summary>
         [DataMember] public string AudioGUID;
 
@@ -292,6 +294,8 @@ namespace DialogueEditor
             base.SerializeAssetData(conversation);
 
             conversation.GetNodeData(this.ID).Audio = this.Audio;
+            conversation.GetNodeData(this.ID).AudioM = this.AudioM;
+            conversation.GetNodeData(this.ID).AudioE = this.AudioE;
             conversation.GetNodeData(this.ID).Icon = this.Icon;
         }
 
@@ -300,6 +304,8 @@ namespace DialogueEditor
             base.DeserializeAssetData(conversation);
 
             this.Audio = conversation.GetNodeData(this.ID).Audio;
+            this.AudioM = conversation.GetNodeData(this.ID).AudioM;
+            this.AudioE = conversation.GetNodeData(this.ID).AudioE;
             this.Icon = conversation.GetNodeData(this.ID).Icon;
 
 #if UNITY_EDITOR

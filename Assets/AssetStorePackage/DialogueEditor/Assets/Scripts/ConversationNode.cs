@@ -71,6 +71,8 @@ namespace DialogueEditor
         public Sprite Icon;
 
         public AudioClip Audio;
+        public AudioClip AudioM;
+        public AudioClip AudioE;
         public float Volume;
 
         /// <summary> UnityEvent, to betriggered when this Node starts. </summary>

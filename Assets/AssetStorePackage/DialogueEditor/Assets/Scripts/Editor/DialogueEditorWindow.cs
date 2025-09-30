@@ -745,6 +745,10 @@ namespace DialogueEditor
                         GUILayout.Label("Audio Options", EditorStyles.boldLabel);
                         GUILayout.Label("Audio");
                         node.Audio = (AudioClip)EditorGUILayout.ObjectField(node.Audio, typeof(AudioClip), false);
+                        GUILayout.Label("AudioM");
+                        node.AudioM = (AudioClip)EditorGUILayout.ObjectField(node.AudioM, typeof(AudioClip), false);
+                        GUILayout.Label("AudioE");
+                        node.AudioE = (AudioClip)EditorGUILayout.ObjectField(node.AudioE, typeof(AudioClip), false);
 
                         GUILayout.Label("Audio Volume");
                         node.Volume = EditorGUILayout.Slider(node.Volume, 0, 1);
